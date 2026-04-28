@@ -58,3 +58,30 @@
 - **Minimum Passing Score**: first-view-scorecard 90+
 - **Critical Fail Conditions**: FVなし / CTA配置1箇所 / 証拠セクションなし
 - **Required Fix Actions**: `skills/02_structure/` で再設計
+
+---
+
+## Emotional CVR Check（追加）
+
+このゲートでは、Emotional CVR Layer の観点も必ず確認する：
+
+- [ ] ユーザーが得るメリットは明確か
+- [ ] 導入後の未来が想像できるか
+- [ ] 不安から期待への転換があるか
+- [ ] CTA直前の行動意欲が高まっているか
+- [ ] CV後の流れが明確か
+- [ ] ファーストビューで「自分のことだ」と感じるか
+- [ ] 期待感が誇大表現でなく根拠ベース
+
+### Required Emotional Scorecards
+
+- `scoring/emotional-cvr-scorecard.md`: **85点以上**
+- `scoring/benefit-clarity-scorecard.md`: **85点以上**
+- `scoring/expectation-scorecard.md`: **85点以上**
+- `scoring/self-relevance-scorecard.md`: **85点以上**
+
+### Required References
+
+- `experience-design/emotional-cvr-principles.md`
+- `experience-design/cv-emotion-journey.md`
+- `contracts/emotional-cvr-output-contract.md`

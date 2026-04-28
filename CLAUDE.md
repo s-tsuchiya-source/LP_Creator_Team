@@ -144,3 +144,56 @@
 - [components/README.md](components/README.md) — LP部品パターン
 - [industry-playbooks/README.md](industry-playbooks/README.md) — 業種別攻略書
 - [quality-gates/](quality-gates/) — 9段階品質ゲート
+
+## Emotional CVR Layer（最優先）
+
+このプロジェクトにおけるLPの目的は、単に情報を伝えることではなく、
+**見たユーザーにメリット・期待・安心・わくわく感を与え、CVを最大化すること**である。
+
+LP制作時は常に以下を確認する：
+
+- ユーザーは何を得られるのか
+- ユーザーの未来はどう良くなるのか
+- ユーザーは何に期待できるのか
+- ユーザーの不安はどう解消されるのか
+- なぜ今CVする必要があるのか
+- CV後に何が起きるのか
+- このLPを見て、ユーザーは前向きな気持ちになるか
+
+ただし、期待感やわくわく感は、**誇張・煽り・派手な装飾で作るのではなく**、
+具体的なメリット、信頼できる証拠、導入後の未来、安心できるプロセスで作る。
+
+## 最高品質LPの定義
+
+```txt
+最高品質のLPとは、見た目が綺麗でも、情報が網羅されていても、装飾がかっこよくてもない。
+
+最高品質のLPとは、見たユーザーが
+「これは自分のためのサービスだ」
+「導入後の未来が想像できる」
+「期待・安心・納得を得られる」
+「まず資料を見てみたい」
+と思い、CVに進む心理状態を作れるLPである。
+
+LPの品質 = 情報品質 × 信頼品質 × 体験価値 × 期待感 × CV導線
+```
+
+## Emotional CVR Layer 必須スコア
+
+最終納品前に、以下を満たすこと：
+
+- `scoring/emotional-cvr-scorecard.md`: **85点以上 必須**
+- `scoring/benefit-clarity-scorecard.md`: **85点以上 必須**
+- `scoring/expectation-scorecard.md`: **85点以上 必須**
+- `scoring/self-relevance-scorecard.md`: **85点以上 必須**
+
+総合スコア（lp-master-scorecard）: **90点以上 推奨**
+法務リスク（legal-risk-scorecard）: **95点以上 必須・Critical Fail なし**
+
+## Emotional CVR 関連ディレクトリ
+
+- `experience-design/` — 体験価値・感情・CV接続レイヤー（中核ナレッジ）
+- `skills/08_experience/` — 感情設計の作業手順
+- `contracts/experience-value-output-contract.md` — 体験価値の出力形式
+- `contracts/emotional-cvr-output-contract.md` — 感情ジャーニーの出力形式
+- `components/emotion/` — 感情に届く部品の勝ちパターン

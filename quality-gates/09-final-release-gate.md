@@ -67,3 +67,30 @@ LP公開可否を最終判定する。
 - **Minimum Passing Score**: lp-master 90+ / final-output 90+ / legal-risk 95+
 - **Critical Fail Conditions**: BLOCK レビューあり / Critical Fail（法務 / 計測 / 主要動作）あり
 - **Required Fix Actions**: `skills/07_review/release-readiness-review-skill.md` で再判定
+
+---
+
+## Emotional CVR Check（追加）
+
+このゲートでは、Emotional CVR Layer の観点も必ず確認する：
+
+- [ ] ユーザーが得るメリットは明確か
+- [ ] 導入後の未来が想像できるか
+- [ ] 不安から期待への転換があるか
+- [ ] CTA直前の行動意欲が高まっているか
+- [ ] CV後の流れが明確か
+- [ ] ファーストビューで「自分のことだ」と感じるか
+- [ ] 期待感が誇大表現でなく根拠ベース
+
+### Required Emotional Scorecards
+
+- `scoring/emotional-cvr-scorecard.md`: **85点以上**
+- `scoring/benefit-clarity-scorecard.md`: **85点以上**
+- `scoring/expectation-scorecard.md`: **85点以上**
+- `scoring/self-relevance-scorecard.md`: **85点以上**
+
+### Required References
+
+- `experience-design/emotional-cvr-principles.md`
+- `experience-design/cv-emotion-journey.md`
+- `contracts/emotional-cvr-output-contract.md`

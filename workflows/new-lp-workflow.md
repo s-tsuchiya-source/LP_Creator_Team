@@ -104,3 +104,33 @@
 - legal-risk-scorecard 95点以上 / Critical Fail なし
 - 全 quality-gates 通過
 - final-delivery-contract に準拠
+
+---
+
+## Emotional CVR Check（追加）
+
+このフロー完了時に、Emotional CVR Layer の観点で追加確認する。
+
+### 完了条件（Emotional CVR）
+
+- `scoring/emotional-cvr-scorecard.md` で **85点以上**
+- `scoring/benefit-clarity-scorecard.md` で **85点以上**
+- `scoring/expectation-scorecard.md` で **85点以上**
+- `scoring/self-relevance-scorecard.md` で **85点以上**
+
+### 使用する Emotional CVR 要素
+
+- **experience-design**: cv-emotion-journey / benefit-realization / expectation / future-state / anxiety-to-expectation
+- **skills/08_experience**: benefit-translation / expectation-building / future-state-copy / self-relevance-design / trust-to-action / cv-motivation-boost
+- **contracts**: experience-value-output-contract / emotional-cvr-output-contract
+- **components/emotion**: benefit-before-feature / future-state-section / expectation-copy / emotional-proof / anxiety-to-confidence / action-motivation-cta / cv-after-experience
+
+### Emotional CVR フェーズ統合
+
+通常フローに加えて、以下を実施する：
+
+1. ペルソナ確定後、`experience-design/user-motivation-map.md` で動機マップを作成
+2. 構成フェーズで `experience-design/cv-emotion-journey.md` の 9段階を反映
+3. コピーフェーズで `skills/08_experience/` 全カテゴリを参照
+4. デザインフェーズで `components/emotion/` を参照
+5. 最終承認時に Emotional CVR 4 scorecard を全て採点

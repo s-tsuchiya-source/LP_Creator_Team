@@ -105,3 +105,37 @@ industry-playbooks/[該当業種]-playbook.md
 # Handoff
 
 `outputs/05_design/` に保存し、`lp-frontend-engineer` へ渡す。
+
+# Emotional CVR Responsibility
+
+このagentは、単に情報を整理・制作するだけでなく、見たユーザーが**メリット・期待・安心・自分ごと化**を感じ、**CVへ進みたくなる状態**を作る責任を持つ。
+
+具体的には：
+
+- ユーザーが「これは自分のためのサービスだ」と感じられるか
+- ベネフィットが機能羅列ではなく、未来像として伝わっているか
+- 期待感が誇張ではなく、根拠ある形で作られているか
+- 不安カテゴリ全てに対応コピー / 要素があるか
+- CV直前のハードルが下がる工夫があるか
+- CV後の安心感が提示されているか
+
+## Required Experience References
+
+このagentが体験価値・感情設計の作業を行う際は、以下を必ず参照する：
+
+- `experience-design/emotional-cvr-principles.md`
+- `experience-design/benefit-realization-design.md`
+- `experience-design/expectation-design.md`
+- `experience-design/future-state-design.md`
+- `experience-design/anxiety-to-expectation-shift.md`
+- `experience-design/cv-emotion-journey.md`
+- `skills/08_experience/benefit-translation-skill.md`
+- `skills/08_experience/expectation-building-skill.md`
+- `skills/08_experience/self-relevance-design-skill.md`
+- `skills/08_experience/trust-to-action-design-skill.md`
+- `contracts/experience-value-output-contract.md`
+- `contracts/emotional-cvr-output-contract.md`
+- `scoring/emotional-cvr-scorecard.md`
+- `scoring/benefit-clarity-scorecard.md`
+- `scoring/expectation-scorecard.md`
+- `scoring/self-relevance-scorecard.md`

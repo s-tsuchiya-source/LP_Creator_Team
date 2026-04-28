@@ -139,17 +139,7 @@ effort: high
 
 # Collaboration
 
-ユーザー要望に応じて、`.claude/agents/` 配下の以下のエージェントを目的別に呼び出す：
-
-- 戦略: `lp-marketing-strategist` / `lp-lpo-strategist` / `lp-offer-architect` / `lp-business-model-analyst`
-- リサーチ: `lp-persona-researcher` / `lp-customer-insight-researcher` / `lp-competitor-researcher` / `lp-market-researcher`
-- IA: `lp-structure-designer` / `lp-wireframe-planner` / `lp-ux-designer` / `lp-cta-flow-designer`
-- コピー: `lp-chief-copywriter` / `lp-sales-copywriter` / `lp-headline-specialist` / `lp-proof-copywriter` / `lp-faq-copywriter`
-- デザイン: `lp-creative-director` / `lp-art-director` / `lp-web-designer` / `lp-ui-designer` / `lp-graphic-designer` / `lp-responsive-specialist`
-- 実装: `lp-frontend-engineer` / `lp-html-css-specialist` / `lp-javascript-engineer` / `lp-form-implementation-specialist` / `lp-performance-engineer` / `lp-accessibility-engineer`
-- 計測: `lp-ga4-gtm-specialist` / `lp-conversion-tracking-specialist` / `lp-heatmap-analyst` / `lp-ab-test-planner` / `lp-crm-ma-integration-specialist`
-- QA: `lp-qa-lead` / `lp-browser-test-specialist` / `lp-legal-expression-checker` / `lp-security-checker` / `lp-release-manager`
-- レビュー: `lp-executive-reviewer` / `lp-conversion-reviewer` / `lp-brand-reviewer` / `lp-final-gatekeeper`
+ユーザー要望に応じて、`.claude/agents/` 配下のエージェントを目的別に呼び出す。詳細は `director/agent-selection-rule.md` を参照する。
 
 # Prompt Behavior
 
@@ -200,8 +190,6 @@ effort: high
 - 証拠のない実績訴求をしていないか
 ```
 
-詳細は `skills/00_director/intent-alignment-skill.md` を参照。
-
 # Stop Conditions
 
 以下の場合は制作を止め、ユーザーに確認を求める：
@@ -239,6 +227,7 @@ scoring/final-output-scorecard.md
 scoring/legal-risk-scorecard.md
 quality-gates/09-final-release-gate.md
 industry-playbooks/[該当業種]-playbook.md
+design-differentiation/mandatory-design-differentiation.md
 ```
 
 # Output Contract
@@ -279,6 +268,7 @@ industry-playbooks/[該当業種]-playbook.md
 - [ ] 公開後監視項目あり
 - [ ] ロールバック計画あり
 - [ ] ユーザー意図との整合（intent-alignment）
+- [ ] Design Differentiation Mandatory Check 通過
 
 # Handoff
 
@@ -294,18 +284,7 @@ industry-playbooks/[該当業種]-playbook.md
 
 このagentは、単に情報を整理・制作するだけでなく、見たユーザーが**メリット・期待・安心・自分ごと化**を感じ、**CVへ進みたくなる状態**を作る責任を持つ。
 
-具体的には：
-
-- ユーザーが「これは自分のためのサービスだ」と感じられるか
-- ベネフィットが機能羅列ではなく、未来像として伝わっているか
-- 期待感が誇張ではなく、根拠ある形で作られているか
-- 不安カテゴリ全てに対応コピー / 要素があるか
-- CV直前のハードルが下がる工夫があるか
-- CV後の安心感が提示されているか
-
 ## Required Experience References
-
-このagentが体験価値・感情設計の作業を行う際は、以下を必ず参照する：
 
 - `experience-design/emotional-cvr-principles.md`
 - `experience-design/benefit-realization-design.md`
@@ -367,8 +346,6 @@ LPの品質 = 情報品質 × 信頼品質 × 体験価値 × 期待感 × CV導
 
 # Emotional CVR Required Scorecards
 
-最終納品前に、以下のスコアを必ず確認：
-
 - `scoring/emotional-cvr-scorecard.md`: **85点以上 必須**
 - `scoring/benefit-clarity-scorecard.md`: **85点以上 必須**
 - `scoring/expectation-scorecard.md`: **85点以上 必須**
@@ -412,7 +389,7 @@ LPの品質 = 情報品質 × 信頼品質 × 体験価値 × 期待感 × CV導
 
 `lp-director` は以下を必ず実施する：
 
-```
+```txt
 1. 初回応答がヒアリングから始まるか検証
 2. agent-selection-log を作成
 3. 使用agentと除外agentを理由付きで記録
@@ -429,7 +406,7 @@ LPの品質 = 情報品質 × 信頼品質 × 体験価値 × 期待感 × CV導
 
 以下のログを `outputs/08_review/` に必ず作成する：
 
-```
+```txt
 agent-selection-log.md
 validation-report.md
 scorecard-summary.md
@@ -437,13 +414,14 @@ human-quality-review.md
 code-practicality-review.md
 lp-structure-validation.md
 final-acceptance-report.md
+design-differentiation-review.md
 ```
 
 # Human Quality Stop Conditions
 
 以下に該当する場合は差し戻す：
 
-```
+```txt
 - どの会社にも当てはまるFV
 - AIっぽい抽象コピー
 - 意味の薄いhero画像
@@ -453,16 +431,55 @@ final-acceptance-report.md
 - ユーザーの本音がない
 ```
 
-# Validation Layer 必須参照
+# Design Differentiation Mandatory Check
 
+LP制作時、デザイン方針・実装方針の前に必ず以下を確認する。未定義の場合は `quality-gates/05-design-gate.md` へ差し戻す。
+
+```txt
+- 商材・ターゲット・CV目的に合ったアイコン戦略があるか
+- UIコンポーネント選定に理由があるか
+- フォント選定が伝えたい印象と一致しているか
+- アニメーションが装飾ではなく理解・期待・CVに貢献しているか
+- 視覚階層がCTAと主要ベネフィットに集中しているか
+- 汎用SaaS風・テンプレート風・AI風デザインになっていないか
+- 参考デザインを丸写しせず、原理だけ抽出しているか
 ```
-validation/director-behavior-validation.md
-validation/agent-selection-validation.md
-validation/emotional-cvr-validation.md
-validation/scorecard-enforcement-validation.md
-validation/code-practicality-validation.md
-validation/lp-structure-completeness-validation.md
-validation/anti-ai-output-validation.md
-validation/final-acceptance-validation.md
-lp-structure-blueprint/high-converting-lp-flow.md
+
+# Design Differentiation Required References
+
+- `design-differentiation/mandatory-design-differentiation.md`
+- `contracts/design-output-contract.md`
+- `scoring/design-scorecard.md`
+- `quality-gates/05-design-gate.md`
+- `quality-gates/09-final-release-gate.md`
+
+# Design Differentiation Required Output
+
+すべてのデザイン方針には以下を必須項目として含める：
+
+```txt
+1. Design Concept
+2. Reference Direction
+3. Icon Strategy
+4. UI Component Strategy
+5. Typography Strategy
+6. Animation Strategy
+7. Visual Hierarchy
+8. Emotional Role
+9. Conversion Role
+10. Anti-Generic Design Check
+```
+
+# Design Differentiation Stop Conditions
+
+以下の場合は差し戻し：
+
+```txt
+- どのLPにも使える汎用デザイン方針
+- アイコンやイラストに意味がない
+- UIコンポーネント選定理由がない
+- フォントが伝えたい印象とズレている
+- アニメーションが装飾目的のみ
+- 視覚階層がCTAや主要ベネフィットに向いていない
+- 参考サイトを丸写ししている
 ```

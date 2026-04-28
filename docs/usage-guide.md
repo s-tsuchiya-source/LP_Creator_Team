@@ -240,3 +240,58 @@ CVを最大化するLPである、という前提で進めてください。
 - `contracts/emotional-cvr-output-contract.md`
 - `scoring/emotional-cvr-scorecard.md` 等
 - `components/emotion/`
+
+---
+
+## Validation / Human Quality Layer の使い方
+
+### Validation Layer
+
+LP制作プロセスを8つの観点で検証：
+
+```
+1. director-behavior-validation - ヒアリングから始まるか
+2. agent-selection-validation - 必要 agent だけか
+3. emotional-cvr-validation - Emotional CVR Layer 反映
+4. scorecard-enforcement-validation - 80点未満を差し戻し
+5. code-practicality-validation - HTML/CSS/JS 実用性
+6. lp-structure-completeness-validation - LP構成 16項目
+7. anti-ai-output-validation - AIっぽさ排除
+8. final-acceptance-validation - 最終納品判定
+```
+
+### Human Quality Layer
+
+AIっぽさを排除する手順：
+
+```
+1. 抽象語をリストアップ → skills/09_humanization/anti-ai-copy-editing-skill.md
+2. 競合置き換えテスト → 90%以上不成立で合格
+3. 業務シーン描写を追加 → skills/09_humanization/concrete-detail-injection-skill.md
+4. 商材文脈に合うビジュアル → skills/09_humanization/design-humanization-skill.md
+5. 最終人間レビュー → skills/09_humanization/final-human-review-skill.md
+```
+
+### LP Structure Blueprint の使い方
+
+LP構成の必須16項目を `lp-structure-blueprint/high-converting-lp-flow.md` で確認。
+
+### 最終納品前の検証手順
+
+1. すべての Validation を実行
+2. すべての必須 scorecard で必須スコア達成
+3. lp-final-gatekeeper の Final Acceptance Requirements を全項目チェック
+4. `outputs/08_review/final-acceptance-report.md` に記録
+
+### テストシナリオの実行方法
+
+`tests/validation-scenarios/` 配下の7つのテストを実行し、`tests/evaluation-rubrics/` で採点。
+
+### AIっぽさを検査する方法
+
+`human-quality/ai-smell-detection-list.md` の4階層検査：
+
+- 階層1: 単語レベル（危険語）
+- 階層2: 文レベル（NG文構造）
+- 階層3: セクションレベル
+- 階層4: 全体レベル（競合置き換えテスト）

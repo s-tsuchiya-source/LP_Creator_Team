@@ -241,3 +241,57 @@ LP_Creator_Team/
 ├─ components/emotion/   # ★感情に届く部品
 └─ tests/                # ★品質ベンチマーク
 ```
+
+## Validation Layer
+
+LP_Creator_Team は、LPを生成するだけでなく、以下を検証します。
+
+- ヒアリングから始まったか
+- 必要 agent だけを使ったか
+- Emotional CVR Layer が反映されているか
+- 80点未満を差し戻したか
+- HTML/CSS/JS が実用レベルか
+- LP構成が網羅されているか
+- AIっぽさが排除されているか
+
+詳細は [validation/](validation/) を参照。
+
+## Human Quality Layer
+
+AIっぽい文章・構成・画像・デザインを排除し、人間が現場を理解して作ったようなLPへ磨きます。
+
+チェック観点：
+
+- 具体性
+- 現場感
+- 自然な文体
+- 読み手の本音
+- テンプレート臭のなさ
+- 商材文脈に合う画像・デザイン
+- CVへ進む自然な理由
+
+詳細は [human-quality/](human-quality/) を参照。
+
+## LP Structure Blueprint
+
+LP構成として必ず押さえる王道15フローを定義しています。
+
+詳細は [lp-structure-blueprint/](lp-structure-blueprint/) を参照。
+
+## Validation 必須スコア
+
+最終納品前に以下を全達成：
+
+| Scorecard | 必須スコア |
+|---|---|
+| lp-master-scorecard | 90+ |
+| emotional-cvr-scorecard | 85+ |
+| benefit-clarity-scorecard | 85+ |
+| expectation-scorecard | 85+ |
+| self-relevance-scorecard | 85+ |
+| human-naturalness-scorecard | 85+ |
+| anti-ai-smell-scorecard | 90+ |
+| code-practicality-scorecard | 85+ |
+| lp-structure-completeness-scorecard | 85+ |
+| legal-risk-scorecard | 95+（Critical Fail なし） |
+| final-output-scorecard | 90+ |

@@ -85,3 +85,39 @@
 - `experience-design/emotional-cvr-principles.md`
 - `experience-design/cv-emotion-journey.md`
 - `contracts/emotional-cvr-output-contract.md`
+
+---
+
+## Validation Layer / Human Quality Layer 通過確認
+
+### Validation Layer
+- [ ] director-behavior-validation 合格
+- [ ] agent-selection-validation 合格
+- [ ] emotional-cvr-validation 合格
+- [ ] scorecard-enforcement-validation 合格
+- [ ] code-practicality-validation 合格
+- [ ] lp-structure-completeness-validation 合格
+- [ ] anti-ai-output-validation 合格
+
+### Human Quality Layer
+- [ ] human-naturalness-scorecard 85+
+- [ ] anti-ai-smell-scorecard 90+
+- [ ] 競合置き換えテスト 90%以上不成立
+- [ ] 業務シーン描写あり
+- [ ] 担当者の本音入り
+- [ ] 数字に出典付き
+- [ ] 商材文脈に合うビジュアル
+
+### LP Structure Blueprint 準拠
+- [ ] 16必須項目網羅、または省略項目に理由
+- [ ] セクション順序が論理的
+- [ ] CTA 最低3箇所
+- [ ] FAQ 6カテゴリ網羅
+
+### 実用コード検査
+- [ ] code-practicality-scorecard 85+
+- [ ] LCP / CLS / INP 達成
+- [ ] 計測 data 属性完備
+- [ ] a11y Lighthouse 90+
+
+詳細は `validation/` 配下の各ファイルを参照。

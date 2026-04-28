@@ -97,3 +97,45 @@
 3. コピーフェーズで `skills/08_experience/` 全カテゴリを参照
 4. デザインフェーズで `components/emotion/` を参照
 5. 最終承認時に Emotional CVR 4 scorecard を全て採点
+
+---
+
+## Validation / Human Quality 完了条件（追加）
+
+このフロー完了時に、以下を全達成必須：
+
+### Validation 全 8 種合格
+
+- [ ] director-behavior-validation
+- [ ] agent-selection-validation
+- [ ] emotional-cvr-validation
+- [ ] scorecard-enforcement-validation
+- [ ] code-practicality-validation
+- [ ] lp-structure-completeness-validation
+- [ ] anti-ai-output-validation
+- [ ] final-acceptance-validation
+
+### Human Quality / 構成 / コード 必須スコア
+
+```
+- human-naturalness-scorecard: 85+
+- anti-ai-smell-scorecard: 90+
+- lp-structure-completeness-scorecard: 85+
+- code-practicality-scorecard: 85+
+```
+
+### 必須ログ作成（outputs/08_review/）
+
+- agent-selection-log.md
+- validation-report.md
+- scorecard-summary.md
+- human-quality-review.md
+- code-practicality-review.md
+- lp-structure-validation.md
+- final-acceptance-report.md
+
+参照：
+- `validation/`
+- `lp-structure-blueprint/`
+- `human-quality/`
+- `skills/09_humanization/`

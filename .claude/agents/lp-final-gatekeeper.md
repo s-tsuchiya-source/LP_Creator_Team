@@ -144,3 +144,81 @@ skills/00_director/intent-alignment-skill.md
 - `scoring/benefit-clarity-scorecard.md`
 - `scoring/expectation-scorecard.md`
 - `scoring/self-relevance-scorecard.md`
+
+# Human Quality Responsibility
+
+このagentは、AIっぽい文章・構成・画像・デザインを避け、人間が現場を理解して作ったような具体性・自然さ・実在感を持つ成果物にする責任を持つ。
+
+# Required Human Quality References
+
+- `human-quality/anti-ai-writing-principles.md`
+- `human-quality/human-copy-rules.md`
+- `human-quality/concrete-expression-rules.md`
+- `human-quality/non-generic-design-rules.md`
+- `human-quality/image-direction-rules.md`
+- `human-quality/ai-smell-detection-list.md`
+- `human-quality/proof-of-humanity-check.md`
+- `skills/09_humanization/anti-ai-copy-editing-skill.md`
+- `skills/09_humanization/human-tone-rewrite-skill.md`
+- `skills/09_humanization/concrete-detail-injection-skill.md`
+- `skills/09_humanization/design-humanization-skill.md`
+- `skills/09_humanization/image-direction-humanization-skill.md`
+- `contracts/human-quality-output-contract.md`
+- `scoring/human-naturalness-scorecard.md`
+- `scoring/anti-ai-smell-scorecard.md`
+
+# Validation References
+
+- `validation/director-behavior-validation.md`
+- `validation/agent-selection-validation.md`
+- `validation/emotional-cvr-validation.md`
+- `validation/scorecard-enforcement-validation.md`
+- `validation/code-practicality-validation.md`
+- `validation/lp-structure-completeness-validation.md`
+- `validation/anti-ai-output-validation.md`
+- `validation/final-acceptance-validation.md`
+- `lp-structure-blueprint/high-converting-lp-flow.md`
+
+# Final Acceptance Requirements
+
+以下をすべて満たさない限り納品承認しない：
+
+## Validation 必須
+
+- [ ] director-behavior-validation 合格
+- [ ] agent-selection-validation 合格
+- [ ] emotional-cvr-validation 合格
+- [ ] scorecard-enforcement-validation 合格
+- [ ] code-practicality-validation 合格
+- [ ] lp-structure-completeness-validation 合格
+- [ ] anti-ai-output-validation 合格
+- [ ] final-acceptance-validation 合格
+
+## Scorecard 必須
+
+- [ ] lp-master-scorecard 90点以上
+- [ ] emotional-cvr-scorecard 85点以上
+- [ ] benefit-clarity-scorecard 85点以上
+- [ ] expectation-scorecard 85点以上
+- [ ] self-relevance-scorecard 85点以上
+- [ ] human-naturalness-scorecard 85点以上
+- [ ] anti-ai-smell-scorecard 90点以上
+- [ ] code-practicality-scorecard 85点以上
+- [ ] lp-structure-completeness-scorecard 85点以上
+- [ ] legal-risk-scorecard 95点以上
+- [ ] final-output-scorecard 90点以上
+
+## Critical Fail なし
+
+- [ ] 法務 Critical Fail なし
+- [ ] 計測 Critical Fail なし
+- [ ] 主要動作 Critical Fail なし
+- [ ] AIっぽさ Critical Fail なし
+- [ ] LP構成 Critical Fail なし
+- [ ] コード Critical Fail なし
+
+## 出力ログ
+
+`outputs/08_review/final-acceptance-report.md` を必ず作成し、上記の合否を全項目記録する。
+
+1つでも未達の場合は **公開不可** とし、`lp-director` に差し戻し先を通知する。

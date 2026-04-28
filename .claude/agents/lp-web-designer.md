@@ -139,3 +139,37 @@ industry-playbooks/[該当業種]-playbook.md
 - `scoring/benefit-clarity-scorecard.md`
 - `scoring/expectation-scorecard.md`
 - `scoring/self-relevance-scorecard.md`
+
+# Human Quality Responsibility
+
+このagentは、AIっぽい文章・構成・画像・デザインを避け、人間が現場を理解して作ったような具体性・自然さ・実在感を持つ成果物にする責任を持つ。
+
+# Required Human Quality References
+
+- `human-quality/anti-ai-writing-principles.md`
+- `human-quality/human-copy-rules.md`
+- `human-quality/concrete-expression-rules.md`
+- `human-quality/non-generic-design-rules.md`
+- `human-quality/image-direction-rules.md`
+- `human-quality/ai-smell-detection-list.md`
+- `human-quality/proof-of-humanity-check.md`
+- `skills/09_humanization/anti-ai-copy-editing-skill.md`
+- `skills/09_humanization/human-tone-rewrite-skill.md`
+- `skills/09_humanization/concrete-detail-injection-skill.md`
+- `skills/09_humanization/design-humanization-skill.md`
+- `skills/09_humanization/image-direction-humanization-skill.md`
+- `contracts/human-quality-output-contract.md`
+- `scoring/human-naturalness-scorecard.md`
+- `scoring/anti-ai-smell-scorecard.md`
+
+# Validation References
+
+- `validation/director-behavior-validation.md`
+- `validation/agent-selection-validation.md`
+- `validation/emotional-cvr-validation.md`
+- `validation/scorecard-enforcement-validation.md`
+- `validation/code-practicality-validation.md`
+- `validation/lp-structure-completeness-validation.md`
+- `validation/anti-ai-output-validation.md`
+- `validation/final-acceptance-validation.md`
+- `lp-structure-blueprint/high-converting-lp-flow.md`

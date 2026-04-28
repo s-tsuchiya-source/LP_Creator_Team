@@ -197,3 +197,38 @@ LPの品質 = 情報品質 × 信頼品質 × 体験価値 × 期待感 × CV導
 - `contracts/experience-value-output-contract.md` — 体験価値の出力形式
 - `contracts/emotional-cvr-output-contract.md` — 感情ジャーニーの出力形式
 - `components/emotion/` — 感情に届く部品の勝ちパターン
+
+## Validation Layer / Human Quality Layer 必須運用
+
+このプロジェクトでは、LP制作時に必ず Validation Layer と Human Quality Layer を通す。
+
+最高品質のLPは、情報が揃っているだけでは不十分。
+見たユーザーにメリット・期待・安心・自分ごと化を与え、かつAIっぽさを感じさせず、人間が現場を理解して作ったような具体性・自然さ・実在感が必要である。
+
+以下を納品前の必須条件とする：
+
+- 初回は必ずヒアリングから始める
+- 使用agentは必要最小限とし、選定理由を残す
+- Emotional CVR Layer を反映する
+- 80点未満は差し戻す
+- LP Structure Blueprint に沿って構成を確認する
+- Human Quality Layer でAIっぽさを排除する
+- HTML/CSS/JS は実用レベルで検証する
+- final-gatekeeper が全項目を承認するまで納品しない
+
+## Validation 必須スコア（追加）
+
+- `scoring/human-naturalness-scorecard.md`: **85点以上**
+- `scoring/anti-ai-smell-scorecard.md`: **90点以上**
+- `scoring/lp-structure-completeness-scorecard.md`: **85点以上**
+- `scoring/code-practicality-scorecard.md`: **85点以上**
+
+## 関連ディレクトリ
+
+- `validation/` — 検証基盤
+- `lp-structure-blueprint/` — LP王道構成
+- `human-quality/` — 人間品質ナレッジ
+- `skills/09_humanization/` — Anti-AI 編集手順
+- `tests/validation-scenarios/` — テストシナリオ
+- `tests/expected-behaviors/` — 期待動作
+- `tests/evaluation-rubrics/` — 評価ルーブリック

@@ -373,3 +373,96 @@ LPの品質 = 情報品質 × 信頼品質 × 体験価値 × 期待感 × CV導
 - `scoring/benefit-clarity-scorecard.md`: **85点以上 必須**
 - `scoring/expectation-scorecard.md`: **85点以上 必須**
 - `scoring/self-relevance-scorecard.md`: **85点以上 必須**
+
+# Human Quality Responsibility
+
+このagentは、AIっぽい文章・構成・画像・デザインを避け、人間が現場を理解して作ったような具体性・自然さ・実在感を持つ成果物にする責任を持つ。
+
+# Required Human Quality References
+
+- `human-quality/anti-ai-writing-principles.md`
+- `human-quality/human-copy-rules.md`
+- `human-quality/concrete-expression-rules.md`
+- `human-quality/non-generic-design-rules.md`
+- `human-quality/image-direction-rules.md`
+- `human-quality/ai-smell-detection-list.md`
+- `human-quality/proof-of-humanity-check.md`
+- `skills/09_humanization/anti-ai-copy-editing-skill.md`
+- `skills/09_humanization/human-tone-rewrite-skill.md`
+- `skills/09_humanization/concrete-detail-injection-skill.md`
+- `skills/09_humanization/design-humanization-skill.md`
+- `skills/09_humanization/image-direction-humanization-skill.md`
+- `contracts/human-quality-output-contract.md`
+- `scoring/human-naturalness-scorecard.md`
+- `scoring/anti-ai-smell-scorecard.md`
+
+# Validation References
+
+- `validation/director-behavior-validation.md`
+- `validation/agent-selection-validation.md`
+- `validation/emotional-cvr-validation.md`
+- `validation/scorecard-enforcement-validation.md`
+- `validation/code-practicality-validation.md`
+- `validation/lp-structure-completeness-validation.md`
+- `validation/anti-ai-output-validation.md`
+- `validation/final-acceptance-validation.md`
+- `lp-structure-blueprint/high-converting-lp-flow.md`
+
+# Validation Mandatory Workflow
+
+`lp-director` は以下を必ず実施する：
+
+```
+1. 初回応答がヒアリングから始まるか検証
+2. agent-selection-log を作成
+3. 使用agentと除外agentを理由付きで記録
+4. Emotional CVR Layer の反映有無を確認
+5. LP Structure Blueprint との整合を確認
+6. 各成果物をscorecardで採点
+7. 80点未満を差し戻し
+8. Human Quality Layer でAIっぽさを検査
+9. HTML/CSS/JSをcode-practicalityで検査
+10. final-acceptance-validation を通して納品判断
+```
+
+# Required Logs
+
+以下のログを `outputs/08_review/` に必ず作成する：
+
+```
+agent-selection-log.md
+validation-report.md
+scorecard-summary.md
+human-quality-review.md
+code-practicality-review.md
+lp-structure-validation.md
+final-acceptance-report.md
+```
+
+# Human Quality Stop Conditions
+
+以下に該当する場合は差し戻す：
+
+```
+- どの会社にも当てはまるFV
+- AIっぽい抽象コピー
+- 意味の薄いhero画像
+- 実在感のない事例
+- テンプレート的なCTA
+- 画像・デザインが商材文脈と合っていない
+- ユーザーの本音がない
+```
+
+# Validation Layer 必須参照
+
+```
+validation/director-behavior-validation.md
+validation/agent-selection-validation.md
+validation/emotional-cvr-validation.md
+validation/scorecard-enforcement-validation.md
+validation/code-practicality-validation.md
+validation/lp-structure-completeness-validation.md
+validation/anti-ai-output-validation.md
+validation/final-acceptance-validation.md
+lp-structure-blueprint/high-converting-lp-flow.md
+```

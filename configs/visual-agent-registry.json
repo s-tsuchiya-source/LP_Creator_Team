@@ -1,0 +1,66 @@
+{
+  "team": "LP_Creator_Team",
+  "module": "visual-specialist-agents",
+  "version": "1.0.0",
+  "purpose": "LP内の写真・イラスト・UIモック・図解・CTA周辺UI・モーション・スマホ表示を、CVに効くビジュアル設計として統括する",
+  "agents": [
+    {
+      "name": "lp-visual-art-director",
+      "layer": "strategy",
+      "role": "LP全体のビジュアル戦略責任者",
+      "depends_on": []
+    },
+    {
+      "name": "lp-image-compositor",
+      "layer": "composite",
+      "role": "写真・UI・数値・短コピーを統合する合成ビジュアル担当",
+      "depends_on": ["lp-visual-art-director"]
+    },
+    {
+      "name": "lp-infographic-designer",
+      "layer": "infographic",
+      "role": "複雑な情報を図解・比較・ファネル・フローへ変換する担当",
+      "depends_on": ["lp-visual-art-director"]
+    },
+    {
+      "name": "lp-cta-ui-designer",
+      "layer": "conversion_ui",
+      "role": "CTA周辺・フォーム周辺・安心訴求UIを設計する担当",
+      "depends_on": ["lp-visual-art-director"]
+    },
+    {
+      "name": "lp-motion-director",
+      "layer": "motion",
+      "role": "スクロール演出・微アニメーションを設計する担当",
+      "depends_on": ["lp-image-compositor", "lp-cta-ui-designer", "lp-infographic-designer"]
+    },
+    {
+      "name": "lp-mobile-visual-optimizer",
+      "layer": "mobile",
+      "role": "スマホ表示の画像構図・CTA・余白・テキスト可読性を最適化する担当",
+      "depends_on": ["lp-image-compositor", "lp-cta-ui-designer", "lp-motion-director"]
+    },
+    {
+      "name": "lp-visual-quality-gate",
+      "layer": "quality_gate",
+      "role": "ビジュアル品質の最終審査担当",
+      "depends_on": [
+        "lp-visual-art-director",
+        "lp-image-compositor",
+        "lp-infographic-designer",
+        "lp-cta-ui-designer",
+        "lp-motion-director",
+        "lp-mobile-visual-optimizer"
+      ]
+    }
+  ],
+  "required_flow": [
+    "lp-visual-art-director",
+    "lp-image-compositor",
+    "lp-infographic-designer",
+    "lp-cta-ui-designer",
+    "lp-motion-director",
+    "lp-mobile-visual-optimizer",
+    "lp-visual-quality-gate"
+  ]
+}

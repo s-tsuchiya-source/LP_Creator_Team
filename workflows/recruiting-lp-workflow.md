@@ -60,3 +60,21 @@
 - 「成長できる」「やりがい」だけの抽象訴求はNG
 - 具体的な日常・数字を伝える
 - 求職者の不安に正面から答える
+
+---
+
+## 使用 agent / skills / contracts / scorecards / components / playbook
+
+- **agent**: lp-director, lp-persona-researcher, lp-customer-insight-researcher, lp-marketing-strategist, lp-chief-copywriter, lp-sales-copywriter, lp-proof-copywriter, lp-faq-copywriter, lp-creative-director, lp-web-designer, lp-frontend-engineer, lp-legal-expression-checker, lp-qa-lead
+- **skills**: 01_strategy, 03_copy (全), 04_design, 07_review (legal)
+- **contracts**: persona / strategy / copy / design
+- **scorecards**: copy / design / legal-risk / final-output
+- **components**: first-view/fv-recruiting / proof / faq
+- **playbook**: hr-recruiting-playbook.md
+
+## 完了条件
+
+- 性別・年齢制限表現なし（法務）
+- 写真・氏名は社員許諾済み
+- legal-risk-scorecard 95点以上
+- final-output-scorecard 90点以上

@@ -50,3 +50,20 @@
 - 既存LPの良い部分を壊さない（CV観点での退行回避）
 - 同時に複数要素を変えない（原因特定不能）
 - ブランドガイドラインがあれば準拠
+
+---
+
+## 使用 agent / skills / contracts / scorecards / components / playbook
+
+- **agent**: lp-director, lp-lpo-strategist, lp-heatmap-analyst, lp-ab-test-planner, lp-chief-copywriter, lp-cta-flow-designer, lp-form-implementation-specialist, lp-qa-lead
+- **skills**: 02_structure (cta-flow), 03_copy, 04_design (form-ui), 06_measurement (form-tracking), 07_review
+- **contracts**: copy-output / code-output / measurement-output / qa-output
+- **scorecards**: cta-form / copy / measurement / final-output
+- **components**: cta / form / faq
+- **playbook**: 既存LP業種に応じて選定
+
+## 完了条件
+
+- 改善版 final-output-scorecard 85点以上
+- A/Bテスト設計完了
+- 計測実装完了

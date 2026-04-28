@@ -82,3 +82,21 @@ outputs/06_code/[案件名]/
 - 計測タグの確認方法
 - フォーム送信先の差し替え方法
 - 注意点
+
+---
+
+## 使用 agent / skills / contracts / scorecards / components / playbook
+
+- **agent**: lp-frontend-engineer, lp-html-css-specialist, lp-javascript-engineer, lp-form-implementation-specialist, lp-performance-engineer, lp-accessibility-engineer, lp-qa-lead, lp-browser-test-specialist
+- **skills**: 05_development (全)
+- **contracts**: code-output
+- **scorecards**: final-output (実装品質)
+- **components**: cta / form / first-view
+- **playbook**: 案件業種に応じて選定
+
+## 完了条件
+
+- LCP < 2.5s / CLS < 0.1 / INP < 200ms
+- a11y 90+
+- 計測 data 属性完備
+- 主要ブラウザ動作

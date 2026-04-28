@@ -52,3 +52,13 @@
 ## 通過後の次フェーズ
 
 → Gate 7: Measurement Gate
+
+---
+
+## Related Contract / Scorecard
+
+- **Related Contract**: `contracts/code-output-contract.md`
+- **Related Scorecard**: `scoring/final-output-scorecard.md`（実装品質 15点満点中13+）
+- **Minimum Passing Score**: 実装品質 13+ / Lighthouse a11y 90+
+- **Critical Fail Conditions**: LCP > 2.5s / 計測未実装 / alt 省略
+- **Required Fix Actions**: `skills/05_development/` で再実装

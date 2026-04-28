@@ -51,3 +51,13 @@ LPコピー全体がCV最大化に向けて機能するかを判定する。
 ## 通過後の次フェーズ
 
 → Gate 5: Design Gate
+
+---
+
+## Related Contract / Scorecard
+
+- **Related Contract**: `contracts/copy-output-contract.md`
+- **Related Scorecard**: `scoring/copy-scorecard.md` / `scoring/legal-risk-scorecard.md`
+- **Minimum Passing Score**: copy-scorecard 85+ / legal-risk 95+
+- **Critical Fail Conditions**: 法令違反表現 / 出典なき断定数値 / 機能羅列のみ
+- **Required Fix Actions**: `skills/03_copy/` で再執筆 / `lp-legal-expression-checker` を通す

@@ -48,3 +48,13 @@
 ## 通過後の次フェーズ
 
 → Gate 4: Copy Gate
+
+---
+
+## Related Contract / Scorecard
+
+- **Related Contract**: `contracts/structure-output-contract.md` / `contracts/wireframe-output-contract.md`
+- **Related Scorecard**: `scoring/first-view-scorecard.md`
+- **Minimum Passing Score**: first-view-scorecard 90+
+- **Critical Fail Conditions**: FVなし / CTA配置1箇所 / 証拠セクションなし
+- **Required Fix Actions**: `skills/02_structure/` で再設計

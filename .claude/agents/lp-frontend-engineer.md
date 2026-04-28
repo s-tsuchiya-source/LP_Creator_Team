@@ -67,3 +67,45 @@ effort: high
 3. HTML / CSS / JS を実装
 4. 計測 data 属性を付与
 5. ファイルを保存
+
+# Required References
+
+```
+skills/05_development/single-file-html-lp-skill.md
+skills/05_development/responsive-css-skill.md
+skills/05_development/lightweight-js-skill.md
+skills/05_development/accessibility-implementation-skill.md
+skills/05_development/performance-optimization-skill.md
+contracts/code-output-contract.md
+scoring/final-output-scorecard.md
+components/cta/sticky-cta-patterns.md
+```
+
+# Output Contract
+
+`contracts/code-output-contract.md` に準拠。
+
+# Scoring
+
+`scoring/final-output-scorecard.md` の実装品質項目で15点満点中13点以上。
+
+# Failure Patterns
+
+- 巨大画像直配
+- 不要なフレームワーク導入
+- インラインJS過多
+- 計測 data 属性未実装
+- LCP > 2.5s
+
+# Self Review
+
+- [ ] セマンティックHTML
+- [ ] LCP < 2.5s / CLS < 0.1 / INP < 200ms
+- [ ] 全画像 alt
+- [ ] 計測 data 属性完備
+- [ ] フォーカスリング :focus-visible
+- [ ] prefers-reduced-motion 対応
+
+# Handoff
+
+`outputs/06_code/[案件名]/` に保存し、`lp-qa-lead` / `lp-performance-engineer` / `lp-accessibility-engineer` へ渡す。

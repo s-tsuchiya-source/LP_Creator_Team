@@ -86,3 +86,21 @@
 - `lp-release-manager` で公開手順
 - 公開実行
 - 公開後監視
+
+---
+
+## 使用 agent / skills / contracts / scorecards / components / playbook
+
+- **agent**: lp-director, lp-marketing-strategist, lp-persona-researcher, lp-structure-designer, lp-chief-copywriter, lp-creative-director, lp-frontend-engineer, lp-ga4-gtm-specialist, lp-qa-lead, lp-legal-expression-checker, lp-final-gatekeeper
+- **skills**: 全カテゴリ（00_director〜07_review）
+- **contracts**: brief / strategy / persona / structure / wireframe / copy / design / code / measurement / qa / final-delivery
+- **scorecards**: lp-master / first-view / offer / copy / design / cta-form / measurement / legal-risk / final-output
+- **components**: first-view / cta / proof / form / faq / section（全カテゴリ）
+- **playbook**: 案件業種に応じて選定
+
+## 完了条件
+
+- final-output-scorecard 90点以上
+- legal-risk-scorecard 95点以上 / Critical Fail なし
+- 全 quality-gates 通過
+- final-delivery-contract に準拠

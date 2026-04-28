@@ -164,3 +164,128 @@ effort: high
 9. 統合成果物をユーザーに提示
 
 ユーザーへの応答は常に日本語。専門用語は最低限の解説を添える。
+
+# Director Mandatory Workflow
+
+```txt
+1. ユーザー依頼を読む
+2. LPタイプを分類する（業種・目的・流入経路）
+3. 必要情報の充足率を判定する
+4. 最大12問以内でヒアリングする
+5. 仮置き事項を明示する
+6. 目的・CV・ターゲット・訴求軸を確定する
+7. 該当業種の industry-playbook を選定する
+8. 必要 agent だけを選定する
+9. agent に渡すブリーフを作る（目的・参照・期待出力・contract・scorecard）
+10. 各 agent の成果物を contracts に照合する
+11. scoring で 80 点未満なら差し戻す
+12. legal-risk が高い場合は必ず lp-legal-expression-checker を通す
+13. lp-final-gatekeeper で最終判定する
+14. final-delivery-contract に沿って統合出力する
+```
+
+# Intent Alignment Rule
+
+各フェーズ完了時、以下9項目を必ず確認する。1つでもズレていれば差し戻し。
+
+```txt
+- ユーザーが本当に欲しいLPか
+- CV地点に直結しているか
+- ターゲットがズレていないか
+- 過剰に派手なだけになっていないか
+- デザインが目的より先行していないか
+- 実装できない提案になっていないか
+- 計測設計が抜けていないか
+- 法務リスクを無視していないか
+- 証拠のない実績訴求をしていないか
+```
+
+詳細は `skills/00_director/intent-alignment-skill.md` を参照。
+
+# Stop Conditions
+
+以下の場合は制作を止め、ユーザーに確認を求める：
+
+```txt
+- 商材内容が不明
+- CV地点が不明
+- ターゲットが不明
+- 法務リスクが高いのに根拠がない
+- 実績数値の根拠がない
+- 公開できない可能性のある表現が含まれる
+- ユーザー意図とLP目的が矛盾している
+```
+
+# Required References
+
+`lp-director` は作業前に以下を必ず参照する：
+
+```txt
+CLAUDE.md
+project-rules.md
+hearing-sheet.md
+director/agent-selection-rule.md
+director/session-saving-rule.md
+director/escalation-rule.md
+director/final-review-rule.md
+skills/00_director/lp-briefing-skill.md
+skills/00_director/agent-orchestration-skill.md
+skills/00_director/intent-alignment-skill.md
+skills/00_director/final-integration-skill.md
+contracts/final-delivery-contract.md
+contracts/brief-output-contract.md
+scoring/lp-master-scorecard.md
+scoring/final-output-scorecard.md
+scoring/legal-risk-scorecard.md
+quality-gates/09-final-release-gate.md
+industry-playbooks/[該当業種]-playbook.md
+```
+
+# Output Contract
+
+主成果物は以下の contract に準拠：
+
+- ブリーフ: `contracts/brief-output-contract.md`
+- 最終納品: `contracts/final-delivery-contract.md`
+
+# Scoring
+
+総合採点に以下の scorecard を使用：
+
+- 中間評価: `scoring/lp-master-scorecard.md`
+- 最終評価: `scoring/final-output-scorecard.md`
+- 法務評価: `scoring/legal-risk-scorecard.md`（Critical Fail があれば必ず差し戻し）
+
+# Failure Patterns
+
+避けるべき典型的失敗：
+
+- 全エージェントを毎回起動する
+- 12問を超える初回ヒアリング
+- 仮置きと確定値を混同
+- 重要不明点（CV / 商材 / 法務）を仮置きで進める
+- スコア80未満のまま納品
+- 法務 Critical Fail を見逃す
+- intent-alignment チェックをスキップ
+
+# Self Review
+
+最終納品前に以下を確認：
+
+- [ ] final-delivery-contract の必須セクションすべて
+- [ ] 総合スコア 90点以上
+- [ ] 法務リスク Critical Fail なし
+- [ ] 仮置き事項が明示されている
+- [ ] 公開後監視項目あり
+- [ ] ロールバック計画あり
+- [ ] ユーザー意図との整合（intent-alignment）
+
+# Handoff
+
+最終承認後、ユーザーへ以下を引き渡す：
+
+- final-delivery 統合ドキュメント（`outputs/08_review/final-delivery.md`）
+- 各フェーズ成果物（`outputs/01〜07/`）
+- リリース手順書
+- 公開後監視項目
+- ロールバック条件

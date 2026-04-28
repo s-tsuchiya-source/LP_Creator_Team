@@ -110,3 +110,56 @@
 - 入力情報なしで依頼
 - 期待出力が曖昧な依頼
 - 中間成果物を毎回再生成
+
+---
+
+## 高品質化アップデートに関する追記
+
+このプロジェクトは `skills/` `contracts/` `scoring/` `components/` `industry-playbooks/` を活用した高品質化アップデートが適用されています。
+
+### 高品質化要素
+
+| 要素 | 役割 | 場所 |
+|---|---|---|
+| skills | 作業手順 | `skills/` |
+| contracts | 成果物の型 | `contracts/` |
+| scoring | 品質採点 | `scoring/` |
+| components | LP部品パターン | `components/` |
+| industry-playbooks | 業種別攻略書 | `industry-playbooks/` |
+
+### LP制作依頼時の推奨プロンプト
+
+```
+LP_Creator_Team の lp-director を起点にして、LP制作を開始してください。
+
+まずは必要事項を最大12問以内でヒアリングしてください。
+その後、回答内容をもとに、contracts と scorecards に準拠して、
+戦略設計、構成、コピー、デザイン方針、HTML/CSS/JS、GA4/GTM計測設計、QAチェックリストまで作成してください。
+
+80点未満の成果物は差し戻し、90点以上を納品推奨基準としてください。
+```
+
+### agent選定の考え方
+
+- 案件タイプに応じて最小構成（director/agent-selection-rule.md）
+- 全agent呼び出しは禁止
+- 法務リスク該当業種では `lp-legal-expression-checker` が必須
+
+### 品質スコアリングの運用
+
+- 各フェーズ完了時: 該当 scorecard で採点
+- 80点未満: 該当 agent に差し戻し
+- 90点以上: 納品推奨
+- 法務 Critical Fail: 点数に関係なく公開不可
+
+### GitHub に上げてはいけない情報
+
+- `.env` / `.env.*`
+- `.claude/settings.local.json`
+- API キー / 接続文字列
+- 顧客実名・連絡先・ロゴ（許諾なし）
+- 顧客実績数値の断定
+- ブランドガイドライン PDF（NDA該当）
+- 実案件の `outputs/` 配下成果物（公開リポジトリの場合）
+
+詳細は `docs/github-upload-guide.md` を参照。

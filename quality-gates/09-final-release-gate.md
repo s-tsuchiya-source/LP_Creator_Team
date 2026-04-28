@@ -57,3 +57,13 @@ LP公開可否を最終判定する。
 → ユーザーへ公開承認通知
 → 公開実行
 → 公開後監視（最初の1日 / 1週間）
+
+---
+
+## Related Contract / Scorecard
+
+- **Related Contract**: `contracts/final-delivery-contract.md`
+- **Related Scorecard**: `scoring/lp-master-scorecard.md` / `scoring/final-output-scorecard.md` / `scoring/legal-risk-scorecard.md`
+- **Minimum Passing Score**: lp-master 90+ / final-output 90+ / legal-risk 95+
+- **Critical Fail Conditions**: BLOCK レビューあり / Critical Fail（法務 / 計測 / 主要動作）あり
+- **Required Fix Actions**: `skills/07_review/release-readiness-review-skill.md` で再判定

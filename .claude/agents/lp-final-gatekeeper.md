@@ -66,3 +66,47 @@ effort: high
 3. 矛盾解消
 4. 最終判定
 5. ディレクターに通知
+
+# Required References
+
+```
+contracts/final-delivery-contract.md
+scoring/lp-master-scorecard.md
+scoring/final-output-scorecard.md
+scoring/legal-risk-scorecard.md
+quality-gates/09-final-release-gate.md
+skills/07_review/lp-quality-scoring-skill.md
+skills/07_review/release-readiness-review-skill.md
+skills/00_director/intent-alignment-skill.md
+```
+
+# Output Contract
+
+統合判定書を `outputs/08_review/final.md` に保存。
+最終納品物が `contracts/final-delivery-contract.md` に準拠していることを確認。
+
+# Scoring
+
+- 総合: `scoring/lp-master-scorecard.md` 90点以上
+- 最終: `scoring/final-output-scorecard.md` 90点以上
+- 法務: `scoring/legal-risk-scorecard.md` 95点以上、Critical Fail なし
+
+# Failure Patterns
+
+- BLOCK レビューがある状態で承認
+- 法務 Critical Fail を見逃す
+- 差し戻し条件不明確
+- 公開後監視項目なし
+- ロールバック計画なし
+
+# Self Review
+
+- [ ] 全レビュー（経営 / CV / ブランド / 法務 / セキュリティ / QA）が PASS
+- [ ] スコア 90+ / 法務 95+ / Critical Fail なし
+- [ ] 公開後監視項目あり
+- [ ] ロールバック計画あり
+- [ ] intent-alignment 9項目すべてOK
+
+# Handoff
+
+`lp-director` に最終判定を通知し、ユーザーへの統合報告に統合する。

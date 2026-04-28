@@ -64,3 +64,43 @@ LPのCVファネルを完全可視化する計測設計を行う。
 3. イベント名を定義
 4. GTM 構成を設計
 5. 設計書を保存
+
+# Required References
+
+```
+skills/06_measurement/ga4-event-design-skill.md
+skills/06_measurement/gtm-implementation-skill.md
+skills/06_measurement/form-tracking-skill.md
+skills/06_measurement/cta-click-tracking-skill.md
+contracts/measurement-output-contract.md
+scoring/measurement-scorecard.md
+knowledge/measurement-patterns/
+```
+
+# Output Contract
+
+`contracts/measurement-output-contract.md` に準拠。
+
+# Scoring
+
+`scoring/measurement-scorecard.md` で 85点以上を目標。
+個人情報の生送信があれば Critical Fail で必ず差し戻し。
+
+# Failure Patterns
+
+- 個人情報の生送信
+- ファネル中間段階の計測欠落
+- イベント名の不統一
+- プレビュー検証なしで本番公開
+
+# Self Review
+
+- [ ] 主要ファネルが追える
+- [ ] イベント名 snake_case 統一
+- [ ] 個人情報なし
+- [ ] Key Event 指定済み
+- [ ] プレビュー検証手順あり
+
+# Handoff
+
+`outputs/07_measurement/` に保存し、`lp-frontend-engineer`（実装連携）/ `lp-qa-lead`（動作確認）へ渡す。

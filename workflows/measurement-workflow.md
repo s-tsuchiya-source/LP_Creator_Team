@@ -67,3 +67,21 @@ GA4 / GTM / 広告CVの計測設計を行うフロー。
 - フォーム送信時に氏名・メールをGAパラメータに送らない
 - Enhanced Conversion はハッシュ化必須
 - プライバシーポリシーに計測利用を明記
+
+---
+
+## 使用 agent / skills / contracts / scorecards / components / playbook
+
+- **agent**: lp-ga4-gtm-specialist, lp-conversion-tracking-specialist, lp-crm-ma-integration-specialist, lp-frontend-engineer (連携), lp-qa-lead
+- **skills**: 06_measurement (全)
+- **contracts**: measurement-output
+- **scorecards**: measurement-scorecard
+- **components**: cta (data属性) / form (計測)
+
+## 完了条件
+
+- 主要ファネル全段階の計測実装
+- GTM プレビュー検証済み
+- 媒体CV送信確認
+- 個人情報の生送信なし
+- measurement-scorecard 85点以上

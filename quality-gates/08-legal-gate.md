@@ -49,3 +49,13 @@
 ## 通過後の次フェーズ
 
 → Gate 9: Final Release Gate
+
+---
+
+## Related Contract / Scorecard
+
+- **Related Contract**: `contracts/qa-output-contract.md`（法務チェック含む）
+- **Related Scorecard**: `scoring/legal-risk-scorecard.md`
+- **Minimum Passing Score**: legal-risk 95+
+- **Critical Fail Conditions**: 効果効能の業法違反 / No.1根拠なし / 個人情報同意UIなし
+- **Required Fix Actions**: `skills/07_review/legal-expression-review-skill.md` で再監査

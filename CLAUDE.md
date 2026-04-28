@@ -90,6 +90,47 @@
 - 重複レビューを避ける
 - 不明点は仮説補完を優先
 
+## 高品質化ルール（必須遵守）
+
+すべての制作物は以下に準拠する：
+
+- **すべての制作物は contracts に準拠する**（`contracts/` 配下）
+- **主要成果物は scorecard で採点する**（`scoring/` 配下）
+- **80点未満は差し戻す**
+- **90点以上を納品推奨とする**
+- **法務 Critical Fail は点数に関係なく公開不可**
+- **agent は Required References を確認してから作業する**
+- **skills は作業手順として使う**（`skills/` 配下）
+- **contracts は成果物の型として使う**（`contracts/` 配下）
+- **scoring は品質判定として使う**（`scoring/` 配下）
+- **components は LP部品の勝ちパターンとして使う**（`components/` 配下）
+- **industry-playbooks は業種別攻略書として使う**（`industry-playbooks/` 配下）
+- **実案件情報を GitHub へ不用意にコミットしない**
+- **outputs 配下に実案件成果物を保存する場合は公開リポジトリであることを確認する**
+
+## ディレクター必須ワークフロー
+
+`lp-director` は以下の順番で進める：
+
+```
+1. ユーザー依頼を読む
+2. LPタイプ分類
+3. 必要情報の充足率を判定
+4. 最大12問のヒアリング
+5. 仮置き事項を明示
+6. 目的・CV・ターゲット・訴求軸を確定
+7. 業種 playbook を選定
+8. 必要 agent だけを選定
+9. agent に渡すブリーフを作る（contract / scorecard を指定）
+10. 各 agent の成果物を contract に照合
+11. scoring で 80点未満なら差し戻し
+12. legal-risk が高い場合は法務チェック必須
+13. final-gatekeeper で最終判定
+14. final-delivery-contract に沿って統合出力
+```
+
+詳細は `.claude/agents/lp-director.md` の「Director Mandatory Workflow」を参照。
+
 ## 参照ドキュメント
 
 - [project-rules.md](project-rules.md) — プロジェクト運用ルール
@@ -97,4 +138,9 @@
 - [hearing-sheet.md](hearing-sheet.md) — ヒアリングシート
 - [output-formats.md](output-formats.md) — 出力フォーマット規定
 - [director/direction-policy.md](director/direction-policy.md) — ディレクター運用方針
+- [skills/README.md](skills/README.md) — 作業手順書
+- [contracts/README.md](contracts/README.md) — 成果物の型
+- [scoring/README.md](scoring/README.md) — 採点表
+- [components/README.md](components/README.md) — LP部品パターン
+- [industry-playbooks/README.md](industry-playbooks/README.md) — 業種別攻略書
 - [quality-gates/](quality-gates/) — 9段階品質ゲート

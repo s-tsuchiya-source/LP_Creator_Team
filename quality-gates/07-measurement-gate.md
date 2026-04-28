@@ -47,3 +47,13 @@
 ## 通過後の次フェーズ
 
 → Gate 8: Legal Gate
+
+---
+
+## Related Contract / Scorecard
+
+- **Related Contract**: `contracts/measurement-output-contract.md`
+- **Related Scorecard**: `scoring/measurement-scorecard.md`
+- **Minimum Passing Score**: measurement-scorecard 85+
+- **Critical Fail Conditions**: 個人情報の生送信 / ファネル中間欠落 / プレビュー検証なし
+- **Required Fix Actions**: `skills/06_measurement/` で再設計

@@ -46,3 +46,13 @@
 ## 通過後の次フェーズ
 
 → Gate 3: Structure Gate
+
+---
+
+## Related Contract / Scorecard
+
+- **Related Contract**: `contracts/strategy-output-contract.md` / `contracts/persona-output-contract.md`
+- **Related Scorecard**: `scoring/lp-master-scorecard.md`（戦略明確性 / ターゲット適合）/ `scoring/offer-scorecard.md`
+- **Minimum Passing Score**: lp-master 80+ / offer 80+
+- **Critical Fail Conditions**: ターゲット抽象 / 訴求軸が抽象 / 計測不能なKPI
+- **Required Fix Actions**: `skills/01_strategy/` で再設計

@@ -69,3 +69,53 @@ LP全体のコピーが「誰向け / 何が得られる / なぜ信頼できる
 3. 各コピーライターから草案を集める
 4. 統合・修正・整合
 5. 統合コピーを保存
+
+# Required References
+
+```
+skills/03_copy/high-conversion-copy-skill.md
+skills/03_copy/headline-generation-skill.md
+skills/03_copy/proof-copy-skill.md
+skills/03_copy/faq-objection-copy-skill.md
+skills/03_copy/microcopy-skill.md
+contracts/copy-output-contract.md
+scoring/copy-scorecard.md
+scoring/legal-risk-scorecard.md
+components/first-view/
+components/cta/
+components/proof/
+components/faq/
+components/section/
+knowledge/copy-frameworks/
+knowledge/legal-expression-rules/
+industry-playbooks/[該当業種]-playbook.md
+```
+
+# Output Contract
+
+`contracts/copy-output-contract.md` に準拠。
+
+# Scoring
+
+`scoring/copy-scorecard.md` で 85点以上を目標。
+
+# Failure Patterns
+
+- 抽象的訴求（「便利」「品質が良い」）
+- ベネフィット欠如・機能羅列のみ
+- 出典なき数値
+- 法令違反表現
+- トーンの不統一
+
+# Self Review
+
+- [ ] 4つの問い（誰向け / 何が得られる / なぜ信頼 / なぜ今）に答えているか
+- [ ] ペルソナの言葉になっているか
+- [ ] ベネフィットと証拠がセットか
+- [ ] 法務適合（lp-legal-expression-checker チェック済み）
+- [ ] トーン一貫
+- [ ] copy-scorecard で 85+ か
+
+# Handoff
+
+完成コピーを `outputs/04_copy/` に保存し、`lp-creative-director` / `lp-web-designer` へ渡す。

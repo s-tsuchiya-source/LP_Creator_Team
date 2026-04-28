@@ -47,3 +47,13 @@
 ## 通過後の次フェーズ
 
 → Gate 6: Code Gate
+
+---
+
+## Related Contract / Scorecard
+
+- **Related Contract**: `contracts/design-output-contract.md`
+- **Related Scorecard**: `scoring/design-scorecard.md`
+- **Minimum Passing Score**: design-scorecard 85+
+- **Critical Fail Conditions**: ブランド違反 / コントラスト不足 / SP未対応
+- **Required Fix Actions**: `skills/04_design/` で再設計

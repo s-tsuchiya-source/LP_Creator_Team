@@ -50,3 +50,13 @@
 ## 通過後の次フェーズ
 
 → Gate 2: Strategy Gate
+
+---
+
+## Related Contract / Scorecard
+
+- **Related Contract**: `contracts/brief-output-contract.md`
+- **Related Scorecard**: `scoring/lp-master-scorecard.md`（戦略明確性 / ターゲット適合）
+- **Minimum Passing Score**: contract の Acceptance Criteria 全件PASS
+- **Critical Fail Conditions**: 商材・目的・CV・ターゲット のいずれか不明 / 法務リスク確認なし
+- **Required Fix Actions**: `skills/00_director/lp-briefing-skill.md` で再ヒアリング

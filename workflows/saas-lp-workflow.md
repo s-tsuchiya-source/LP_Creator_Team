@@ -65,3 +65,21 @@ SaaSプロダクトのLP制作フロー。
 - 「誰のどんな業務がどう変わるか」を具体化
 - 価格は隠さず明示（信頼）
 - セキュリティ・SLA・サポート も訴求要素
+
+---
+
+## 使用 agent / skills / contracts / scorecards / components / playbook
+
+- **agent**: lp-director, lp-business-model-analyst, lp-marketing-strategist, lp-offer-architect, lp-headline-specialist, lp-proof-copywriter, lp-competitor-researcher, lp-faq-copywriter, lp-frontend-engineer, lp-ga4-gtm-specialist, lp-qa-lead
+- **skills**: 01_strategy (全), 02_structure, 03_copy (headline / proof), 06_measurement
+- **contracts**: strategy / copy / code / measurement
+- **scorecards**: lp-master / offer / copy / measurement
+- **components**: first-view/fv-saas / cta / proof
+- **playbook**: btob-saas-playbook.md
+
+## 完了条件
+
+- 価格プラン3案 + 推奨ハイライト
+- 競合比較表あり
+- 無料トライアル登録動作確認
+- final-output-scorecard 90点以上

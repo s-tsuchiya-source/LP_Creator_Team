@@ -160,3 +160,25 @@
 - [ ] outputs/08_review/visual-expression-scorecard.md
 
 詳細は `quality-gates/visual-expression-gate.md` を参照。
+
+---
+
+## Hero Art Direction + Japanese Line Break 通過確認（追加）
+
+### Hero Art Direction
+- [ ] 3パターン以上比較
+- [ ] hero-art-direction-scorecard 85+
+- [ ] non-dashboard-hero-scorecard 85+
+- [ ] photo-annotation-hero-scorecard 85+（写真パターン時）
+- [ ] hero-pattern-selection.md 作成
+
+### Japanese Line Break
+- [ ] japanese-line-break-scorecard 85+
+- [ ] 助詞分断ゼロ
+- [ ] 複合語分断ゼロ
+- [ ] PC / SP 改行分離（br クラス）
+- [ ] japanese-line-break-review.md 作成
+
+詳細は以下を参照：
+- `quality-gates/hero-art-direction-gate.md`
+- `quality-gates/japanese-line-break-gate.md`

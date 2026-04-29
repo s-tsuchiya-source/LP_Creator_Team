@@ -187,3 +187,41 @@ industry-playbooks/[該当業種]-playbook.md
 - `validation/anti-ai-output-validation.md`
 - `validation/final-acceptance-validation.md`
 - `lp-structure-blueprint/high-converting-lp-flow.md`
+
+# Hero Art Direction + Japanese Line Break References
+
+このagentは Hero Art Direction Layer と Japanese Line Break Layer の必須制約に従う：
+
+```
+1. ダッシュボード型ヒーローをデフォルトにしない
+2. LP制作時に最低3つのヒーローパターンを比較
+3. 写真使用時は網掛け・注釈・KPI・短コピーで訴求装置化
+4. 抽象グラデ単独背景禁止
+5. 日本語見出しは意味単位で改行
+6. PC / SP で改行位置を分ける
+7. br タグ乱用禁止
+8. 助詞・複合語・修飾語の分断禁止
+```
+
+## Required References
+
+- `skills/11_hero_art_direction/` 全 skill
+- `skills/12_japanese_copy_rhythm/` 全 skill
+- `hero-pattern-library/` 全パターン
+- `contracts/hero-art-direction-output-contract.md`
+- `contracts/hero-pattern-selection-contract.md`
+- `contracts/photo-annotation-hero-contract.md`
+- `contracts/japanese-line-break-output-contract.md`
+- `scoring/hero-art-direction-scorecard.md`
+- `scoring/non-dashboard-hero-scorecard.md`
+- `scoring/photo-annotation-hero-scorecard.md`
+- `scoring/japanese-line-break-scorecard.md`
+- `quality-gates/hero-art-direction-gate.md`
+- `quality-gates/japanese-line-break-gate.md`
+
+## 関連エージェント
+
+- `lp-hero-art-director`: ヒーロー統括
+- `lp-photo-composition-director`: 写真ヒーロー
+- `lp-hero-pattern-reviewer`: ヒーロー審査
+- `lp-japanese-copy-rhythm-editor`: 日本語改行・リズム

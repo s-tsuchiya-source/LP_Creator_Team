@@ -272,3 +272,45 @@ LPの品質 = 情報品質 × 信頼品質 × 体験価値 × 期待感 × CV導
 - `lp-typography-director` — 日本語ラベル設計
 - `lp-shape-language-designer` — 形状言語設計
 - `lp-human-art-reviewer` — 人間品質審査
+
+## Hero Art Direction + Japanese Line Break Layer 必須運用
+
+このプロジェクトでは、LP制作時に Hero Art Direction Layer と Japanese Line Break Layer を必ず通す。
+
+### Hero Art Direction 必須制約
+
+1. ダッシュボード型ヒーローをデフォルトにしない
+2. LP制作時に最低3つのヒーローパターンを比較して選定する
+3. 選定理由を `outputs/05_design/hero-pattern-selection.md` に残す
+4. ヒーロー画像は装飾ではなくCVに貢献する役割を持たせる
+5. 写真を使う場合は、網掛け・注釈・KPI・短コピーで訴求装置化する
+6. ヒーロー背景に意味のない抽象グラデーションだけを使わない
+
+### Japanese Line Break 必須制約
+
+7. 日本語見出しは意味単位で改行する
+8. PC / SP で改行位置を分ける
+9. brタグを乱用しない
+10. 助詞・修飾語・名詞の分断を禁止する
+
+### 必須スコア（追加）
+
+- `scoring/hero-art-direction-scorecard.md`: **85点以上**
+- `scoring/non-dashboard-hero-scorecard.md`: **85点以上**
+- `scoring/photo-annotation-hero-scorecard.md`（写真パターン採用時）: **85点以上**
+- `scoring/japanese-line-break-scorecard.md`: **85点以上**
+
+### 関連ディレクトリ
+
+- `skills/11_hero_art_direction/` — Hero Art Direction skill
+- `skills/12_japanese_copy_rhythm/` — Japanese Line Break skill
+- `hero-pattern-library/` — 10種ヒーローパターン
+- `quality-gates/hero-art-direction-gate.md`
+- `quality-gates/japanese-line-break-gate.md`
+
+### 担当エージェント（新規）
+
+- `lp-hero-art-director` — ヒーロー統括
+- `lp-photo-composition-director` — 写真ヒーロー
+- `lp-hero-pattern-reviewer` — ヒーロー審査
+- `lp-japanese-copy-rhythm-editor` — 日本語改行・リズム

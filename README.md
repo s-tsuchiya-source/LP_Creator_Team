@@ -329,3 +329,45 @@ outputs/08_review/visual-expression-scorecard.md
 - `lp-human-art-reviewer` — 人間品質審査
 
 詳細は [skills/10_visual_expression/](skills/10_visual_expression/) を参照。
+
+## Hero Art Direction Layer
+
+LPのヒーロー（FV）を「ダッシュボード型のデフォルト」にせず、最低3つのパターンを比較して選定します。
+
+### 10種ヒーローパターン
+
+```
+1. product-ui-preview-hero
+2. photo-annotation-hero
+3. editorial-typography-hero
+4. before-after-hero
+5. workflow-diagram-hero
+6. customer-scene-hero
+7. report-ledger-hero
+8. video-demo-hero
+9. problem-visualization-hero
+10. no-image-bold-copy-hero
+```
+
+詳細は [hero-pattern-library/](hero-pattern-library/) を参照。
+
+## Japanese Line Break Layer
+
+日本語コピーの改行を意味単位で行い、AIっぽいランダム改行を排除します。
+
+```
+✓ 助詞分断ゼロ
+✓ 複合語分断ゼロ
+✓ 修飾語と名詞の分断ゼロ
+✓ PC / SP で改行位置を分ける
+✓ br タグ乱用排除
+```
+
+詳細は [skills/12_japanese_copy_rhythm/](skills/12_japanese_copy_rhythm/) を参照。
+
+### 担当エージェント
+
+- `lp-hero-art-director` — ヒーロー統括
+- `lp-photo-composition-director` — 写真ヒーロー
+- `lp-hero-pattern-reviewer` — ヒーロー審査
+- `lp-japanese-copy-rhythm-editor` — 日本語改行・リズム

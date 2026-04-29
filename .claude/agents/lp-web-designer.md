@@ -172,4 +172,61 @@ industry-playbooks/[該当業種]-playbook.md
 - `validation/lp-structure-completeness-validation.md`
 - `validation/anti-ai-output-validation.md`
 - `validation/final-acceptance-validation.md`
+- `validation/design-differentiation-validation.md`
 - `lp-structure-blueprint/high-converting-lp-flow.md`
+
+# Design Differentiation Mandatory
+
+LPセクション設計が一辺倒（全カード・全アイコン横並び）にならないよう、UI Component Strategy を商材・ターゲット・CV目的に応じて選び分ける責任を負う。
+
+## このagentに求められるデザイン判断（責務範囲）
+
+- **UI Component Strategy**: 各セクションで cards / tabs / accordion / stepper / comparison-table / pricing-table / sticky-CTA / modal / form / timeline / proof-block の中から、理解促進 or CV促進に貢献するものを選定し、選定理由を残す
+- **セクション間リズム**: 同一カード羅列を避け、視線を飽きさせないコントラスト（密度・色・形状）を設計
+- **業界差の反映**: BtoB SaaS / 採用 / EC / セミナー / ローカル等で異なる UI パターンを使い分け、`industry-playbooks/[該当].md` の構造推奨と整合
+- **CTA配置**: ヘッダー / FV / 中段（最低2箇所）/ 直前 / フォーム / フローティング のうちLPに最適な構成を選定
+
+## Required Design Differentiation References
+
+- `.ai-workflow/director/design-differentiation-task.md`
+- `design-differentiation/mandatory-design-differentiation.md`
+- `contracts/design-differentiation-output-contract.md`
+- `scoring/design-differentiation-scorecard.md` （**85点以上 必須**）
+- `quality-gates/design-differentiation-gate.md`
+- `validation/design-differentiation-validation.md`
+- `templates/visual-brief-template.md`
+- `templates/visual-review-sheet.md`
+- `docs/visual-agent-architecture.md`
+- `docs/visual-production-workflow.md`
+- `configs/visual-agent-registry.json`
+- `industry-playbooks/[該当業種]-playbook.md`
+
+## External Design Reference Sources（参考元 / 丸写し禁止）
+
+- アイコン: https://pa-tu.work/tools/icon-search/
+- UI辞典: https://ui-design-dictionary.pages.dev/
+- Material Design Components: https://m3.material.io/components
+- Web Design キュレーション: https://craftwork.design/curated/websites/
+
+## Anti-Pattern（このagentが避けるべき出力）
+
+- 全セクション同じカード3列（密度の単調さ）
+- 装飾目的のセクション（CV貢献なし）
+- 業種を変えても同じになるUI構成
+- comparison-table を使っているのに、競合との差が言語化されていない
+- 参考LPのセクション順序を丸写し
+
+## Mandatory Output Items
+
+- UI Component Strategy（セクションごとの選定 + 理由）
+- セクション間リズム設計
+- CTA配置設計（最低3箇所、配置理由付き）
+- 業界playbook との整合確認
+- CV Impact Hypothesis
+- Anti-Generic Design Check
+
+## Stop Conditions
+
+- 同一UIパターンの羅列のみ
+- セクション選定理由が「綺麗」「定番」のみ
+- CTA配置が1箇所のみ

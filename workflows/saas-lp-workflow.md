@@ -148,6 +148,7 @@ SaaSプロダクトのLP制作フロー。
 - human-quality-review.md
 - code-practicality-review.md
 - lp-structure-validation.md
+- design-differentiation-layer-report.md
 - final-acceptance-report.md
 
 参照：
@@ -155,3 +156,36 @@ SaaSプロダクトのLP制作フロー。
 - `lp-structure-blueprint/`
 - `human-quality/`
 - `skills/09_humanization/`
+- `design-differentiation/`
+
+---
+
+## Design Differentiation Mandatory（必須・全フェーズ通過）
+
+SaaS LPは比較・機能訴求・トライアル誘導が多いため、競合と同じデザインになりやすい。商材ポジショニング（業務効率 / データ可視化 / 属人化解消 / セキュリティ）・ターゲット（担当 / 決裁 / 情シス）・CV目的（資料 / トライアル / デモ）に応じて、UI Component / Typography / Animation を**選んで決める**。
+
+### このワークフローでの必須事項
+
+- デザインフェーズで `lp-visual-asset-director` を起動し、`templates/visual-brief-template.md` を出力
+- `contracts/design-differentiation-output-contract.md` の必須セクションすべて記録
+- `industry-playbooks/btob-saas-playbook.md` の Design Direction を反映
+- プロダクトUIスクショ / 機能比較表 / 価格表示の使い分けを採用理由付きで記録
+- 「青グラデhero」「均一カード羅列」「装飾モーション」等の Anti-Pattern を避ける
+- `quality-gates/design-differentiation-gate.md` 通過 / `scoring/design-differentiation-scorecard.md` **85点以上** 必須
+
+### Validation 追加
+
+- [ ] **design-differentiation-validation 合格**
+
+### 必須参照
+
+- `.ai-workflow/director/design-differentiation-task.md`
+- `design-differentiation/mandatory-design-differentiation.md`
+- `contracts/design-differentiation-output-contract.md`
+- `scoring/design-differentiation-scorecard.md`
+- `quality-gates/design-differentiation-gate.md`
+- `validation/design-differentiation-validation.md`
+- `templates/visual-brief-template.md`
+- `templates/visual-review-sheet.md`
+- `docs/visual-agent-architecture.md`
+- `docs/visual-production-workflow.md`

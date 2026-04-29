@@ -50,8 +50,14 @@
 - `lp-art-director` で意匠
 - `lp-web-designer` でセクション
 - `lp-responsive-specialist` でSP
+- **Design Differentiation 必須判断**:
+  - `lp-visual-asset-director` 起動 → visual orchestration
+  - Icon Strategy / UI Component Strategy / Typography Strategy / Animation Strategy / Visual Hierarchy / Emotional Role / Conversion Role を `templates/visual-brief-template.md` 形式で記録
+  - `contracts/design-differentiation-output-contract.md` 必須セクションすべて記録
+  - 該当業種 `industry-playbooks/[業種]-playbook.md` の Design Direction を参照
 - 出力: `outputs/05_design/`
 - **Gate 5**: Design Gate
+- **Sub-Gate**: `quality-gates/design-differentiation-gate.md`（**design-differentiation-scorecard 85+ 必須**）→ `lp-visual-quality-gate` で判定
 
 ### Step 6: Code（2〜4日）
 - `lp-frontend-engineer` 統括
@@ -141,7 +147,7 @@
 
 このフロー完了時に、以下を全達成必須：
 
-### Validation 全 8 種合格
+### Validation 全 9 種合格
 
 - [ ] director-behavior-validation
 - [ ] agent-selection-validation
@@ -150,15 +156,17 @@
 - [ ] code-practicality-validation
 - [ ] lp-structure-completeness-validation
 - [ ] anti-ai-output-validation
+- [ ] **design-differentiation-validation**
 - [ ] final-acceptance-validation
 
-### Human Quality / 構成 / コード 必須スコア
+### Human Quality / 構成 / コード / デザイン差別化 必須スコア
 
 ```
 - human-naturalness-scorecard: 85+
 - anti-ai-smell-scorecard: 90+
 - lp-structure-completeness-scorecard: 85+
 - code-practicality-scorecard: 85+
+- design-differentiation-scorecard: 85+
 ```
 
 ### 必須ログ作成（outputs/08_review/）
@@ -169,6 +177,7 @@
 - human-quality-review.md
 - code-practicality-review.md
 - lp-structure-validation.md
+- **design-differentiation-layer-report.md**
 - final-acceptance-report.md
 
 参照：
@@ -176,3 +185,6 @@
 - `lp-structure-blueprint/`
 - `human-quality/`
 - `skills/09_humanization/`
+- `design-differentiation/`
+- `docs/visual-agent-architecture.md`
+- `docs/visual-production-workflow.md`

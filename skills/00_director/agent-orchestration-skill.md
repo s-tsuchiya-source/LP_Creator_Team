@@ -59,7 +59,35 @@ LP制作工程に応じて必要最小限のエージェントを選定し、目
 - [ ] 案件タイプに最小構成か
 - [ ] 並行可能なタスクは並行か
 - [ ] 各呼び出しにcontract/scorecardが紐づくか
+- [ ] **デザイン関連 agent には `contracts/design-differentiation-output-contract.md` と `scoring/design-differentiation-scorecard.md` を必ず指定したか**
+
+## Design Differentiation Orchestration
+
+design-differentiation を必須化するため、デザイン系 agent（`lp-creative-director` / `lp-art-director` / `lp-web-designer` / `lp-ui-designer` / `lp-graphic-designer` / `lp-visual-art-director` / `lp-visual-asset-director` / `lp-cta-ui-designer` / `lp-motion-director` / `lp-mobile-visual-optimizer` / `lp-image-compositor` / `lp-infographic-designer` / `lp-responsive-specialist` / `lp-frontend-engineer`）を起動するブリーフには、以下を必ず含める：
+
+- 商材・ターゲット・CV目的・Emotional Role の明示
+- `contracts/design-differentiation-output-contract.md` への準拠を要求
+- `scoring/design-differentiation-scorecard.md` 85点以上を採点条件に指定
+- 汎用テンプレート（青グラデhero / 装飾アイコン羅列 / 装飾モーション）を Anti-Pattern として明示
+- 該当する `industry-playbooks/[業種]-playbook.md` の Design Direction を指定
+- `templates/visual-brief-template.md` を出力フォーマットとして指定
+
+最終承認前に `lp-visual-quality-gate` および `lp-final-gatekeeper` で `quality-gates/design-differentiation-gate.md` の通過を確認する。
 
 ## Related Agents
 
 - `lp-director`（このskillの主使用者）
+- `lp-visual-asset-director`（visual orchestration の専門エージェント）
+- `lp-visual-quality-gate`（visual 領域の品質ゲート）
+
+## Related References
+
+- `.ai-workflow/director/design-differentiation-task.md`
+- `design-differentiation/mandatory-design-differentiation.md`
+- `contracts/design-differentiation-output-contract.md`
+- `scoring/design-differentiation-scorecard.md`
+- `quality-gates/design-differentiation-gate.md`
+- `validation/design-differentiation-validation.md`
+- `configs/visual-agent-registry.json`
+- `docs/visual-agent-architecture.md`
+- `docs/visual-production-workflow.md`

@@ -177,6 +177,7 @@ skills/00_director/intent-alignment-skill.md
 - `validation/lp-structure-completeness-validation.md`
 - `validation/anti-ai-output-validation.md`
 - `validation/final-acceptance-validation.md`
+- `validation/design-differentiation-validation.md`
 - `lp-structure-blueprint/high-converting-lp-flow.md`
 
 # Final Acceptance Requirements
@@ -192,6 +193,7 @@ skills/00_director/intent-alignment-skill.md
 - [ ] code-practicality-validation 合格
 - [ ] lp-structure-completeness-validation 合格
 - [ ] anti-ai-output-validation 合格
+- [ ] design-differentiation-validation 合格
 - [ ] final-acceptance-validation 合格
 
 ## Scorecard 必須
@@ -205,6 +207,7 @@ skills/00_director/intent-alignment-skill.md
 - [ ] anti-ai-smell-scorecard 90点以上
 - [ ] code-practicality-scorecard 85点以上
 - [ ] lp-structure-completeness-scorecard 85点以上
+- [ ] design-differentiation-scorecard 85点以上
 - [ ] legal-risk-scorecard 95点以上
 - [ ] final-output-scorecard 90点以上
 
@@ -216,9 +219,43 @@ skills/00_director/intent-alignment-skill.md
 - [ ] AIっぽさ Critical Fail なし
 - [ ] LP構成 Critical Fail なし
 - [ ] コード Critical Fail なし
+- [ ] デザイン差別化 Critical Fail なし（汎用SaaS風 / アイコン / フォント / アニメの装飾目的のみ / 競合置換可能なデザイン）
 
 ## 出力ログ
 
 `outputs/08_review/final-acceptance-report.md` を必ず作成し、上記の合否を全項目記録する。
 
 1つでも未達の場合は **公開不可** とし、`lp-director` に差し戻し先を通知する。
+
+# Design Differentiation Mandatory
+
+最終承認の門番として、design-differentiation-scorecard 85点以上 / Critical Fail なし / `outputs/08_review/design-differentiation-layer-report.md` の存在 を必ず確認する。
+
+## 確認項目
+
+- [ ] design-differentiation-scorecard が **85点以上**
+- [ ] design-differentiation-gate.md の通過記録あり
+- [ ] `contracts/design-differentiation-output-contract.md` 必須セクションすべて記録あり
+- [ ] Icon / UI Component / Typography / Animation Strategy が **理由付きで明示** されている
+- [ ] Visual Hierarchy（first / second / third）が定義されている
+- [ ] Emotional Role / Conversion Role が明示
+- [ ] 「競合社名に置換しても成立する」設計でないことを確認
+- [ ] Anti-Pattern（汎用SaaS風 / 装飾モーション / 意味なきアイコン羅列）に該当しない
+
+## Required Design Differentiation References
+
+- `.ai-workflow/director/design-differentiation-task.md`
+- `design-differentiation/mandatory-design-differentiation.md`
+- `contracts/design-differentiation-output-contract.md`
+- `scoring/design-differentiation-scorecard.md`
+- `quality-gates/design-differentiation-gate.md`
+- `validation/design-differentiation-validation.md`
+- `templates/visual-review-sheet.md`
+- `docs/visual-agent-architecture.md`
+- `docs/visual-production-workflow.md`
+
+## Stop Conditions（公開不可）
+
+- design-differentiation-scorecard 85未満で承認した場合
+- design-differentiation-gate 未通過で承認した場合
+- Visual Hierarchy / Icon / UI / Typography / Animation の選定理由が記録されていない場合

@@ -143,6 +143,7 @@
 - human-quality-review.md
 - code-practicality-review.md
 - lp-structure-validation.md
+- design-differentiation-layer-report.md
 - final-acceptance-report.md
 
 参照：
@@ -150,3 +151,36 @@
 - `lp-structure-blueprint/`
 - `human-quality/`
 - `skills/09_humanization/`
+- `design-differentiation/`
+
+---
+
+## Design Differentiation Mandatory（必須・全フェーズ通過）
+
+採用LPは「働く未来が見える」体験設計が要。求職者ペルソナ（年齢・経験・志向）・募集職種・CV種別（応募 / 説明会 / カジュアル面談）に応じて、写真・イラスト・アイコン・フォント・モーションを**選んで決める**。
+
+### このワークフローでの必須事項
+
+- デザインフェーズで `lp-visual-asset-director` を起動し、`templates/visual-brief-template.md` を出力
+- `contracts/design-differentiation-output-contract.md` の必須セクションすべて記録
+- `industry-playbooks/hr-recruiting-playbook.md`（または `hr-ads-playbook.md`）の Design Direction を反映
+- 社員写真 / オフィス / 1日の流れ等の人間味あるビジュアルと、AIっぽい抽象未来人物の排除を担保
+- 採用領域の禁止属性表現（性別・年齢・宗教等）を含めない（`lp-legal-expression-checker` 連携）
+- `quality-gates/design-differentiation-gate.md` 通過 / `scoring/design-differentiation-scorecard.md` **85点以上** 必須
+
+### Validation 追加
+
+- [ ] **design-differentiation-validation 合格**
+
+### 必須参照
+
+- `.ai-workflow/director/design-differentiation-task.md`
+- `design-differentiation/mandatory-design-differentiation.md`
+- `contracts/design-differentiation-output-contract.md`
+- `scoring/design-differentiation-scorecard.md`
+- `quality-gates/design-differentiation-gate.md`
+- `validation/design-differentiation-validation.md`
+- `templates/visual-brief-template.md`
+- `templates/visual-review-sheet.md`
+- `docs/visual-agent-architecture.md`
+- `docs/visual-production-workflow.md`

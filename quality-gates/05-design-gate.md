@@ -46,6 +46,7 @@
 
 ## 通過後の次フェーズ
 
+→ **Design Differentiation Gate**（必須サブゲート / 次の `quality-gates/design-differentiation-gate.md` を必ず通過）
 → Gate 6: Code Gate
 
 ---
@@ -57,6 +58,16 @@
 - **Minimum Passing Score**: design-scorecard 85+
 - **Critical Fail Conditions**: ブランド違反 / コントラスト不足 / SP未対応
 - **Required Fix Actions**: `skills/04_design/` で再設計
+
+### Design Differentiation Sub-Gate（必須）
+
+このゲート通過後、`quality-gates/design-differentiation-gate.md` を**必ず通過**しなければ Code Gate に進めない。
+
+- **Related Contract**: `contracts/design-differentiation-output-contract.md`
+- **Related Scorecard**: `scoring/design-differentiation-scorecard.md`
+- **Minimum Passing Score**: design-differentiation-scorecard **85+**
+- **Critical Fail Conditions**: 汎用SaaS風 / 装飾アイコン羅列 / 装飾モーション / フォント採用理由なし / Visual Hierarchy 未定義 / 競合置換可能なデザイン
+- **Required Fix Actions**: `skills/04_design/visual-direction-skill.md` で Reference Direction / Icon Strategy / Typography Strategy / Animation Strategy / Visual Hierarchy を再定義
 
 ---
 

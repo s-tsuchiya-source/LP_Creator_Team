@@ -132,6 +132,7 @@
 - human-quality-review.md
 - code-practicality-review.md
 - lp-structure-validation.md
+- design-differentiation-layer-report.md
 - final-acceptance-report.md
 
 参照：
@@ -139,3 +140,35 @@
 - `lp-structure-blueprint/`
 - `human-quality/`
 - `skills/09_humanization/`
+- `design-differentiation/`
+
+---
+
+## Design Differentiation Mandatory（必須・全フェーズ通過）
+
+既存LP改善は「ヒートマップ・離脱・GA4ファネル」の事実から不整合を見つけ、商材文脈に合うデザインへ**選び直す**。既存のデザインを温存することが目的ではなく、CV貢献仮説に基づいて Icon / UI / Typography / Animation / Visual Hierarchy を再判断する。
+
+### このワークフローでの必須事項
+
+- 改善案で変更するデザイン要素ごとに、変更理由・期待CV影響・リスクを `templates/visual-brief-template.md` 形式で記録
+- A/Bテスト設計時に Anti-Pattern（汎用デザインへの後退）を含めない
+- ヒートマップで離脱していたセクションについて、UI Component Strategy を再選定
+- `contracts/design-differentiation-output-contract.md` の必須セクションすべて記録
+- `quality-gates/design-differentiation-gate.md` 通過 / `scoring/design-differentiation-scorecard.md` **85点以上** 必須
+
+### Validation 追加
+
+- [ ] **design-differentiation-validation 合格**
+
+### 必須参照
+
+- `.ai-workflow/director/design-differentiation-task.md`
+- `design-differentiation/mandatory-design-differentiation.md`
+- `contracts/design-differentiation-output-contract.md`
+- `scoring/design-differentiation-scorecard.md`
+- `quality-gates/design-differentiation-gate.md`
+- `validation/design-differentiation-validation.md`
+- `templates/visual-brief-template.md`
+- `templates/visual-review-sheet.md`
+- `docs/visual-agent-architecture.md`
+- `docs/visual-production-workflow.md`

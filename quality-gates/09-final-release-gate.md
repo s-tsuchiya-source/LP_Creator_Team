@@ -107,6 +107,7 @@ LP公開可否を最終判定する。
 - [ ] code-practicality-validation 合格
 - [ ] lp-structure-completeness-validation 合格
 - [ ] anti-ai-output-validation 合格
+- [ ] design-differentiation-validation 合格
 
 ### Human Quality Layer
 - [ ] human-naturalness-scorecard 85+
@@ -128,5 +129,17 @@ LP公開可否を最終判定する。
 - [ ] LCP / CLS / INP 達成
 - [ ] 計測 data 属性完備
 - [ ] a11y Lighthouse 90+
+
+### Design Differentiation Layer 通過確認（必須）
+
+- [ ] `quality-gates/design-differentiation-gate.md` 通過
+- [ ] `scoring/design-differentiation-scorecard.md` **85点以上**
+- [ ] `contracts/design-differentiation-output-contract.md` の必須セクションすべて記録
+- [ ] Reference Direction（参考元 + 抽出原理）あり / 丸写しなし
+- [ ] Icon / UI Component / Typography / Animation Strategy が **理由付き** で明示
+- [ ] Visual Hierarchy（first / second / third）が定義され、CTA到達性が確認済み
+- [ ] Emotional Role（信頼 / 期待 / 安心 / 高揚 等）と Conversion Role（不安低減 / 動機強化 / 仕組み説明 / 証拠補強 / CTA推進）が明示
+- [ ] Anti-Generic Design Check 通過（競合社名に置換しても成立する設計でない）
+- [ ] `outputs/08_review/design-differentiation-layer-report.md` 存在
 
 詳細は `validation/` 配下の各ファイルを参照。

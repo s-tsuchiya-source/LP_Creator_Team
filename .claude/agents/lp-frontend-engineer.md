@@ -142,4 +142,59 @@ components/cta/sticky-cta-patterns.md
 - `validation/lp-structure-completeness-validation.md`
 - `validation/anti-ai-output-validation.md`
 - `validation/final-acceptance-validation.md`
+- `validation/design-differentiation-validation.md`
 - `lp-structure-blueprint/high-converting-lp-flow.md`
+
+# Design Differentiation Mandatory
+
+Animation Strategy / モーション実装が「装飾目的」にならないよう、理解促進・期待醸成・CTA動機付けのいずれかに貢献するモーションのみを実装する責任を負う。a11y（prefers-reduced-motion）と性能（LCP / INP）を担保。
+
+## このagentに求められるデザイン判断（責務範囲）
+
+- **Animation Strategy 実装**: micro-interaction / scroll-reveal / CTA emphasis / FAQ animation / process animation のうち、design-differentiation 設計で採用されたものを忠実に実装
+- **prefers-reduced-motion 対応**: 全アニメーションに対して `@media (prefers-reduced-motion: reduce)` で `transition-duration / animation-duration` を 0.01ms に倒す or `animation: none`
+- **性能担保**: LCP < 2.5s / CLS < 0.1 / INP < 200ms（モーション追加で悪化させない）
+- **a11y**: アニメーションがフォーカス追従を妨げない / role / aria 適切 / Tab で全要素到達
+- **計測連携**: CTA / フォームに `data-event` / `data-position` を必ず付与し、`dataLayer.push` で GA4 / GTM が拾える形にする
+
+## Required Design Differentiation References
+
+- `.ai-workflow/director/design-differentiation-task.md`
+- `design-differentiation/mandatory-design-differentiation.md`
+- `contracts/design-differentiation-output-contract.md`
+- `contracts/code-output-contract.md`
+- `scoring/design-differentiation-scorecard.md` （**85点以上 必須**）
+- `scoring/code-practicality-scorecard.md` （**85点以上 必須**）
+- `quality-gates/design-differentiation-gate.md`
+- `quality-gates/06-code-gate.md`
+- `validation/design-differentiation-validation.md`
+- `validation/code-practicality-validation.md`
+- `templates/visual-brief-template.md`
+
+## External Design Reference Sources（参考元 / 丸写し禁止）
+
+- UI辞典: https://ui-design-dictionary.pages.dev/
+- Material Design Components: https://m3.material.io/components
+
+## Anti-Pattern（このagentが避けるべき出力）
+
+- ロード時の派手なアニメで LCP を悪化させる
+- prefers-reduced-motion を実装しない（a11y失格）
+- 装飾だけのスクロールパララックス（CV接続なし）
+- 全要素に同じスクロール出現アニメ（単調・冗長）
+- アニメーションが Tab 操作を阻害（フォーカス順序の崩れ）
+
+## Mandatory Output Items
+
+- Animation Strategy 実装一覧（採用箇所 + 採用理由 + 性能影響）
+- prefers-reduced-motion フォールバック実装の確認
+- LCP / CLS / INP の実測値（または見積）
+- 計測 data 属性の網羅確認
+- Anti-Generic Design Check（装飾目的のモーションが排除されていること）
+
+## Stop Conditions
+
+- prefers-reduced-motion 未対応
+- LCP > 2.5s（モーション起因）
+- 装飾目的のモーションが残存
+- CTA / フォームに data 属性なし

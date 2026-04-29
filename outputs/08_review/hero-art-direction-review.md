@@ -1,7 +1,7 @@
 # Hero Art Direction Review - aggregate-visual-fullquality 4LP
 
 ## レビュー実施日
-- 2026-04-29
+- 2026-04-29（実装是正後）
 
 ## レビュー対象
 - aggregate-visual-fullquality 配下 4LP
@@ -49,14 +49,18 @@
 
 ### LP3 (運用代行) - PASS
 
-**達成事項**:
+**実装状況**:
 - ✓ 3パターン比較完了
-- ✓ photo-annotation 採用（ダッシュボード型から脱却）
-- ✓ 業務シーン写真で共感誘発
-- ✓ KPI注釈・専任担当バッジ配置
+- ✓ photo-annotation-hero **実装完了**（lp3-operation-outsourcing/index.html に `lp3-hero--photo` 反映済み）
+- ✓ `assets/images/lp3/img_hero_01.png` を `<img class="lp3-hero__bg">` で配置
+- ✓ ブランドカラーオーバーレイ（PC: 60〜45% / SP: 75〜60%）を `lp3.css` に実装
+- ✓ KPI注釈「業務時間 月150h → 月60h」+「※ 例・自社調べ想定値」付帯
+- ✓ KPIバッジ「導入1,200社」「専任担当が伴走」+「※ 例・想定値」付帯
+- ✓ 既存タスクボードはヒーロー直下の `lp3-board-section`（「引き取る業務の見える化」）に移設
 
 **改善余地**:
-- 写真は実撮影 or 許諾済み顧客写真が理想（次回フェーズで実装）
+- 写真は実撮影 or 許諾済み顧客写真が理想（本番公開前に営業/CS 確認後に差し替え）
+- KPI 数値は本番公開前に実数値・出典・許諾を確認し、注記を取り外す運用
 
 ### LP4 (分析改善) - PASS
 
@@ -65,9 +69,10 @@
 - ✓ report-ledger 採用は「データ分析訴求」の文脈最適
 - ✓ 指標一覧の独自レイアウト
 - ✓ 装飾的要素なし
+- ✓ METRICS CATALOG / DASHBOARD AT A GLANCE 等の装飾英語は **日本語化完了**（残存は PDCA / PLAN / REVIEW のサイクル要素のみ）
 
 **改善余地**:
-- 残装飾英語（METRICS CATALOG等）の段階的日本語化
+- なし（装飾英語ゼロ達成）
 
 ## Critical Fail チェック
 
@@ -97,12 +102,15 @@
 - 4LP のヒーローパターン再選定完了
 - ダッシュボード型のデフォルト化を回避
 - 各 visual 要素に CV貢献理由
-- LP3 で photo-annotation-hero パターン採用（業界SaaS から差別化）
+- LP3 で photo-annotation-hero パターン **実装完了**（業界SaaS から差別化）
+- LP3 タスクボードを「引き取る業務の見える化」セクションに移設し、ヒーローの責務を共感+期待生成に純化
+- 全LP で装飾英語ゼロ達成（業界用語残置のみ）
+- 数値表現に「※ 例・想定値」注記を付帯し、景表法リスクを低減
 
 ### 次フェーズ実施項目
 - LP3 写真の実撮影 or 許諾済み顧客写真化
-- 注釈（callout）の追加実装
-- 残装飾英語の段階的日本語化
+- KPI 数値の本番実数値差し替え（注記取り外し）
+- LP1 / LP2 / LP4 にも br クラス分離（br.pc / br.sp）の段階適用
 
 ## Related
 

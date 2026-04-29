@@ -47,20 +47,23 @@
 
 <main id="main">
 
-<!-- ============== HERO ============== -->
-<section class="lp3-hero" data-sticky-trigger>
+<!-- ============== HERO (photo-annotation pattern) ============== -->
+<section class="lp3-hero lp3-hero--photo" data-sticky-trigger>
+  <!-- 写真背景 -->
+  <img class="lp3-hero__bg" src="../assets/images/lp3/img_hero_01.png"
+       alt="採用担当者がデスクで媒体運用業務に取り組む様子"
+       loading="eager" fetchpriority="high">
+  <div class="lp3-hero__overlay" aria-hidden="true"></div>
+
   <div class="l-container lp3-hero__inner">
-    <div data-reveal>
-      <div class="lp3-hero__sticker">採用担当者の業務時間を、本来の業務へ。</div>
-      <h1>
-        媒体運用を、<br>
-        現場が回る形に<br>
-        <strong>整える。</strong><span class="pill"> 安心して、任せる。</span>
+    <div class="lp3-hero__content" data-reveal data-motion="fade">
+      <p class="lp3-hero__target">中小企業の採用担当者へ</p>
+      <h1 class="lp3-hero__title">
+        媒体運用を、<br class="pc">引き受けます。
       </h1>
       <p class="lp3-hero__lead">
-        媒体ごとの管理画面、毎週の原稿差し替え、媒体担当との連絡、月次レポート集計、配分の見直し。<br>
-        現場の業務工数が「採用業務そのもの」を圧迫していませんか。<br>
-        aggregateは、運用業務を引き取り、整理し、戻すべき業務（面接・配属・人事戦略）を守ります。
+        採用担当者が本来やるべきは、<br class="pc">面接・配属・人事戦略です。<br>
+        媒体運用は、<br class="sp">私たちが引き取ります。
       </p>
       <div class="lp3-hero__cta">
         <a href="#closing" class="btn btn--primary btn--lg">資料を取り寄せる
@@ -68,14 +71,44 @@
         </a>
         <a href="#takeover" class="btn btn--ghost btn--lg">引き取る業務を見る</a>
       </div>
-      <ul class="lp3-hero__supports" role="list">
-        <li>媒体差替・配信管理を全件代行</li>
-        <li>週次レポートと改善提案MTGを定例化</li>
-        <li>媒体担当者とのやりとりも巻き取り</li>
+
+      <ul class="lp3-hero__assurance" role="list">
+        <li>クレジットカード不要</li>
+        <li>営業からの強引な連絡なし</li>
+        <li>専任担当が伴走</li>
       </ul>
     </div>
 
-    <!-- HEROビジュアル：タスクボード合成 -->
+    <!-- 注釈（callout）：写真の業務量を指す -->
+    <aside class="lp3-hero__annotation" data-reveal data-motion="fade" data-delay="200">
+      <span class="lp3-hero__annotation-line" aria-hidden="true"></span>
+      <p class="lp3-hero__annotation-body">
+        <strong>業務時間 月150h → 月60h</strong>
+        <small>※ 例・自社調べ想定値（本番では実数値に差し替え）</small>
+      </p>
+    </aside>
+
+    <!-- KPIバッジ -->
+    <div class="lp3-hero__kpi" data-reveal data-motion="scale" data-delay="300">
+      <div class="lp3-hero__kpi-item">
+        <strong>1,200<small>社</small></strong>
+        <span>導入実績<br><em>※ 例・想定値</em></span>
+      </div>
+      <div class="lp3-hero__kpi-item">
+        <strong>3<small>ヶ月</small></strong>
+        <span>専任担当が伴走</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TASK BOARD (運用比較ビジュアル) ============== -->
+<section class="lp3-board-section" aria-labelledby="lp3-board-title">
+  <div class="l-container">
+    <header class="lp3-board__head" data-reveal>
+      <p class="eyebrow">引き取る業務の見える化</p>
+      <h2 id="lp3-board-title">採用担当の業務、これを私たちが引き取ります</h2>
+    </header>
     <div class="lp3-hero__visual" data-reveal data-delay="200">
       <div class="lp3-board" aria-label="運用業務のタスクボード">
 
@@ -156,7 +189,7 @@
 
 <!-- ============== PHOTO BILLBOARD (採用担当の現場) ============== -->
 <section class="photo-billboard" aria-labelledby="lp3-billboard-title" style="--billboard-glow: rgba(249, 115, 22, .35); --billboard-accent: #FED7AA; --brand-primary: #0F766E;">
-  <div class="photo-billboard__corner-tag">CURRENT / 採用担当の現場</div>
+  <div class="photo-billboard__corner-tag">現状 / 採用担当の現場</div>
   <div class="photo-billboard__frame" style="background-image: url('../assets/images/lp3/img_02.png');">
     <div class="l-container photo-billboard__inner">
       <div class="photo-billboard__copy" data-reveal>
@@ -166,7 +199,7 @@
       </div>
       <div class="photo-billboard__cards" data-reveal data-delay="200">
         <div class="billboard-card">
-          <small>OPERATIONS / DAY</small>
+          <small>業務時間 / 1日</small>
           <b>4.2h</b>
           <span>媒体運用に消費</span>
         </div>
@@ -176,7 +209,7 @@
           <span>本来業務に戻る</span>
         </div>
         <div class="billboard-card">
-          <small>WEEKLY MTG</small>
+          <small>週次MTG</small>
           <b>15min</b>
           <span>定例・意思決定のみ</span>
         </div>
@@ -371,7 +404,7 @@
   <div class="photo-billboard__frame" style="background-image: url('../assets/images/lp3/img_01.png'); min-height: clamp(320px, 42vw, 460px);">
     <div class="l-container photo-billboard__inner" style="grid-template-columns: 1fr;">
       <div class="photo-billboard__copy" data-reveal style="max-width: 32em;">
-        <span class="eyebrow">WEEKLY</span>
+        <span class="eyebrow">週次</span>
         <h2 class="photo-billboard__title">毎週の<em>15分</em>で、現場が回る。</h2>
         <p class="photo-billboard__lead">運用ナレッジは個人に依存させません。チェックリストとナレッジベースで仕組み化し、御社採用チームと並走します。</p>
       </div>
@@ -457,7 +490,7 @@
       <p class="site-footer__brand-blurb">運用業務に追われない採用組織を作る。媒体管理・原稿差替・レポート集計を引き取り、現場が回る形に整える運用代行。</p>
     </div>
     <div>
-      <h4>SOLUTION</h4>
+      <h4>解決策</h4>
       <ul>
         <li><a href="../lp1-cpa-cost/">採用費構造改善</a></li>
         <li><a href="../lp2-application-volume/">母集団形成</a></li>
@@ -473,7 +506,7 @@
       </ul>
     </div>
     <div>
-      <h4>COMPANY</h4>
+      <h4>自社</h4>
       <ul>
         <li><a href="https://aggregate.eole.co.jp/" rel="noopener">aggregate.eole.co.jp</a></li>
       </ul>

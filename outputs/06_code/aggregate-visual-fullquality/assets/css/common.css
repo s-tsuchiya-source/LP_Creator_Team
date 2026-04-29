@@ -561,3 +561,59 @@ body {
 .cross-nav__card:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.2); transform: translateY(-2px); }
 .cross-nav__card small { font-size: 11px; letter-spacing: .18em; color: var(--c-ink-300); }
 .cross-nav__card b { font-size: 15px; line-height: 1.5; }
+
+/* ============================================================
+   Visual Expression Layer: shape-language 是正
+   比較表・帳票・タイムライン・指標一覧は直角・罫線・台帳形式へ
+   角丸カード比率を50%以下にするための上書き
+   ============================================================ */
+
+/* 比較系・帳票系・指標一覧系 → 直角化 */
+.lp1-pain__card,
+.lp1-proof__card,
+.lp1-compare__col,
+.lp1-ledger__table,
+.lp1-flow__step,
+.lp2-funnel__card,
+.lp2-pain__card,
+.lp2-proof__card,
+.lp2-feature,
+.lp3-board__col,
+.lp3-board,
+.lp3-takeover__col,
+.lp3-day__row,
+.lp3-routine__item,
+.lp4-problem__article,
+.lp4-wall__card,
+.lp4-catalog__table,
+.lp4-cycle__step,
+.lp4-metric__card {
+  border-radius: 0 !important;
+}
+
+/* 数値バッジ・小要素 → 4px の small radius */
+.metric-badge,
+.proof-number,
+.kpi-badge,
+.billboard-card {
+  border-radius: 4px !important;
+}
+
+/* 比較系の枠線強化（直角化により罫線で区切る） */
+.lp1-compare__col,
+.lp3-board__col,
+.lp3-takeover__col,
+.lp3-day__row,
+.lp4-problem__article,
+.lp4-wall__card {
+  border: 1px solid var(--c-ink-200, rgba(15, 23, 42, .12));
+}
+
+/* FAQ アコーディオン → 直角・台帳形式 */
+.faq-item {
+  border-radius: 0 !important;
+  border-bottom: 1px solid var(--c-ink-200, rgba(15, 23, 42, .12));
+}
+.faq-item:first-of-type {
+  border-top: 1px solid var(--c-ink-200, rgba(15, 23, 42, .12));
+}

@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 720" preserveAspectRatio="xMidYMid slice" role="img" aria-label="採用費の構造を可視化したダッシュボードと媒体配分グラフ">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061429"/>
+      <stop offset="1" stop-color="#0F2A5A"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C8E66A"/>
+      <stop offset="1" stop-color="#7BAA20"/>
+    </linearGradient>
+    <linearGradient id="bar-mute" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F4FB4" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#1F4FB4" stop-opacity=".25"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C8E66A"/>
+      <stop offset="1" stop-color="#7AC0FF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#C8E66A" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#C8E66A" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+    <filter id="noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3"/>
+      <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.06 0"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="720" fill="url(#bg)"/>
+  <rect width="800" height="720" fill="url(#grid)"/>
+  <rect width="800" height="720" fill="url(#glow)" transform="translate(420 -120)"/>
+  <rect width="800" height="720" filter="url(#noise)" opacity=".55"/>
+
+  <!-- 写真モチーフ：抽象的なオフィス風景（窓越しの夜景イメージ） -->
+  <g opacity=".22">
+    <!-- 右上のビル群シルエット -->
+    <path d="M 540 0 L 540 200 L 580 200 L 580 240 L 620 240 L 620 180 L 660 180 L 660 220 L 700 220 L 700 160 L 740 160 L 740 200 L 800 200 L 800 0 Z" fill="#1F4FB4"/>
+    <!-- ビル窓 -->
+    <g fill="#7AC0FF" opacity=".7">
+      <rect x="548" y="60" width="6" height="6"/><rect x="558" y="60" width="6" height="6"/><rect x="568" y="60" width="6" height="6"/>
+      <rect x="548" y="80" width="6" height="6"/><rect x="568" y="80" width="6" height="6"/>
+      <rect x="548" y="100" width="6" height="6"/><rect x="558" y="100" width="6" height="6"/>
+      <rect x="630" y="200" width="6" height="6"/><rect x="640" y="200" width="6" height="6"/>
+      <rect x="670" y="180" width="6" height="6"/><rect x="710" y="180" width="6" height="6"/>
+      <rect x="750" y="170" width="6" height="6"/>
+    </g>
+  </g>
+
+  <!-- メインダッシュボード（疑似UI） -->
+  <g transform="translate(60 100)">
+    <!-- ウィンドウ枠 -->
+    <rect x="0" y="0" width="660" height="420" rx="18" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)"/>
+    <!-- ヘッダー -->
+    <rect x="0" y="0" width="660" height="44" rx="18" fill="rgba(255,255,255,0.06)"/>
+    <rect x="0" y="22" width="660" height="22" fill="rgba(255,255,255,0.06)"/>
+    <circle cx="20" cy="22" r="5" fill="#FF5F56"/>
+    <circle cx="38" cy="22" r="5" fill="#FFBD2E"/>
+    <circle cx="56" cy="22" r="5" fill="#27C93F"/>
+    <text x="84" y="26" font-family="-apple-system, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">aggregate.eole.co.jp / cost-control</text>
+
+    <!-- 左ペイン：媒体別CPA棒グラフ -->
+    <text x="20" y="78" font-family="-apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,0.45)" letter-spacing="2">CPA BY CHANNEL</text>
+    <text x="20" y="96" font-family="DM Serif Display, serif" font-size="22" fill="#fff">媒体別 応募単価</text>
+
+    <!-- 棒グラフ -->
+    <g transform="translate(20 120)">
+      <line x1="0" y1="200" x2="320" y2="200" stroke="rgba(255,255,255,0.15)"/>
+      <line x1="0" y1="150" x2="320" y2="150" stroke="rgba(255,255,255,0.08)" stroke-dasharray="2 4"/>
+      <line x1="0" y1="100" x2="320" y2="100" stroke="rgba(255,255,255,0.08)" stroke-dasharray="2 4"/>
+      <line x1="0" y1="50" x2="320" y2="50" stroke="rgba(255,255,255,0.08)" stroke-dasharray="2 4"/>
+
+      <!-- 最適化前 -->
+      <rect x="20" y="60" width="36" height="140" fill="url(#bar-mute)" rx="3"/>
+      <rect x="80" y="40" width="36" height="160" fill="url(#bar-mute)" rx="3"/>
+      <rect x="140" y="80" width="36" height="120" fill="url(#bar-mute)" rx="3"/>
+      <rect x="200" y="50" width="36" height="150" fill="url(#bar-mute)" rx="3"/>
+      <rect x="260" y="100" width="36" height="100" fill="url(#bar-mute)" rx="3"/>
+
+      <!-- 最適化後（緑） -->
+      <rect x="22" y="120" width="32" height="80" fill="url(#bar)" rx="3"/>
+      <rect x="82" y="100" width="32" height="100" fill="url(#bar)" rx="3"/>
+      <rect x="142" y="130" width="32" height="70" fill="url(#bar)" rx="3"/>
+      <rect x="202" y="115" width="32" height="85" fill="url(#bar)" rx="3"/>
+      <rect x="262" y="145" width="32" height="55" fill="url(#bar)" rx="3"/>
+
+      <!-- ラベル -->
+      <g font-family="-apple-system, sans-serif" font-size="9" fill="rgba(255,255,255,0.55)" text-anchor="middle">
+        <text x="38" y="216">媒体A</text>
+        <text x="98" y="216">媒体B</text>
+        <text x="158" y="216">媒体C</text>
+        <text x="218" y="216">媒体D</text>
+        <text x="278" y="216">媒体E</text>
+      </g>
+    </g>
+
+    <!-- 凡例 -->
+    <g transform="translate(20 350)">
+      <rect x="0" y="0" width="10" height="10" fill="url(#bar-mute)" rx="2"/>
+      <text x="16" y="9" font-family="-apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,0.65)">最適化前</text>
+      <rect x="80" y="0" width="10" height="10" fill="url(#bar)" rx="2"/>
+      <text x="96" y="9" font-family="-apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,0.65)">最適化後</text>
+    </g>
+
+    <!-- 右ペイン：トレンドライン -->
+    <g transform="translate(380 78)">
+      <text x="0" y="0" font-family="-apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,0.45)" letter-spacing="2">3-MONTH TREND</text>
+      <text x="0" y="18" font-family="DM Serif Display, serif" font-size="22" fill="#fff">CPAの推移</text>
+      <text x="0" y="44" font-family="DM Serif Display, serif" font-size="36" fill="#C8E66A">¥4,820</text>
+      <text x="120" y="44" font-family="-apple-system, sans-serif" font-size="11" fill="rgba(255,255,255,0.55)">月平均</text>
+
+      <!-- ラインチャート -->
+      <g transform="translate(0 70)">
+        <line x1="0" y1="80" x2="260" y2="80" stroke="rgba(255,255,255,0.15)"/>
+        <line x1="0" y1="40" x2="260" y2="40" stroke="rgba(255,255,255,0.08)" stroke-dasharray="2 4"/>
+        <line x1="0" y1="0" x2="260" y2="0" stroke="rgba(255,255,255,0.08)" stroke-dasharray="2 4"/>
+
+        <!-- 旧トレンドライン -->
+        <path d="M 0 30 L 40 25 L 80 35 L 120 28 L 160 22 L 200 32 L 260 26"
+              fill="none" stroke="rgba(122, 192, 255, .4)" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+        <!-- 新トレンドライン（下降） -->
+        <path d="M 0 30 L 40 38 L 80 50 L 120 48 L 160 60 L 200 62 L 260 70"
+              fill="none" stroke="url(#line)" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M 0 30 L 40 38 L 80 50 L 120 48 L 160 60 L 200 62 L 260 70 L 260 80 L 0 80 Z"
+              fill="url(#line)" opacity=".15"/>
+
+        <!-- データポイント -->
+        <g fill="#C8E66A">
+          <circle cx="0" cy="30" r="3"/>
+          <circle cx="40" cy="38" r="3"/>
+          <circle cx="80" cy="50" r="3"/>
+          <circle cx="120" cy="48" r="3"/>
+          <circle cx="160" cy="60" r="3"/>
+          <circle cx="200" cy="62" r="3"/>
+          <circle cx="260" cy="70" r="4"/>
+        </g>
+        <circle cx="260" cy="70" r="9" fill="none" stroke="#C8E66A" stroke-opacity=".5"/>
+
+        <!-- 月ラベル -->
+        <g font-family="-apple-system, sans-serif" font-size="9" fill="rgba(255,255,255,0.4)">
+          <text x="-3" y="100">M-3</text>
+          <text x="36" y="100">M-2</text>
+          <text x="76" y="100">M-1</text>
+          <text x="116" y="100">M+1</text>
+          <text x="156" y="100">M+2</text>
+          <text x="196" y="100">M+3</text>
+          <text x="246" y="100">Now</text>
+        </g>
+      </g>
+
+      <!-- KPI下段 -->
+      <g transform="translate(0 220)">
+        <line x1="0" y1="0" x2="260" y2="0" stroke="rgba(255,255,255,0.1)"/>
+        <text x="0" y="22" font-family="-apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,0.45)" letter-spacing="2">SAVED</text>
+        <text x="0" y="46" font-family="DM Serif Display, serif" font-size="28" fill="#fff">¥1.42M</text>
+        <text x="120" y="22" font-family="-apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,0.45)" letter-spacing="2">CPA -</text>
+        <text x="120" y="46" font-family="DM Serif Display, serif" font-size="28" fill="#C8E66A">31%</text>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- 下部ノイズ層（写真感） -->
+  <rect width="800" height="720" filter="url(#noise)" opacity=".25"/>
+</svg>

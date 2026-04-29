@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" preserveAspectRatio="xMidYMid slice" role="img" aria-label="求人露出から応募までのファネルと、求職者ネットワークのイメージ">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A1240"/>
+      <stop offset="1" stop-color="#4F46E5"/>
+    </linearGradient>
+    <radialGradient id="g-pink" cx=".7" cy=".25" r=".6">
+      <stop offset="0" stop-color="#EC4899" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#EC4899" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g-amber" cx=".15" cy=".85" r=".55">
+      <stop offset="0" stop-color="#F59E0B" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FBCFE8"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="blur1"><feGaussianBlur stdDeviation="40"/></filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="720" height="720" fill="url(#bg2)"/>
+  <rect width="720" height="720" fill="url(#g-pink)"/>
+  <rect width="720" height="720" fill="url(#g-amber)"/>
+
+  <!-- ノイズドット -->
+  <g fill="#fff" opacity=".06">
+    <circle cx="60" cy="120" r="1.5"/><circle cx="160" cy="80" r="1.5"/><circle cx="280" cy="180" r="1"/>
+    <circle cx="540" cy="120" r="1.5"/><circle cx="640" cy="220" r="1"/><circle cx="120" cy="320" r="1.5"/>
+    <circle cx="220" cy="420" r="1"/><circle cx="500" cy="380" r="1.5"/><circle cx="660" cy="500" r="1"/>
+    <circle cx="60" cy="580" r="1.5"/><circle cx="180" cy="640" r="1"/><circle cx="380" cy="600" r="1.5"/>
+  </g>
+
+  <!-- 同心円リング（求人到達範囲のイメージ） -->
+  <g transform="translate(360 360)">
+    <circle r="280" fill="none" stroke="rgba(255,255,255,.06)"/>
+    <circle r="220" fill="none" stroke="rgba(255,255,255,.08)"/>
+    <circle r="160" fill="none" stroke="rgba(255,255,255,.10)"/>
+    <circle r="100" fill="none" stroke="url(#ring)" stroke-width="1.5" stroke-dasharray="3 4"/>
+
+    <!-- 中心：あなたの求人 -->
+    <circle r="62" fill="rgba(15,12,40,.7)" stroke="url(#ring)" stroke-width="2"/>
+    <text y="-6" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="800" fill="#fff" letter-spacing="2">YOUR JOB</text>
+    <text y="14" text-anchor="middle" font-family="DM Serif Display, serif" font-size="22" fill="#FBCFE8">求人A</text>
+
+    <!-- 第1リング上のドット（求職者） -->
+    <g fill="#FBCFE8">
+      <circle cx="100" cy="0" r="6"/>
+      <circle cx="-100" cy="0" r="6"/>
+      <circle cx="0" cy="-100" r="6"/>
+      <circle cx="0" cy="100" r="6"/>
+      <circle cx="71" cy="-71" r="5"/>
+      <circle cx="-71" cy="71" r="5"/>
+      <circle cx="71" cy="71" r="5"/>
+      <circle cx="-71" cy="-71" r="5"/>
+    </g>
+
+    <!-- 第2リング上のドット -->
+    <g fill="#F59E0B" opacity=".85">
+      <circle cx="160" cy="-30" r="5"/>
+      <circle cx="-160" cy="40" r="5"/>
+      <circle cx="40" cy="-160" r="5"/>
+      <circle cx="-40" cy="160" r="5"/>
+      <circle cx="120" cy="120" r="5"/>
+      <circle cx="-120" cy="-120" r="5"/>
+    </g>
+
+    <!-- 第3リング上のドット -->
+    <g fill="#A78BFA" opacity=".7">
+      <circle cx="220" cy="-50" r="4"/>
+      <circle cx="-220" cy="50" r="4"/>
+      <circle cx="50" cy="-220" r="4"/>
+      <circle cx="-50" cy="220" r="4"/>
+      <circle cx="180" cy="180" r="4"/>
+      <circle cx="-180" cy="-180" r="4"/>
+      <circle cx="180" cy="-180" r="4"/>
+      <circle cx="-180" cy="180" r="4"/>
+    </g>
+
+    <!-- 第4リングドット -->
+    <g fill="#fff" opacity=".5">
+      <circle cx="280" cy="0" r="3"/>
+      <circle cx="-280" cy="0" r="3"/>
+      <circle cx="0" cy="280" r="3"/>
+      <circle cx="0" cy="-280" r="3"/>
+      <circle cx="200" cy="-200" r="3"/>
+      <circle cx="-200" cy="200" r="3"/>
+      <circle cx="200" cy="200" r="3"/>
+      <circle cx="-200" cy="-200" r="3"/>
+    </g>
+
+    <!-- 接続線（中心から第1リングへ） -->
+    <g stroke="rgba(251,207,232,.3)" stroke-width="1.5" stroke-dasharray="2 4">
+      <line x1="0" y1="0" x2="100" y2="0"/>
+      <line x1="0" y1="0" x2="-100" y2="0"/>
+      <line x1="0" y1="0" x2="0" y2="100"/>
+      <line x1="0" y1="0" x2="0" y2="-100"/>
+    </g>
+  </g>
+
+  <!-- 上部右：到達ラベル -->
+  <g transform="translate(490 90)">
+    <rect x="0" y="0" width="180" height="56" rx="14" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)"/>
+    <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,.6)" letter-spacing="2">REACH</text>
+    <text x="14" y="44" font-family="DM Serif Display, serif" font-size="22" fill="#fff">+12,400<tspan font-size="11" fill="#FBCFE8">人 / 月</tspan></text>
+  </g>
+
+  <!-- 下部左：応募率ラベル -->
+  <g transform="translate(50 600)">
+    <rect x="0" y="0" width="180" height="56" rx="14" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)"/>
+    <text x="14" y="22" font-family="-apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,.6)" letter-spacing="2">APPLY RATE</text>
+    <text x="14" y="44" font-family="DM Serif Display, serif" font-size="22" fill="#fff">+38<tspan font-size="11" fill="#F59E0B">% YoY</tspan></text>
+  </g>
+
+  <!-- パーティクル -->
+  <g fill="#FBCFE8" opacity=".7">
+    <circle cx="120" cy="170" r="2.5"/>
+    <circle cx="600" cy="540" r="2.5"/>
+    <circle cx="80" cy="500" r="2"/>
+    <circle cx="640" cy="160" r="2"/>
+  </g>
+</svg>

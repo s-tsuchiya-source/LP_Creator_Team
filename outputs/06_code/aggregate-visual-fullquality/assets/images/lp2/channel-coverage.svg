@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" role="img" aria-label="求人媒体・チャネルの網羅マップと種類別の特性">
+  <defs>
+    <radialGradient id="cm-bg" cx=".5" cy=".5" r=".7">
+      <stop offset="0" stop-color="#4F46E5" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#4F46E5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="720" height="460" fill="url(#cm-bg)"/>
+
+  <!-- 中心：自社 -->
+  <g transform="translate(360 230)">
+    <circle r="50" fill="rgba(15,12,40,.8)" stroke="#FBCFE8" stroke-width="2"/>
+    <text y="-4" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" fill="rgba(255,255,255,.65)" letter-spacing="2">YOUR JOB</text>
+    <text y="14" text-anchor="middle" font-family="DM Serif Display, serif" font-size="18" fill="#fff">自社求人</text>
+  </g>
+
+  <!-- 接続線 -->
+  <g stroke="rgba(255,255,255,.15)" stroke-width="1" stroke-dasharray="3 4">
+    <line x1="360" y1="230" x2="160" y2="100"/>
+    <line x1="360" y1="230" x2="320" y2="60"/>
+    <line x1="360" y1="230" x2="500" y2="80"/>
+    <line x1="360" y1="230" x2="620" y2="180"/>
+    <line x1="360" y1="230" x2="600" y2="350"/>
+    <line x1="360" y1="230" x2="420" y2="400"/>
+    <line x1="360" y1="230" x2="200" y2="380"/>
+    <line x1="360" y1="230" x2="80" y2="260"/>
+  </g>
+
+  <!-- 周辺：チャネル -->
+  <g font-family="-apple-system, sans-serif">
+    <!-- 求人サイト型 -->
+    <g transform="translate(160 100)">
+      <circle r="36" fill="#fff" stroke="#4F46E5" stroke-width="2"/>
+      <text y="-4" text-anchor="middle" font-size="10" fill="#4F46E5" font-weight="800" letter-spacing="2">JOB BOARD</text>
+      <text y="12" text-anchor="middle" font-family="DM Serif Display, serif" font-size="14" fill="#1B1240">大手媒体</text>
+    </g>
+    <g transform="translate(320 60)">
+      <circle r="32" fill="#fff" stroke="#A78BFA" stroke-width="2"/>
+      <text y="-2" text-anchor="middle" font-size="10" fill="#A78BFA" font-weight="800" letter-spacing="2">NICHE</text>
+      <text y="14" text-anchor="middle" font-family="DM Serif Display, serif" font-size="13" fill="#1B1240">特化媒体</text>
+    </g>
+    <g transform="translate(500 80)">
+      <circle r="34" fill="#fff" stroke="#EC4899" stroke-width="2"/>
+      <text y="-3" text-anchor="middle" font-size="10" fill="#EC4899" font-weight="800" letter-spacing="2">AGGREGATOR</text>
+      <text y="13" text-anchor="middle" font-family="DM Serif Display, serif" font-size="13" fill="#1B1240">求人検索</text>
+    </g>
+    <g transform="translate(620 180)">
+      <circle r="32" fill="#fff" stroke="#F59E0B" stroke-width="2"/>
+      <text y="-2" text-anchor="middle" font-size="10" fill="#F59E0B" font-weight="800" letter-spacing="2">SCOUT</text>
+      <text y="14" text-anchor="middle" font-family="DM Serif Display, serif" font-size="13" fill="#1B1240">スカウト</text>
+    </g>
+    <g transform="translate(600 350)">
+      <circle r="32" fill="#fff" stroke="#EC4899" stroke-width="2"/>
+      <text y="-2" text-anchor="middle" font-size="10" fill="#EC4899" font-weight="800" letter-spacing="2">SNS</text>
+      <text y="14" text-anchor="middle" font-family="DM Serif Display, serif" font-size="13" fill="#1B1240">SNS求人</text>
+    </g>
+    <g transform="translate(420 400)">
+      <circle r="34" fill="#fff" stroke="#A78BFA" stroke-width="2"/>
+      <text y="-3" text-anchor="middle" font-size="10" fill="#A78BFA" font-weight="800" letter-spacing="2">REFERRAL</text>
+      <text y="13" text-anchor="middle" font-family="DM Serif Display, serif" font-size="13" fill="#1B1240">リファラル</text>
+    </g>
+    <g transform="translate(200 380)">
+      <circle r="34" fill="#fff" stroke="#4F46E5" stroke-width="2"/>
+      <text y="-3" text-anchor="middle" font-size="10" fill="#4F46E5" font-weight="800" letter-spacing="2">OWNED</text>
+      <text y="13" text-anchor="middle" font-family="DM Serif Display, serif" font-size="13" fill="#1B1240">自社サイト</text>
+    </g>
+    <g transform="translate(80 260)">
+      <circle r="32" fill="#fff" stroke="#F59E0B" stroke-width="2"/>
+      <text y="-2" text-anchor="middle" font-size="10" fill="#F59E0B" font-weight="800" letter-spacing="2">ADS</text>
+      <text y="14" text-anchor="middle" font-family="DM Serif Display, serif" font-size="13" fill="#1B1240">運用型広告</text>
+    </g>
+  </g>
+
+  <!-- 凡例 -->
+  <g transform="translate(40 30)" font-family="-apple-system, sans-serif" font-size="11" fill="rgba(255,255,255,.85)">
+    <text font-size="10" letter-spacing="2" fill="rgba(255,255,255,.55)">CHANNEL COVERAGE</text>
+    <text y="20" font-family="DM Serif Display, serif" font-size="20" fill="#fff">8チャネル × 役割分担</text>
+  </g>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 600" role="img" aria-label="採用ファネル図：露出から応募までの数とチェックポイント">
+  <defs>
+    <linearGradient id="f1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="f2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#A78BFA"/><stop offset="1" stop-color="#EC4899"/>
+    </linearGradient>
+    <linearGradient id="f3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EC4899"/><stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="f4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F59E0B"/><stop offset="1" stop-color="#FFD6A5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- レベル1：露出 -->
+  <g transform="translate(0 30)">
+    <path d="M 30 0 L 530 0 L 480 80 L 80 80 Z" fill="url(#f1)" opacity=".85"/>
+    <text x="280" y="34" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="rgba(255,255,255,.85)" letter-spacing="2">REACH / 露出</text>
+    <text x="280" y="62" text-anchor="middle" font-family="DM Serif Display, serif" font-size="24" fill="#fff">12,400 imp</text>
+  </g>
+
+  <!-- レベル2：閲覧 -->
+  <g transform="translate(0 130)">
+    <path d="M 80 0 L 480 0 L 430 80 L 130 80 Z" fill="url(#f2)" opacity=".88"/>
+    <text x="280" y="34" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="rgba(255,255,255,.85)" letter-spacing="2">VIEW / 閲覧</text>
+    <text x="280" y="62" text-anchor="middle" font-family="DM Serif Display, serif" font-size="22" fill="#fff">3,820</text>
+  </g>
+
+  <!-- レベル3：詳細遷移 -->
+  <g transform="translate(0 230)">
+    <path d="M 130 0 L 430 0 L 380 80 L 180 80 Z" fill="url(#f3)" opacity=".9"/>
+    <text x="280" y="34" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="rgba(255,255,255,.9)" letter-spacing="2">CLICK / 詳細</text>
+    <text x="280" y="62" text-anchor="middle" font-family="DM Serif Display, serif" font-size="22" fill="#fff">920</text>
+  </g>
+
+  <!-- レベル4：応募 -->
+  <g transform="translate(0 330)">
+    <path d="M 180 0 L 380 0 L 330 80 L 230 80 Z" fill="url(#f4)"/>
+    <text x="280" y="34" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" fill="rgba(40,20,5,.7)" letter-spacing="2">APPLY / 応募</text>
+    <text x="280" y="62" text-anchor="middle" font-family="DM Serif Display, serif" font-size="22" fill="#1B1240">86</text>
+  </g>
+
+  <!-- 右側：改善ポイントラベル -->
+  <g font-family="-apple-system, sans-serif" font-size="11" fill="#1B1240">
+    <g transform="translate(0 65)">
+      <circle cx="540" cy="0" r="4" fill="#4F46E5"/>
+      <text x="528" y="3" text-anchor="end" font-weight="700">露出チャネル拡張</text>
+    </g>
+    <g transform="translate(0 165)">
+      <circle cx="540" cy="0" r="4" fill="#A78BFA"/>
+      <text x="528" y="3" text-anchor="end" font-weight="700">タイトル・サムネ最適化</text>
+    </g>
+    <g transform="translate(0 265)">
+      <circle cx="540" cy="0" r="4" fill="#EC4899"/>
+      <text x="528" y="3" text-anchor="end" font-weight="700">原稿の魅力訴求</text>
+    </g>
+    <g transform="translate(0 365)">
+      <circle cx="540" cy="0" r="4" fill="#F59E0B"/>
+      <text x="528" y="3" text-anchor="end" font-weight="700">応募導線の摩擦排除</text>
+    </g>
+  </g>
+
+  <!-- フッター注釈 -->
+  <text x="280" y="450" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" fill="#6B5BA8">
+    各ファネルで「歩留まり率」を上げる打ち手を整理します
+  </text>
+
+  <!-- ボトム：歩留まり率 -->
+  <g transform="translate(60 480)">
+    <rect x="0" y="0" width="440" height="80" rx="12" fill="#FAF7FF" stroke="#EAE6F5"/>
+    <g font-family="-apple-system, sans-serif">
+      <text x="20" y="22" font-size="10" fill="#6B5BA8" letter-spacing="2">CONVERSION RATE</text>
+      <g transform="translate(20 36)">
+        <text font-size="11" fill="#6B5BA8">露出→閲覧</text>
+        <text x="0" y="22" font-family="DM Serif Display, serif" font-size="16" fill="#1B1240">30.8%</text>
+      </g>
+      <g transform="translate(140 36)">
+        <text font-size="11" fill="#6B5BA8">閲覧→詳細</text>
+        <text x="0" y="22" font-family="DM Serif Display, serif" font-size="16" fill="#1B1240">24.1%</text>
+      </g>
+      <g transform="translate(260 36)">
+        <text font-size="11" fill="#6B5BA8">詳細→応募</text>
+        <text x="0" y="22" font-family="DM Serif Display, serif" font-size="16" fill="#1B1240">9.3%</text>
+      </g>
+      <g transform="translate(360 36)">
+        <text font-size="11" fill="#EC4899">合計</text>
+        <text x="0" y="22" font-family="DM Serif Display, serif" font-size="16" fill="#EC4899">0.69%</text>
+      </g>
+    </g>
+  </g>
+</svg>

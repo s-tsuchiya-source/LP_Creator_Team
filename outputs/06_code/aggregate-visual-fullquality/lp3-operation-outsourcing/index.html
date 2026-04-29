@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0F766E">
+<meta name="description" content="複数媒体の運用、原稿差し替え、レポーティング。日々の媒体運用工数を、現場が回る形に整える。aggregateの運用代行・媒体管理サポート。">
+<title>媒体運用を、現場が回る形に整える｜aggregate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/reset.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/lp3.css">
+</head>
+<body>
+<a href="#main" class="skip-link">本文へスキップ</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ico-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></symbol>
+    <symbol id="ico-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="ico-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="ico-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="ico-stack" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5 9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="l-container site-header__inner">
+    <a href="../index.html" class="site-logo">
+      <span class="site-logo__mark">A</span>
+      <span>aggregate<span class="site-logo__sub">/ 運用代行</span></span>
+    </a>
+    <nav class="site-nav" aria-label="メインナビ">
+      <a href="#day">1日の比較</a>
+      <a href="#takeover">引き取る業務</a>
+      <a href="#routine">週間サイクル</a>
+      <a href="#process">プロセス</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <a href="#closing" class="btn btn--primary" style="padding:12px 20px;font-size:13.5px">資料を見る
+      <svg class="icon" width="16" height="16"><use href="#ico-arrow"/></svg>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============== HERO ============== -->
+<section class="lp3-hero" data-sticky-trigger>
+  <div class="l-container lp3-hero__inner">
+    <div data-reveal>
+      <div class="lp3-hero__sticker">採用担当者の業務時間を、本来の業務へ。</div>
+      <h1>
+        媒体運用を、<br>
+        現場が回る形に<br>
+        <strong>整える。</strong><span class="pill"> 安心して、任せる。</span>
+      </h1>
+      <p class="lp3-hero__lead">
+        媒体ごとの管理画面、毎週の原稿差し替え、媒体担当との連絡、月次レポート集計、配分の見直し。<br>
+        現場の業務工数が「採用業務そのもの」を圧迫していませんか。<br>
+        aggregateは、運用業務を引き取り、整理し、戻すべき業務（面接・配属・人事戦略）を守ります。
+      </p>
+      <div class="lp3-hero__cta">
+        <a href="#closing" class="btn btn--primary btn--lg">資料を取り寄せる
+          <svg class="icon" width="18" height="18"><use href="#ico-arrow"/></svg>
+        </a>
+        <a href="#takeover" class="btn btn--ghost btn--lg">引き取る業務を見る</a>
+      </div>
+      <ul class="lp3-hero__supports" role="list">
+        <li>媒体差替・配信管理を全件代行</li>
+        <li>週次レポートと改善提案MTGを定例化</li>
+        <li>媒体担当者とのやりとりも巻き取り</li>
+      </ul>
+    </div>
+
+    <!-- HEROビジュアル：タスクボード合成 -->
+    <div class="lp3-hero__visual" data-reveal data-delay="200">
+      <div class="lp3-board" aria-label="運用業務のタスクボード">
+
+        <!-- ▼ 自社 / 課題山積 -->
+        <div class="lp3-board__col">
+          <div class="lp3-board__col-header"><span>自社業務</span><b>23</b></div>
+          <div class="lp3-task">
+            <span class="lp3-task__tag lp3-task__tag--ad">媒体A</span>
+            <span class="lp3-task__title">配信状況確認</span>
+            <span class="lp3-task__meta">採用担当</span>
+          </div>
+          <div class="lp3-task">
+            <span class="lp3-task__tag lp3-task__tag--copy">原稿</span>
+            <span class="lp3-task__title">職種B 差替</span>
+            <span class="lp3-task__meta">採用担当</span>
+          </div>
+          <div class="lp3-task">
+            <span class="lp3-task__tag lp3-task__tag--data">レポ</span>
+            <span class="lp3-task__title">先週分集計</span>
+            <span class="lp3-task__meta">採用担当</span>
+          </div>
+          <div class="lp3-task">
+            <span class="lp3-task__tag lp3-task__tag--mtg">MTG</span>
+            <span class="lp3-task__title">媒体C定例</span>
+            <span class="lp3-task__meta">採用担当</span>
+          </div>
+        </div>
+
+        <!-- ▼ aggregate引き取り -->
+        <div class="lp3-board__col lp3-board__col--ours">
+          <div class="lp3-board__col-header"><span>aggregate引取</span><b>17</b></div>
+          <div class="lp3-task">
+            <span class="lp3-task__tag lp3-task__tag--ad">媒体A</span>
+            <span class="lp3-task__title">配信状況確認</span>
+            <span class="lp3-task__meta">aggregate</span>
+          </div>
+          <div class="lp3-task">
+            <span class="lp3-task__tag lp3-task__tag--copy">原稿</span>
+            <span class="lp3-task__title">職種B 差替</span>
+            <span class="lp3-task__meta">aggregate</span>
+          </div>
+          <div class="lp3-task">
+            <span class="lp3-task__tag lp3-task__tag--data">レポ</span>
+            <span class="lp3-task__title">先週分集計</span>
+            <span class="lp3-task__meta">aggregate</span>
+          </div>
+          <div class="lp3-task">
+            <span class="lp3-task__tag lp3-task__tag--mtg">MTG</span>
+            <span class="lp3-task__title">媒体C定例</span>
+            <span class="lp3-task__meta">aggregate</span>
+          </div>
+        </div>
+
+        <!-- ▼ 完了 -->
+        <div class="lp3-board__col">
+          <div class="lp3-board__col-header"><span>完了</span><b>—</b></div>
+          <div class="lp3-task lp3-task--done">
+            <span class="lp3-task__tag lp3-task__tag--ad">媒体A</span>
+            <span class="lp3-task__title">配信確認</span>
+            <span class="lp3-task__meta">本日完了</span>
+          </div>
+          <div class="lp3-task lp3-task--done">
+            <span class="lp3-task__tag lp3-task__tag--copy">原稿</span>
+            <span class="lp3-task__title">職種B 差替</span>
+            <span class="lp3-task__meta">本日完了</span>
+          </div>
+          <div class="lp3-task lp3-task--done">
+            <span class="lp3-task__tag lp3-task__tag--data">レポ</span>
+            <span class="lp3-task__title">月次集計</span>
+            <span class="lp3-task__meta">昨日完了</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PHOTO BILLBOARD (採用担当の現場) ============== -->
+<section class="photo-billboard" aria-labelledby="lp3-billboard-title" style="--billboard-glow: rgba(249, 115, 22, .35); --billboard-accent: #FED7AA; --brand-primary: #0F766E;">
+  <div class="photo-billboard__corner-tag">CURRENT / 採用担当の現場</div>
+  <div class="photo-billboard__frame" style="background-image: url('../assets/images/lp3/img_02.png');">
+    <div class="l-container photo-billboard__inner">
+      <div class="photo-billboard__copy" data-reveal>
+        <span class="eyebrow">業務時間の偏り</span>
+        <h2 id="lp3-billboard-title" class="photo-billboard__title">運用に追われ、<em>本来業務</em>が<em>後回し</em>になる。</h2>
+        <p class="photo-billboard__lead">媒体管理・原稿差替・媒体担当連絡。気づけば1日の半分が運用業務に消えています。本当に時間を使うべき、面接・配属・採用戦略の仕事に時間が戻るように、運用は引き取らせてください。</p>
+      </div>
+      <div class="photo-billboard__cards" data-reveal data-delay="200">
+        <div class="billboard-card">
+          <small>OPERATIONS / DAY</small>
+          <b>4.2h</b>
+          <span>媒体運用に消費</span>
+        </div>
+        <div class="billboard-card billboard-card--accent">
+          <small>RECLAIMED</small>
+          <b>+3.8h</b>
+          <span>本来業務に戻る</span>
+        </div>
+        <div class="billboard-card">
+          <small>WEEKLY MTG</small>
+          <b>15min</b>
+          <span>定例・意思決定のみ</span>
+        </div>
+        <div class="billboard-card">
+          <small>HANDOVER</small>
+          <b>17 ops</b>
+          <span>aggregate 引取</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== DAY COMPARE Before/After ============== -->
+<section class="lp3-day" id="day">
+  <div class="l-container">
+    <div class="lp3-day__head" data-reveal>
+      <span class="eyebrow">Before / After your day</span>
+      <h2 class="section-title">採用担当者の<em>1日</em>を、整理する。</h2>
+      <p class="section-lead" style="margin-inline:auto">
+        ある採用担当者の典型的な1日です（イメージ）。<br>
+        運用業務に追われて、本来やるべき面接準備・候補者対応・社内調整が後ろ倒しになっていませんか。
+      </p>
+    </div>
+
+    <div class="lp3-day__rows">
+      <article class="lp3-day__row lp3-day__row--before" data-reveal>
+        <span class="lp3-day__row-label">BEFORE — 運用業務に追われる1日</span>
+        <h3>9:00 - 17:00 / 媒体管理に4時間以上を消費</h3>
+        <div class="lp3-timeline">
+          <div class="lp3-timeline__hours" aria-hidden="true">
+            <div class="lp3-timeline__hour">09:00</div>
+            <div class="lp3-timeline__hour">10:00</div>
+            <div class="lp3-timeline__hour">11:00</div>
+            <div class="lp3-timeline__hour">12:00</div>
+            <div class="lp3-timeline__hour">13:00</div>
+            <div class="lp3-timeline__hour">14:00</div>
+            <div class="lp3-timeline__hour">15:00</div>
+            <div class="lp3-timeline__hour">16:00</div>
+          </div>
+          <div class="lp3-timeline__tracks" style="height: 320px">
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__block lp3-timeline__block--ad" style="top: 0; height: 50px">媒体A 配信確認 <small>40min</small></div>
+            <div class="lp3-timeline__block lp3-timeline__block--copy" style="top: 55px; height: 65px">原稿差替 4職種 <small>1h</small></div>
+            <div class="lp3-timeline__block lp3-timeline__block--mtg" style="top: 125px; height: 35px">媒体担当B 定例 <small>30min</small></div>
+            <div class="lp3-timeline__block lp3-timeline__block--core" style="top: 165px; height: 50px">面接 1件 <small>45min</small></div>
+            <div class="lp3-timeline__block lp3-timeline__block--ad" style="top: 220px; height: 35px">媒体C 媒体担当連絡 <small>30min</small></div>
+            <div class="lp3-timeline__block lp3-timeline__block--data" style="top: 260px; height: 60px">先週分レポート集計 <small>1h+</small></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="lp3-day__row lp3-day__row--after" data-reveal data-delay="200">
+        <span class="lp3-day__row-label">AFTER — 採用業務に集中できる1日</span>
+        <h3>9:00 - 17:00 / 運用業務は<em>15分のMTG</em>だけに圧縮</h3>
+        <div class="lp3-timeline">
+          <div class="lp3-timeline__hours" aria-hidden="true">
+            <div class="lp3-timeline__hour">09:00</div>
+            <div class="lp3-timeline__hour">10:00</div>
+            <div class="lp3-timeline__hour">11:00</div>
+            <div class="lp3-timeline__hour">12:00</div>
+            <div class="lp3-timeline__hour">13:00</div>
+            <div class="lp3-timeline__hour">14:00</div>
+            <div class="lp3-timeline__hour">15:00</div>
+            <div class="lp3-timeline__hour">16:00</div>
+          </div>
+          <div class="lp3-timeline__tracks" style="height: 320px">
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__hour-line"></div>
+            <div class="lp3-timeline__block lp3-timeline__block--core" style="top: 0; height: 70px">面接準備 / 候補者対応 <small>1h</small></div>
+            <div class="lp3-timeline__block lp3-timeline__block--mtg" style="top: 75px; height: 28px">aggregate定例 <small>15min</small></div>
+            <div class="lp3-timeline__block lp3-timeline__block--core" style="top: 110px; height: 65px">面接 2件 <small>1h</small></div>
+            <div class="lp3-timeline__block lp3-timeline__block--core" style="top: 180px; height: 65px">社内調整 / 配属検討 <small>1h</small></div>
+            <div class="lp3-timeline__block lp3-timeline__block--core" style="top: 250px; height: 70px">採用戦略 / 育成 <small>1h+</small></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TAKEOVER ============== -->
+<section class="lp3-takeover" id="takeover">
+  <div class="l-container">
+    <div class="lp3-takeover__head" data-reveal>
+      <span class="eyebrow">業務分担</span>
+      <h2 class="section-title">「自社で持つ業務」と「aggregateが持つ業務」を、<em>明確に分ける。</em></h2>
+      <p class="section-lead" style="margin-inline:auto">アウトソースは「丸投げ」ではなく「分担」。何を任せ、何を持つかを最初に決めるところから始めます。</p>
+    </div>
+
+    <div class="lp3-takeover__layout">
+      <div class="lp3-takeover__col lp3-takeover__col--keep" data-reveal>
+        <h3>自社で持ち続ける業務</h3>
+        <ul>
+          <li>採用方針・募集職種の意思決定</li>
+          <li>面接・配属・候補者選考</li>
+          <li>採用ブランド・カルチャー設計</li>
+          <li>最終判断・責任の所在</li>
+          <li>社内調整・経営層への報告</li>
+        </ul>
+      </div>
+
+      <div class="lp3-takeover__arrow" aria-hidden="true">
+        <svg width="20" height="20"><use href="#ico-arrow"/></svg>
+      </div>
+
+      <div class="lp3-takeover__col lp3-takeover__col--takeover" data-reveal data-delay="200">
+        <h3>aggregateが引き取る業務</h3>
+        <ul>
+          <li>媒体管理画面の日次運用</li>
+          <li>原稿差し替え・写真差し替え</li>
+          <li>媒体担当者とのやりとり</li>
+          <li>週次レポート・月次レポート作成</li>
+          <li>配信状況確認・配分見直し提案</li>
+          <li>競合動向・媒体動向のキャッチアップ</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- プロセス図解 -->
+    <div id="process" style="margin-top:80px" data-reveal>
+      <img src="../assets/images/lp3/process-flow.svg" alt="運用代行プロセス図：日次・週次・月次の業務リズム">
+    </div>
+  </div>
+</section>
+
+<!-- ============== ROUTINE ============== -->
+<section class="lp3-routine" id="routine">
+  <div class="l-container">
+    <div class="lp3-routine__head" data-reveal>
+      <span class="eyebrow">週次サイクル</span>
+      <h2 class="section-title">毎週、<em>同じリズム</em>で。<br>採用担当者は15分だけ参加。</h2>
+      <p class="section-lead" style="margin-inline:auto">運用は属人化しないリズムで回します。週1回の定例で意思決定だけしていただければ、現場業務は止まりません。</p>
+    </div>
+
+    <div class="lp3-routine__list">
+      <article class="lp3-routine__item" data-reveal>
+        <div class="lp3-routine__day">MON</div>
+        <div>
+          <div class="lp3-routine__title">先週分のレポートを共有</div>
+          <p class="lp3-routine__desc">媒体別・職種別の応募数・応募単価・歩留まりを1枚にまとめ、月曜午前にお送りします。</p>
+        </div>
+      </article>
+      <article class="lp3-routine__item" data-reveal data-delay="80">
+        <div class="lp3-routine__day">TUE</div>
+        <div>
+          <div class="lp3-routine__title">原稿差替・配分見直し提案</div>
+          <p class="lp3-routine__desc">数字をもとに、改善が必要な原稿・配分の提案を作成。承認いただいた範囲で当週から反映します。</p>
+        </div>
+      </article>
+      <article class="lp3-routine__item" data-reveal data-delay="160">
+        <div class="lp3-routine__day">WED</div>
+        <div>
+          <div class="lp3-routine__title">15分の定例MTG</div>
+          <p class="lp3-routine__desc">レポート + 提案を15分で確認。採用担当者の判断が必要な事項のみご相談します。</p>
+        </div>
+      </article>
+      <article class="lp3-routine__item" data-reveal data-delay="240">
+        <div class="lp3-routine__day">THU</div>
+        <div>
+          <div class="lp3-routine__title">原稿差替の実施・媒体連絡</div>
+          <p class="lp3-routine__desc">承認された変更を媒体側へ反映。媒体担当者とのやりとりはaggregateで巻き取ります。</p>
+        </div>
+      </article>
+      <article class="lp3-routine__item" data-reveal data-delay="320">
+        <div class="lp3-routine__day">FRI</div>
+        <div>
+          <div class="lp3-routine__title">今週の動きを記録 / 翌週準備</div>
+          <p class="lp3-routine__desc">変更履歴・効果検証・翌週の論点をまとめ、月曜のレポートに繋ぎます。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TEAM PHOTO ============== -->
+<section class="photo-billboard" aria-label="採用チームの定例イメージ" style="--billboard-glow: rgba(20, 184, 166, .3); --billboard-accent: #FED7AA; --brand-primary: #0F766E;">
+  <div class="photo-billboard__corner-tag">TEAM / 週次15分の定例</div>
+  <div class="photo-billboard__frame" style="background-image: url('../assets/images/lp3/img_01.png'); min-height: clamp(320px, 42vw, 460px);">
+    <div class="l-container photo-billboard__inner" style="grid-template-columns: 1fr;">
+      <div class="photo-billboard__copy" data-reveal style="max-width: 32em;">
+        <span class="eyebrow">WEEKLY</span>
+        <h2 class="photo-billboard__title">毎週の<em>15分</em>で、現場が回る。</h2>
+        <p class="photo-billboard__lead">運用ナレッジは個人に依存させません。チェックリストとナレッジベースで仕組み化し、御社採用チームと並走します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="lp3-faq" id="faq">
+  <div class="l-container l-container--narrow">
+    <div class="lp3-faq__head" data-reveal>
+      <span class="eyebrow">よくある質問</span>
+      <h2 class="section-title">相談前に、<em>気になる</em>こと。</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" data-reveal><summary>運用代行の範囲は柔軟に決められますか？</summary>
+        <div class="faq-item__body">はい。「全部任せる」「数字管理だけ任せる」「媒体担当との対応だけ任せる」など、業務単位で切り出せます。最初に「自社で持つ / aggregateが持つ」を整理してから契約します。</div>
+      </details>
+      <details class="faq-item" data-reveal data-delay="50"><summary>急な原稿差替や緊急対応にも対応できますか？</summary>
+        <div class="faq-item__body">日次運用の中で軽微な調整は当日中に反映します。大きな差替・新規出稿は、翌営業日の対応を基本としています。緊急度の判断基準は契約時にすり合わせます。</div>
+      </details>
+      <details class="faq-item" data-reveal data-delay="100"><summary>担当者が変わると引継ぎが心配です。</summary>
+        <div class="faq-item__body">媒体運用ナレッジは個人ではなく仕組み（チェックリスト・ナレッジベース）で管理しています。担当変更時は引き継ぎ期間を必ず設け、御社運用の連続性を守ります。</div>
+      </details>
+      <details class="faq-item" data-reveal data-delay="150"><summary>少額予算の媒体運用でも依頼できますか？</summary>
+        <div class="faq-item__body">運用代行のスコープと予算規模が見合うかを最初にご相談します。「運用代行」が逆にコストを押し上げると判断した場合は、別の打ち手（例：構造分析のみ）をお勧めします。</div>
+      </details>
+      <details class="faq-item" data-reveal data-delay="200"><summary>すでに代理店に依頼しているのですが、移管できますか？</summary>
+        <div class="faq-item__body">移管支援も対応しています。代理店からの引継ぎ・媒体権限の移行・履歴データの整理まで、御社負担を最小化する形で進めます。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CLOSING ============== -->
+<section class="lp3-closing" id="closing">
+  <div class="l-container l-container--narrow">
+    <div class="lp3-closing__inner" data-reveal>
+      <h2>採用担当者の手元から、<br><em>運用業務を、すっと外す。</em></h2>
+      <p>
+        運用業務に追われない採用組織を作るために、まずは現状の業務分担を可視化します。<br>
+        無料相談では、御社の業務量と任せ先候補をその場で整理してお伝えします。
+      </p>
+      <div class="lp3-closing__cta">
+        <a href="mailto:contact@example.com" class="btn btn--primary btn--lg">資料を取り寄せる
+          <svg class="icon" width="18" height="18"><use href="#ico-arrow"/></svg>
+        </a>
+        <a href="mailto:contact@example.com" class="btn btn--ghost btn--lg">業務量の無料診断</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 横断ナビ -->
+<section class="cross-nav" aria-label="他の課題別LPへ">
+  <div class="l-container">
+    <h3>他の採用課題から探す</h3>
+    <div class="cross-nav__grid">
+      <a class="cross-nav__card" href="../lp1-cpa-cost/">
+        <small>01 / COST</small><b>応募単価・広告費改善</b>
+      </a>
+      <a class="cross-nav__card" href="../lp2-application-volume/">
+        <small>02 / VOLUME</small><b>応募数不足・母集団形成</b>
+      </a>
+      <a class="cross-nav__card" href="../lp4-analytics-improvement/">
+        <small>04 / ANALYTICS</small><b>データ可視化・改善サイクル</b>
+      </a>
+      <a class="cross-nav__card" href="../index.html">
+        <small>00 / OVERVIEW</small><b>4本の課題LP一覧へ</b>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="l-container site-footer__grid">
+    <div>
+      <div class="site-logo" style="color:#fff">
+        <span class="site-logo__mark">A</span>
+        <span>aggregate</span>
+      </div>
+      <p class="site-footer__brand-blurb">運用業務に追われない採用組織を作る。媒体管理・原稿差替・レポート集計を引き取り、現場が回る形に整える運用代行。</p>
+    </div>
+    <div>
+      <h4>SOLUTION</h4>
+      <ul>
+        <li><a href="../lp1-cpa-cost/">採用費構造改善</a></li>
+        <li><a href="../lp2-application-volume/">母集団形成</a></li>
+        <li><a href="../lp3-operation-outsourcing/">運用代行</a></li>
+        <li><a href="../lp4-analytics-improvement/">データ可視化</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>RESOURCES</h4>
+      <ul>
+        <li><a href="#closing">資料ダウンロード</a></li>
+        <li><a href="#closing">業務量診断</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>COMPANY</h4>
+      <ul>
+        <li><a href="https://aggregate.eole.co.jp/" rel="noopener">aggregate.eole.co.jp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="l-container site-footer__bottom">
+    <span>&copy; aggregate / イオレ</span>
+    <span>運用代行ソリューション</span>
+  </div>
+</footer>
+
+<div class="sticky-cta" data-sticky-cta role="region" aria-label="主要アクション">
+  <a href="#takeover" class="btn btn--ghost">業務範囲</a>
+  <a href="mailto:contact@example.com" class="btn btn--primary">資料請求</a>
+</div>
+
+<script src="../assets/js/common.js" defer></script>
+<script src="../assets/js/lp3.js" defer></script>
+</body>
+</html>

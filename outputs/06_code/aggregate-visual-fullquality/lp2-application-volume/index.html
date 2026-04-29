@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1A1240">
+<meta name="description" content="求人を出しても応募が来ない、母集団形成が進まない。露出から応募までのファネルを8チャネルで再設計し、見つけてもらえる→選ばれる求人へ。aggregateの母集団形成支援。">
+<title>求人に、見つけられる理由と選ばれる理由を作る｜aggregate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/reset.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/lp2.css">
+</head>
+<body>
+<a href="#main" class="skip-link">本文へスキップ</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ico-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></symbol>
+    <symbol id="ico-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol>
+    <symbol id="ico-magnifier" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="ico-megaphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+    <symbol id="ico-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M12 17v4"/><path d="M3 12h4"/><path d="M17 12h4"/><path d="M5.6 5.6 8 8"/><path d="m16 16 2.4 2.4"/><path d="M5.6 18.4 8 16"/><path d="m16 8 2.4-2.4"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="l-container site-header__inner">
+    <a href="../index.html" class="site-logo">
+      <span class="site-logo__mark">A</span>
+      <span>aggregate<span class="site-logo__sub">/ 母集団形成</span></span>
+    </a>
+    <nav class="site-nav" aria-label="メインナビ">
+      <a href="#pain">課題</a>
+      <a href="#funnel">ファネル設計</a>
+      <a href="#solution">3つの打ち手</a>
+      <a href="#channels">チャネル網羅</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <a href="#closing" class="btn btn--primary" style="padding:12px 20px;font-size:13.5px">資料を見る
+      <svg class="icon" width="16" height="16"><use href="#ico-arrow"/></svg>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============== HERO ============== -->
+<section class="lp2-hero" data-sticky-trigger>
+  <div class="l-container lp2-hero__inner">
+    <div data-reveal>
+      <div class="lp2-hero__chips">
+        <span>母集団形成</span>
+        <span>応募数 +改善</span>
+        <span>8チャネル設計</span>
+      </div>
+      <h1>
+        求人に、<br>
+        <span class="grad">見つけられる理由</span>と<br>
+        <span class="accent">選ばれる理由</span>を作る。
+      </h1>
+      <p class="lp2-hero__lead">
+        「求人を出しても応募が来ない」のは、見られていないからか、選ばれていないか、その両方か。<br>
+        aggregateは、<strong>露出 → 閲覧 → 詳細 → 応募</strong>のファネルを分解し、止まっている場所を特定。<br>
+        8つのチャネルを役割分担させて、母集団そのものを設計し直します。
+      </p>
+      <div class="lp2-hero__cta">
+        <a href="#closing" class="btn btn--primary btn--lg">資料を取り寄せる
+          <svg class="icon" width="18" height="18"><use href="#ico-arrow"/></svg>
+        </a>
+        <a href="#funnel" class="btn btn--ghost btn--lg">ファネル設計を見る</a>
+      </div>
+      <div class="lp2-hero__metrics">
+        <div>
+          <small>支援領域</small>
+          <b>母集団設計 × 露出</b>
+        </div>
+        <div>
+          <small>対応チャネル</small>
+          <b><span data-countup="8" data-duration="1200">8</span>+</b>
+        </div>
+        <div>
+          <small>初回相談</small>
+          <b>無料 60分</b>
+        </div>
+      </div>
+    </div>
+
+    <div class="lp2-hero__visual" data-reveal data-delay="200">
+      <img class="lp2-hero__visual-svg" src="../assets/images/lp2/hero-funnel-growth.svg" alt="求人到達範囲を示す同心円ネットワーク図" loading="eager">
+
+      <div class="lp2-floater lp2-floater--a">
+        <small>FUNNEL / 露出</small>
+        <b><span class="num"><span data-countup="12400">12,400</span></span> imp / 月</b>
+      </div>
+      <div class="lp2-floater lp2-floater--b">
+        <small>APPLY RATE</small>
+        <b><span class="num">+<span data-countup="38">38</span>%</span></b>
+      </div>
+      <div class="lp2-floater lp2-floater--c">
+        <small>CHANNELS</small>
+        <b><span class="num"><span data-countup="8">8</span></span> channels active</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PHOTO BILLBOARD (母集団形成のリアル) ============== -->
+<section class="photo-billboard" aria-labelledby="lp2-billboard-title" style="--billboard-glow: rgba(236, 72, 153, .35); --billboard-accent: #FBCFE8; --brand-primary: #4F46E5;">
+  <div class="photo-billboard__corner-tag">CHANNELS / 母集団の現実</div>
+  <div class="photo-billboard__frame" style="background-image: url('../assets/images/lp2/img_03.png');">
+    <div class="l-container photo-billboard__inner">
+      <div class="photo-billboard__copy" data-reveal>
+        <span class="eyebrow">露出 → 閲覧 → 詳細 → 応募</span>
+        <h2 id="lp2-billboard-title" class="photo-billboard__title">求職者の<em>動線</em>に、求人を<em>並走</em>させる。</h2>
+        <p class="photo-billboard__lead">求職者は1つの媒体だけで完結しません。検索・スカウト・SNS・自社サイトを行き来する動線に対して、それぞれの役割で求人を露出する設計が必要です。</p>
+      </div>
+      <div class="photo-billboard__cards" data-reveal data-delay="200">
+        <div class="billboard-card">
+          <small>REACH / MO</small>
+          <b>12,400</b>
+          <span>imp 8チャネル合算</span>
+        </div>
+        <div class="billboard-card billboard-card--accent">
+          <small>APPLY RATE</small>
+          <b>+38%</b>
+          <span>YoY 改善試算</span>
+        </div>
+        <div class="billboard-card">
+          <small>CHANNELS</small>
+          <b>8 chs</b>
+          <span>役割分担済</span>
+        </div>
+        <div class="billboard-card">
+          <small>FUNNEL CV</small>
+          <b>0.69%</b>
+          <span>露出 → 応募 全体</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PAIN bubbles ============== -->
+<section class="lp2-pain" id="pain">
+  <div class="l-container">
+    <div class="lp2-pain__head" data-reveal>
+      <span class="eyebrow">採用現場の声</span>
+      <h2 class="section-title">「応募が来ない」の<em>理由</em>は、ひとつじゃない。</h2>
+      <p class="section-lead" style="margin-inline:auto">
+        母集団形成が進まないとき、原因はだいたい4つに分類できます。<br>
+        どこで止まっているかが分かれば、打ち手は変わります。
+      </p>
+    </div>
+
+    <div class="lp2-pain__bubbles">
+      <article class="lp2-pain__bubble" data-reveal>
+        <p class="lp2-pain__bubble-quote">求人を出しているのに、そもそも見られていない気がする</p>
+        <p class="lp2-pain__bubble-cause"><strong>原因:</strong> 露出チャネルが少ない、検索順位が上がらない、サムネイル/タイトルが弱い。</p>
+      </article>
+      <article class="lp2-pain__bubble" data-reveal data-delay="100">
+        <p class="lp2-pain__bubble-quote">クリックはされているのに、応募までいかない</p>
+        <p class="lp2-pain__bubble-cause"><strong>原因:</strong> 原稿の魅力訴求が弱い、写真・動画が情報量不足、応募導線に摩擦がある。</p>
+      </article>
+      <article class="lp2-pain__bubble" data-reveal data-delay="200">
+        <p class="lp2-pain__bubble-quote">特定の媒体だけに依存していて、他のチャネルが空白</p>
+        <p class="lp2-pain__bubble-cause"><strong>原因:</strong> 露出チャネルがJob Board一極集中。求職者の検索行動と一致していない。</p>
+      </article>
+      <article class="lp2-pain__bubble" data-reveal data-delay="300">
+        <p class="lp2-pain__bubble-quote">同じ職種でも、競合の方が応募が集まっているように見える</p>
+        <p class="lp2-pain__bubble-cause"><strong>原因:</strong> 待遇・写真・働き方訴求の比較で負けている。差別化軸が立っていない。</p>
+      </article>
+      <article class="lp2-pain__bubble" data-reveal data-delay="400">
+        <p class="lp2-pain__bubble-quote">出稿数を増やしても応募の伸びが鈍い</p>
+        <p class="lp2-pain__bubble-cause"><strong>原因:</strong> 量を増やす前に、ファネル中間（閲覧→詳細）の歩留まり改善が必要なケース。</p>
+      </article>
+      <article class="lp2-pain__bubble" data-reveal data-delay="500">
+        <p class="lp2-pain__bubble-quote">そもそも求職者がどこを見ているのか分からない</p>
+        <p class="lp2-pain__bubble-cause"><strong>原因:</strong> 求職者の検索チャネル分布の把握が不足。露出戦略が「経験則」に依存している。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FUNNEL ============== -->
+<section class="lp2-funnel" id="funnel">
+  <div class="l-container">
+    <div class="lp2-funnel__head" data-reveal>
+      <span class="eyebrow">ファネル設計</span>
+      <h2 class="section-title">「応募が止まる場所」を、<em>4段階</em>で分解する。</h2>
+      <p class="section-lead" style="margin-inline:auto">露出から応募までのファネルを4段階に分け、どこで歩留まりが落ちているかを特定。落ちている階層に応じて、打ち手を切り替えます。</p>
+    </div>
+
+    <div class="lp2-funnel__layout">
+      <div class="lp2-funnel__visual" data-reveal>
+        <img src="../assets/images/lp2/funnel-diagram.svg" alt="ファネル図：露出12,400 → 閲覧3,820 → 詳細920 → 応募86の各階層と歩留まり率">
+      </div>
+
+      <div class="lp2-funnel__cards">
+        <article class="lp2-funnel__card" data-reveal>
+          <div class="lp2-funnel__card-step">01</div>
+          <div>
+            <h3>REACH / 露出を広げる</h3>
+            <p>求職者が「そもそも見つけられる」状態を作る。検索結果での順位、複数チャネルへの掲載、SNS拡散の組み合わせで設計します。</p>
+            <span class="lp2-funnel__card-meta">対応チャネル: Job Board / Aggregator / SNS / Owned</span>
+          </div>
+        </article>
+        <article class="lp2-funnel__card" data-reveal data-delay="100">
+          <div class="lp2-funnel__card-step">02</div>
+          <div>
+            <h3>VIEW / 閲覧してもらう</h3>
+            <p>タイトル・サムネ・冒頭3行で「自分向け」と思ってもらう。検索結果から閲覧への歩留まりを上げる原稿改善が中心です。</p>
+            <span class="lp2-funnel__card-meta">改善対象: タイトル / サムネ / 冒頭リード</span>
+          </div>
+        </article>
+        <article class="lp2-funnel__card" data-reveal data-delay="200">
+          <div class="lp2-funnel__card-step">03</div>
+          <div>
+            <h3>CLICK / 詳細まで読ませる</h3>
+            <p>仕事内容・働き方・待遇のうち、求職者が「決め手」にしている情報を上位に配置。離脱が起きるブロックを特定します。</p>
+            <span class="lp2-funnel__card-meta">改善対象: 原稿構成 / 働き方訴求 / 写真</span>
+          </div>
+        </article>
+        <article class="lp2-funnel__card" data-reveal data-delay="300">
+          <div class="lp2-funnel__card-step">04</div>
+          <div>
+            <h3>APPLY / 応募ボタンを押させる</h3>
+            <p>応募導線の摩擦排除、応募フォームの項目最適化、CTAの位置改善。応募率改善は最後の数%を取りに行く工程です。</p>
+            <span class="lp2-funnel__card-meta">改善対象: CTA / 応募フォーム / モバイル最適化</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SOLUTION ============== -->
+<section class="lp2-solution" id="solution">
+  <div class="l-container">
+    <div class="lp2-solution__head" data-reveal>
+      <span class="eyebrow">aggregateの3つの打ち手</span>
+      <h2 class="section-title">露出を広げ、原稿を磨き、<em>歩留まりを上げる。</em></h2>
+      <p class="section-lead" style="margin-inline:auto">母集団形成は「量」「質」「歩留まり」の3点を同時に動かす必要があります。aggregateはこの3つを別々に設計します。</p>
+    </div>
+
+    <div class="lp2-solution__grid">
+      <article class="lp2-feature lp2-feature--a" data-reveal>
+        <div class="lp2-feature__icon">
+          <svg class="icon"><use href="#ico-megaphone"/></svg>
+        </div>
+        <span class="lp2-feature__num">01</span>
+        <h3>チャネル網羅<br>—— 8チャネル × 役割分担</h3>
+        <p>主要求人媒体だけでなく、特化媒体・求人検索・スカウト・SNS・リファラル・自社サイト・運用型広告の8軸で、それぞれの役割を分担します。</p>
+        <ul>
+          <li>露出量の総合計を最大化</li>
+          <li>チャネル間の応募重複を抑制</li>
+          <li>「空白チャネル」を特定して埋める</li>
+        </ul>
+      </article>
+
+      <article class="lp2-feature lp2-feature--b" data-reveal data-delay="150">
+        <div class="lp2-feature__icon">
+          <svg class="icon"><use href="#ico-sparkles"/></svg>
+        </div>
+        <span class="lp2-feature__num">02</span>
+        <h3>原稿の魅力設計<br>—— 「自分向け」と感じさせる</h3>
+        <p>仕事内容の羅列ではなく、「誰が」「何を得て」「どう変わるか」を明示。働き方・成長・待遇のうち、求職者の決め手になる順に並び替えます。</p>
+        <ul>
+          <li>タイトル・サムネ・冒頭3行の最適化</li>
+          <li>働き方訴求のリライト</li>
+          <li>写真・動画の情報量強化</li>
+        </ul>
+      </article>
+
+      <article class="lp2-feature lp2-feature--c" data-reveal data-delay="300">
+        <div class="lp2-feature__icon">
+          <svg class="icon"><use href="#ico-magnifier"/></svg>
+        </div>
+        <span class="lp2-feature__num">03</span>
+        <h3>歩留まり改善<br>—— ファネル中間の漏れを埋める</h3>
+        <p>応募導線・フォーム・モバイル最適化など、応募率に直接効く要素を改善。「もう一押し」の歩留まり改善でCV件数を底上げします。</p>
+        <ul>
+          <li>応募フォーム項目の最適化</li>
+          <li>CTA位置・文言のテスト</li>
+          <li>モバイル離脱要因の解消</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CHANNELS ============== -->
+<section class="lp2-channels" id="channels">
+  <div class="l-container lp2-channels__inner">
+    <div class="lp2-channels__head" data-reveal>
+      <span class="eyebrow" style="color:#FBCFE8">CHANNEL COVERAGE</span>
+      <h2 class="section-title">求職者が「実際に見ている場所」を、<em>すべて押さえる。</em></h2>
+      <p class="section-lead">媒体ごとに役割は違います。1チャネルへの集中をやめ、母集団全体の網を広げます。</p>
+    </div>
+
+    <div class="lp2-channels__visual" data-reveal>
+      <img src="../assets/images/lp2/channel-coverage.svg" alt="採用チャネル網羅マップ：自社求人を中心に8つの異なる役割のチャネルを配置">
+    </div>
+
+    <div class="lp2-channels__visual" style="margin-top:64px">
+      <p style="text-align:center; color:rgba(255,255,255,.6); font-size:13.5px; line-height:1.85; max-width:48em; margin-inline:auto;" data-reveal>
+        各チャネルは「広く浅く」と「狭く深く」が混在しています。<br>
+        職種・年齢・経験のターゲットによって、組み合わせと予算配分は変わります。<br>
+        aggregateは、御社のターゲットに合わせて<strong style="color:#FBCFE8">最適なチャネル組み合わせ</strong>を提示します。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TEAM PHOTO ============== -->
+<section class="photo-billboard" aria-label="採用チャネル設計のイメージ" style="--billboard-glow: rgba(245, 158, 11, .35); --billboard-accent: #FED7AA; --brand-primary: #4F46E5;">
+  <div class="photo-billboard__corner-tag">DESIGN / 8チャネル統合運用</div>
+  <div class="photo-billboard__frame" style="background-image: url('../assets/images/lp2/img_01.png'); background-size: cover; background-position: center; min-height: clamp(360px, 46vw, 520px);">
+    <div class="l-container photo-billboard__inner">
+      <div class="photo-billboard__copy" data-reveal style="max-width: 32em;">
+        <span class="eyebrow">INTEGRATED</span>
+        <h2 class="photo-billboard__title"><em>1つの戦略</em>で、<em>8つの面</em>を動かす。</h2>
+        <p class="photo-billboard__lead">媒体ごとにバラバラだった運用を、1つの母集団戦略にまとめます。アクセス・スカウト・SNS・自社サイト、すべて1枚の地図の上で動かす。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="lp2-faq" id="faq">
+  <div class="l-container l-container--narrow">
+    <div class="lp2-faq__head" data-reveal>
+      <span class="eyebrow">よくある質問</span>
+      <h2 class="section-title">相談前に、<em>気になる</em>こと。</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" data-reveal><summary>すでに複数の求人媒体を使っていますが、それでも依頼できますか？</summary>
+        <div class="faq-item__body">はい。媒体数が多いケースでも、各チャネルの役割分担が整理されていないことは多いです。「重複している部分」「空白になっている部分」を整理して、母集団全体の網を再設計します。</div>
+      </details>
+      <details class="faq-item" data-reveal data-delay="50"><summary>応募数を一気に増やしたいのですが、すぐ可能ですか？</summary>
+        <div class="faq-item__body">露出を広げる打ち手は短期で効果が出やすいですが、母集団の質まで含めて改善する場合は1〜3ヶ月のスパンが現実的です。短期の打ち手と中期の打ち手を分けてご提示します。</div>
+      </details>
+      <details class="faq-item" data-reveal data-delay="100"><summary>原稿の書き換えだけ依頼できますか？</summary>
+        <div class="faq-item__body">原稿改善のみのご依頼も対応可能です。ただし、原稿だけ磨いても露出が足りないケースもあるため、最初に「現状のファネル状況」を確認した上で、原稿のみ・露出のみ・両方のいずれをお勧めするか整理します。</div>
+      </details>
+      <details class="faq-item" data-reveal data-delay="150"><summary>地方拠点の採用にも対応できますか？</summary>
+        <div class="faq-item__body">地域特化媒体・地域版の運用型広告・地元コミュニティ経由など、エリアによって最適なチャネルは変わります。エリアの母集団状況を踏まえて設計します。</div>
+      </details>
+      <details class="faq-item" data-reveal data-delay="200"><summary>採用ターゲットが特殊で、母数が少ない職種です。それでも対応可能ですか？</summary>
+        <div class="faq-item__body">はい。母数が少ない職種ほど、「見つけてもらう」ためのチャネル設計が重要になります。ニッチ媒体・コミュニティ・スカウトなど、量より質が効くチャネルの組み合わせをご提案します。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CLOSING ============== -->
+<section class="lp2-closing" id="closing">
+  <div class="l-container l-container--narrow">
+    <div class="lp2-closing__inner" data-reveal>
+      <h2>応募数の壁を、<br><em>「設計」</em>で抜く。</h2>
+      <p>
+        露出から応募までのファネルを再設計し、御社の母集団を厚くする打ち手を整理してご提示します。<br>
+        まずは初回60分相談で、現状のファネルと改善余地を一緒に見ましょう。
+      </p>
+      <div class="lp2-closing__cta">
+        <a href="mailto:contact@example.com" class="btn btn--primary btn--lg">資料を取り寄せる（無料）
+          <svg class="icon" width="18" height="18"><use href="#ico-arrow"/></svg>
+        </a>
+        <a href="mailto:contact@example.com" class="btn btn--ghost btn--lg">60分無料相談</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 横断ナビ -->
+<section class="cross-nav" aria-label="他の課題別LPへ">
+  <div class="l-container">
+    <h3>他の採用課題から探す</h3>
+    <div class="cross-nav__grid">
+      <a class="cross-nav__card" href="../lp1-cpa-cost/">
+        <small>01 / COST</small><b>応募単価・広告費改善</b>
+      </a>
+      <a class="cross-nav__card" href="../lp3-operation-outsourcing/">
+        <small>03 / OPERATIONS</small><b>媒体運用工数・まるごと代行</b>
+      </a>
+      <a class="cross-nav__card" href="../lp4-analytics-improvement/">
+        <small>04 / ANALYTICS</small><b>データ可視化・改善サイクル</b>
+      </a>
+      <a class="cross-nav__card" href="../index.html">
+        <small>00 / OVERVIEW</small><b>4本の課題LP一覧へ</b>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="l-container site-footer__grid">
+    <div>
+      <div class="site-logo" style="color:#fff">
+        <span class="site-logo__mark">A</span>
+        <span>aggregate</span>
+      </div>
+      <p class="site-footer__brand-blurb">露出 → 閲覧 → 詳細 → 応募。母集団は「設計」できる。8チャネルの役割分担で、見つけてもらえる→選ばれる求人へ。</p>
+    </div>
+    <div>
+      <h4>SOLUTION</h4>
+      <ul>
+        <li><a href="../lp1-cpa-cost/">採用費構造改善</a></li>
+        <li><a href="../lp2-application-volume/">母集団形成</a></li>
+        <li><a href="../lp3-operation-outsourcing/">運用代行</a></li>
+        <li><a href="../lp4-analytics-improvement/">データ可視化</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>RESOURCES</h4>
+      <ul>
+        <li><a href="#closing">資料ダウンロード</a></li>
+        <li><a href="#closing">無料相談</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>COMPANY</h4>
+      <ul>
+        <li><a href="https://aggregate.eole.co.jp/" rel="noopener">aggregate.eole.co.jp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="l-container site-footer__bottom">
+    <span>&copy; aggregate / イオレ</span>
+    <span>母集団形成ソリューション</span>
+  </div>
+</footer>
+
+<div class="sticky-cta" data-sticky-cta role="region" aria-label="主要アクション">
+  <a href="#funnel" class="btn btn--ghost">ファネル</a>
+  <a href="mailto:contact@example.com" class="btn btn--primary">資料請求</a>
+</div>
+
+<script src="../assets/js/common.js" defer></script>
+<script src="../assets/js/lp2.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 280" role="img" aria-label="運用代行プロセス図：日次・週次・月次の業務フロー">
+  <defs>
+    <linearGradient id="lp3-flow-a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0F766E"/><stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="lp3-flow-b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#14B8A6"/><stop offset="1" stop-color="#FBA94A"/>
+    </linearGradient>
+    <linearGradient id="lp3-flow-c" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FBA94A"/><stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 横軸：時間軸 -->
+  <line x1="60" y1="180" x2="820" y2="180" stroke="#DDE8E5" stroke-width="2"/>
+
+  <!-- 区切り：日 / 週 / 月 -->
+  <g font-family="-apple-system, sans-serif" font-size="11" fill="#67807D" letter-spacing="2" text-anchor="middle">
+    <text x="180" y="220" font-weight="800">DAILY</text>
+    <text x="440" y="220" font-weight="800">WEEKLY</text>
+    <text x="700" y="220" font-weight="800">MONTHLY</text>
+  </g>
+
+  <!-- セクションマーカー -->
+  <g stroke="#DDE8E5" stroke-dasharray="3 4">
+    <line x1="320" y1="60" x2="320" y2="200"/>
+    <line x1="560" y1="60" x2="560" y2="200"/>
+  </g>
+
+  <!-- ノード -->
+  <g>
+    <!-- Daily -->
+    <g transform="translate(120 180)">
+      <circle r="14" fill="url(#lp3-flow-a)"/>
+      <text y="-30" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" fill="#0F2A2A" font-weight="700">媒体管理画面</text>
+      <text y="-16" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" fill="#67807D">配信状況確認</text>
+    </g>
+    <g transform="translate(220 180)">
+      <circle r="14" fill="url(#lp3-flow-a)"/>
+      <text y="-30" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" fill="#0F2A2A" font-weight="700">原稿差し替え</text>
+      <text y="-16" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" fill="#67807D">微調整</text>
+    </g>
+    <!-- Weekly -->
+    <g transform="translate(380 180)">
+      <circle r="14" fill="url(#lp3-flow-b)"/>
+      <text y="-30" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" fill="#0F2A2A" font-weight="700">週次レポート</text>
+      <text y="-16" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" fill="#67807D">前週比較</text>
+    </g>
+    <g transform="translate(490 180)">
+      <circle r="14" fill="url(#lp3-flow-b)"/>
+      <text y="-30" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" fill="#0F2A2A" font-weight="700">改善提案MTG</text>
+      <text y="-16" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" fill="#67807D">15-30min</text>
+    </g>
+    <!-- Monthly -->
+    <g transform="translate(640 180)">
+      <circle r="14" fill="url(#lp3-flow-c)"/>
+      <text y="-30" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" fill="#0F2A2A" font-weight="700">月次レポート</text>
+      <text y="-16" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" fill="#67807D">採用結果集計</text>
+    </g>
+    <g transform="translate(760 180)">
+      <circle r="14" fill="url(#lp3-flow-c)"/>
+      <text y="-30" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" fill="#0F2A2A" font-weight="700">配分見直し</text>
+      <text y="-16" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" fill="#67807D">次月戦略</text>
+    </g>
+  </g>
+
+  <!-- 接続矢印 -->
+  <g fill="#67807D">
+    <path d="M 142 180 L 196 180 L 192 176 M 196 180 L 192 184" stroke="#67807D" stroke-width="1.5" fill="none"/>
+    <path d="M 242 180 L 358 180 L 354 176 M 358 180 L 354 184" stroke="#67807D" stroke-width="1.5" fill="none"/>
+    <path d="M 402 180 L 470 180 L 466 176 M 470 180 L 466 184" stroke="#67807D" stroke-width="1.5" fill="none"/>
+    <path d="M 510 180 L 620 180 L 616 176 M 620 180 L 616 184" stroke="#67807D" stroke-width="1.5" fill="none"/>
+    <path d="M 660 180 L 740 180 L 736 176 M 740 180 L 736 184" stroke="#67807D" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- ヘッダー -->
+  <g font-family="-apple-system, sans-serif">
+    <text x="60" y="40" font-size="11" fill="#67807D" letter-spacing="3">PROCESS / 運用代行の動き</text>
+    <text x="60" y="64" font-size="20" font-weight="800" fill="#0F2A2A">日次 → 週次 → 月次のリズムで、現場負荷ゼロを実現</text>
+  </g>
+</svg>

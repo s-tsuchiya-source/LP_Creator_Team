@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-label="採用予算の最適配分図解">
+  <defs>
+    <linearGradient id="alloc-a" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0E2A5A"/><stop offset="1" stop-color="#1F4FB4"/>
+    </linearGradient>
+    <linearGradient id="alloc-b" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1F4FB4"/><stop offset="1" stop-color="#7AC0FF"/>
+    </linearGradient>
+    <linearGradient id="alloc-c" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7AC0FF"/><stop offset="1" stop-color="#C8E66A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 上段：旧配分 -->
+  <g transform="translate(40 30)">
+    <text x="0" y="0" font-family="-apple-system, sans-serif" font-size="11" fill="#6E7693" letter-spacing="2">BEFORE</text>
+    <text x="0" y="22" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#0E2A5A">最適化前の配分（横並び・効果無視）</text>
+
+    <g transform="translate(0 50)">
+      <rect x="0" y="0" width="720" height="40" fill="#F4F6FB" rx="8"/>
+      <rect x="0" y="0" width="180" height="40" fill="#0E2A5A" rx="8"/>
+      <rect x="180" y="0" width="180" height="40" fill="#1F4FB4"/>
+      <rect x="360" y="0" width="180" height="40" fill="#7AC0FF"/>
+      <rect x="540" y="0" width="180" height="40" fill="#C8E66A"/>
+      <g font-family="-apple-system, sans-serif" font-size="11" fill="#fff" font-weight="700">
+        <text x="90" y="25" text-anchor="middle">媒体A 25%</text>
+        <text x="270" y="25" text-anchor="middle">媒体B 25%</text>
+        <text x="450" y="25" text-anchor="middle" fill="#0E2A5A">媒体C 25%</text>
+        <text x="630" y="25" text-anchor="middle" fill="#0E2A5A">媒体D 25%</text>
+      </g>
+    </g>
+
+    <g transform="translate(0 110)" font-family="-apple-system, sans-serif" font-size="11" fill="#6E7693">
+      <text x="90" y="0" text-anchor="middle">CPA ¥7,200</text>
+      <text x="270" y="0" text-anchor="middle">CPA ¥4,500</text>
+      <text x="450" y="0" text-anchor="middle">CPA ¥6,800</text>
+      <text x="630" y="0" text-anchor="middle">CPA ¥9,400</text>
+    </g>
+  </g>
+
+  <!-- 矢印 -->
+  <g transform="translate(380 175)">
+    <path d="M 0 -8 L 0 8 L 8 0 Z" fill="#1F4FB4"/>
+    <line x1="-380" y1="0" x2="0" y2="0" stroke="#DDE2EE" stroke-width="2" stroke-dasharray="4 4"/>
+    <line x1="0" y1="0" x2="380" y2="0" stroke="#DDE2EE" stroke-width="2" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- 下段：最適化後配分 -->
+  <g transform="translate(40 210)">
+    <text x="0" y="0" font-family="-apple-system, sans-serif" font-size="11" fill="#5B8A00" letter-spacing="2">AFTER</text>
+    <text x="0" y="22" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#0E2A5A">CPA起点で再配分（効果に予算を寄せる）</text>
+
+    <g transform="translate(0 50)">
+      <rect x="0" y="0" width="720" height="40" fill="#F4F6FB" rx="8"/>
+      <rect x="0" y="0" width="100" height="40" fill="#0E2A5A" rx="8"/>
+      <rect x="100" y="0" width="320" height="40" fill="url(#alloc-a)"/>
+      <rect x="420" y="0" width="220" height="40" fill="url(#alloc-b)"/>
+      <rect x="640" y="0" width="80" height="40" fill="url(#alloc-c)"/>
+      <g font-family="-apple-system, sans-serif" font-size="11" fill="#fff" font-weight="700">
+        <text x="50" y="25" text-anchor="middle">14%</text>
+        <text x="260" y="25" text-anchor="middle">媒体B 44%</text>
+        <text x="530" y="25" text-anchor="middle">媒体C 31%</text>
+        <text x="680" y="25" text-anchor="middle" fill="#0E2A5A">11%</text>
+      </g>
+    </g>
+
+    <g transform="translate(0 110)" font-family="-apple-system, sans-serif" font-size="11" fill="#5B8A00" font-weight="700">
+      <text x="50" y="0" text-anchor="middle">縮小</text>
+      <text x="260" y="0" text-anchor="middle">主軸へ集中</text>
+      <text x="530" y="0" text-anchor="middle">再評価</text>
+      <text x="680" y="0" text-anchor="middle">縮小</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-label="採用改善のPDCA循環図">
+  <defs>
+    <linearGradient id="lp4-arc-1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#06B6D4"/><stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="lp4-arc-2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0EA5E9"/><stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="lp4-arc-3" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#38BDF8"/><stop offset="1" stop-color="#67E8F9"/>
+    </linearGradient>
+    <linearGradient id="lp4-arc-4" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#67E8F9"/><stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景円 -->
+  <circle cx="240" cy="240" r="200" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+  <circle cx="240" cy="240" r="160" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
+
+  <!-- 4つのアーク（PDCA） -->
+  <!-- P: 上 -->
+  <path d="M 240 60 A 180 180 0 0 1 420 240" fill="none" stroke="url(#lp4-arc-1)" stroke-width="46" stroke-linecap="round"/>
+  <!-- D: 右 -->
+  <path d="M 420 240 A 180 180 0 0 1 240 420" fill="none" stroke="url(#lp4-arc-2)" stroke-width="46" stroke-linecap="round"/>
+  <!-- C: 下 -->
+  <path d="M 240 420 A 180 180 0 0 1 60 240" fill="none" stroke="url(#lp4-arc-3)" stroke-width="46" stroke-linecap="round"/>
+  <!-- A: 左 -->
+  <path d="M 60 240 A 180 180 0 0 1 240 60" fill="none" stroke="url(#lp4-arc-4)" stroke-width="46" stroke-linecap="round"/>
+
+  <!-- ラベル -->
+  <g font-family="DM Serif Display, serif" font-weight="400" fill="#fff">
+    <text x="332" y="135" font-size="32" text-anchor="middle">P</text>
+    <text x="345" y="332" font-size="32" text-anchor="middle">D</text>
+    <text x="148" y="345" font-size="32" text-anchor="middle">C</text>
+    <text x="135" y="148" font-size="32" text-anchor="middle">A</text>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="9" fill="rgba(255,255,255,.85)" letter-spacing="2">
+    <text x="332" y="148" text-anchor="middle">PLAN</text>
+    <text x="345" y="345" text-anchor="middle">DO</text>
+    <text x="148" y="358" text-anchor="middle">CHECK</text>
+    <text x="135" y="161" text-anchor="middle">ACT</text>
+  </g>
+
+  <!-- 中心：DATA -->
+  <circle cx="240" cy="240" r="62" fill="#0F172A" stroke="rgba(103, 232, 249, .5)" stroke-width="1.5"/>
+  <text x="240" y="232" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="rgba(255,255,255,.55)" letter-spacing="2">SOURCE</text>
+  <text x="240" y="258" text-anchor="middle" font-family="DM Serif Display, serif" font-size="22" fill="#67E8F9">DATA</text>
+
+  <!-- 矢印 -->
+  <g fill="rgba(255,255,255,.7)">
+    <polygon points="408 50 420 60 408 70" transform="rotate(0 414 60)"/>
+    <polygon points="408 410 420 420 408 430" transform="rotate(90 414 420)"/>
+    <polygon points="60 410 72 420 60 430" transform="rotate(180 66 420)"/>
+    <polygon points="60 50 72 60 60 70" transform="rotate(-90 66 60)"/>
+  </g>
+
+  <!-- ドット飾り -->
+  <g fill="rgba(103, 232, 249, .6)">
+    <circle cx="240" cy="60" r="3"/>
+    <circle cx="420" cy="240" r="3"/>
+    <circle cx="240" cy="420" r="3"/>
+    <circle cx="60" cy="240" r="3"/>
+  </g>
+</svg>

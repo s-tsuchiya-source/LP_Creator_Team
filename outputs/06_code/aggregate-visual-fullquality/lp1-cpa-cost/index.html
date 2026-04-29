@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0E2A5A">
+<meta name="description" content="採用費の高止まり、媒体配分の非効率、CPA上昇の構造を、媒体・原稿・予算配分の3視点から可視化。広告費を増やさずに改善余地を見つけるための採用費構造分析。">
+<title>採用費を、媒体・原稿・予算の構造から見直す｜aggregate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/reset.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/lp1.css">
+</head>
+<body>
+<a href="#main" class="skip-link">本文へスキップ</a>
+
+<!-- アイコンsprite -->
+<div hidden aria-hidden="true">
+  <object type="image/svg+xml" data="../assets/icons/icons.svg" width="0" height="0"></object>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ico-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></symbol>
+    <symbol id="ico-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 17-8.5-8.5-5 5L2 7"/><path d="M16 17h6v-6"/></symbol>
+    <symbol id="ico-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="ico-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="ico-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="ico-coin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="9" ry="3"/><path d="M3 6v6c0 1.66 4 3 9 3s9-1.34 9-3V6"/><path d="M3 12v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></symbol>
+    <symbol id="ico-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14v3"/><path d="M11 10v7"/><path d="M15 6v11"/></symbol>
+    <symbol id="ico-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></symbol>
+  </defs>
+</svg>
+
+<!-- ヘッダー -->
+<header class="site-header">
+  <div class="l-container site-header__inner">
+    <a href="../index.html" class="site-logo">
+      <span class="site-logo__mark">A</span>
+      <span>aggregate<span class="site-logo__sub">/ 採用費構造改善</span></span>
+    </a>
+    <nav class="site-nav" aria-label="メインナビ">
+      <a href="#pain">課題</a>
+      <a href="#compare">改善イメージ</a>
+      <a href="#solution">解決アプローチ</a>
+      <a href="#flow">進め方</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <a href="#closing" class="btn btn--primary" style="padding:12px 20px;font-size:13.5px">資料を見る
+      <svg class="icon" width="16" height="16"><use href="#ico-arrow"/></svg>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============== HERO ============== -->
+<section class="lp1-hero" data-sticky-trigger>
+  <div class="l-container lp1-hero__inner">
+    <div data-reveal>
+      <div class="lp1-hero__eyebrow-row">
+        <span class="eyebrow">FOR HR / EXECUTIVES</span>
+        <span class="lp1-hero__doc-no">DOC-01 / COST-CONTROL</span>
+      </div>
+      <h1>
+        採用費を、<br>
+        媒体・原稿・予算の<br>
+        <span class="underline">構造</span>から<em>見直す。</em>
+      </h1>
+      <p class="lp1-hero__lead">
+        応募単価が下がらないのは、媒体や原稿が悪いからではなく、<br>
+        <strong>「予算配分の根拠」と「効果計測の粒度」</strong>が合っていないからかもしれません。<br>
+        aggregateは、現状の採用費を媒体・原稿・期間・職種で分解し、改善余地が眠っている場所を「数字」で示します。
+      </p>
+      <div class="lp1-hero__cta">
+        <a href="#closing" class="btn btn--primary btn--lg">無料で資料を取り寄せる
+          <svg class="icon" width="18" height="18"><use href="#ico-arrow"/></svg>
+        </a>
+        <a href="#compare" class="btn btn--ghost btn--lg">改善イメージを見る</a>
+      </div>
+      <div class="lp1-hero__trust">
+        <div class="lp1-hero__trust-item">
+          <span>支援領域</span>
+          <b class="text-num">媒体運用 × 構造分析</b>
+        </div>
+        <div class="lp1-hero__trust-item">
+          <span>提供フォーマット</span>
+          <b class="text-num">構造分析レポート</b>
+        </div>
+        <div class="lp1-hero__trust-item">
+          <span>初回相談</span>
+          <b class="text-num">無料 / 60min</b>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO ビジュアル -->
+    <div class="lp1-hero__visual" data-reveal data-delay="200">
+      <img class="bg" src="../assets/images/lp1/hero-cost-control.svg" alt="採用費構造ダッシュボードのイメージ" loading="eager">
+      <div class="lp1-hero__floating">LIVE / 媒体別CPAモニタ</div>
+      <div class="lp1-hero__overlay">
+        <div class="lp1-overlay-card">
+          <div class="lp1-overlay-card__row">
+            <span class="lp1-overlay-card__label">月間採用費</span>
+            <span class="lp1-overlay-card__delta">
+              <svg class="icon" width="12" height="12"><use href="#ico-down"/></svg> -¥1.42M
+            </span>
+          </div>
+          <span class="lp1-overlay-card__value">¥<span data-countup="3.18" data-duration="1500">3.18</span>M</span>
+          <div class="lp1-overlay-card__bar" data-bar-fill="68"><span></span></div>
+        </div>
+        <div class="lp1-overlay-card">
+          <div class="lp1-overlay-card__row">
+            <span class="lp1-overlay-card__label">CPA改善率（試算）</span>
+            <span class="lp1-overlay-card__delta">
+              <svg class="icon" width="12" height="12"><use href="#ico-down"/></svg> 改善
+            </span>
+          </div>
+          <span class="lp1-overlay-card__value"><span data-countup="31" data-duration="1600">31</span>%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PHOTO BILLBOARD (採用費の現場) ============== -->
+<section class="photo-billboard" aria-labelledby="lp1-billboard-title" style="--billboard-glow: rgba(31, 79, 180, .35); --billboard-accent: #C8E66A;">
+  <div class="photo-billboard__corner-tag">FIELD / 採用予算の現場</div>
+  <div class="photo-billboard__frame" style="background-image: url('../assets/images/lp1/img_02.png');">
+    <div class="l-container photo-billboard__inner">
+      <div class="photo-billboard__copy" data-reveal>
+        <span class="eyebrow">採用費の説明責任</span>
+        <h2 id="lp1-billboard-title" class="photo-billboard__title">「いくら使って、何を得たか」を、<em>1枚で答える。</em></h2>
+        <p class="photo-billboard__lead">レポートの数字を経営層に説明する場面ほど、構造の不在が露呈します。媒体・原稿・職種の3軸で分解されたサマリーがあれば、判断材料は「感覚」ではなく「事実」になります。</p>
+      </div>
+      <div class="photo-billboard__cards" data-reveal data-delay="200">
+        <div class="billboard-card">
+          <small>MONTHLY SPEND</small>
+          <b>¥3.18M</b>
+          <span>媒体7軸 / 4職種</span>
+        </div>
+        <div class="billboard-card billboard-card--accent">
+          <small>SAVED</small>
+          <b>-¥1.42M</b>
+          <span>構造分析後 試算</span>
+        </div>
+        <div class="billboard-card">
+          <small>CPA</small>
+          <b>¥4,820</b>
+          <span>改善後 平均値</span>
+        </div>
+        <div class="billboard-card">
+          <small>HIRE RATE</small>
+          <b>8.6%</b>
+          <span>応募→採用 +1.8pt</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PAIN ============== -->
+<section class="lp1-pain" id="pain">
+  <div class="l-container">
+    <div class="lp1-pain__head" data-reveal>
+      <span class="eyebrow">問題提起</span>
+      <h2 class="section-title">採用費が膨らむ理由は、ほぼ<em>「構造」</em>にある。</h2>
+      <p class="section-lead" style="margin-inline:auto">
+        媒体担当・採用担当・経営層の間で、コストの判断材料が分断されていないか。<br>
+        現場で頻発している採用費の課題を整理しました。
+      </p>
+    </div>
+
+    <div class="lp1-pain__grid">
+      <article class="lp1-pain__card" data-reveal>
+        <span class="lp1-pain__card-num">01</span>
+        <h3 class="lp1-pain__card-title">CPAが「なんとなく高い」で止まっている</h3>
+        <p class="lp1-pain__card-body">媒体別・原稿別・職種別に分解されておらず、改善する場所が見えない。月次レポートも前月比だけで判断材料が薄い。</p>
+      </article>
+      <article class="lp1-pain__card" data-reveal data-delay="100">
+        <span class="lp1-pain__card-num">02</span>
+        <h3 class="lp1-pain__card-title">効果の悪い出稿を止められない</h3>
+        <p class="lp1-pain__card-body">「過去から続いているから」「営業との関係で」といった理由で、効果が見えない出稿が惰性で続いている。</p>
+      </article>
+      <article class="lp1-pain__card" data-reveal data-delay="200">
+        <span class="lp1-pain__card-num">03</span>
+        <h3 class="lp1-pain__card-title">予算配分の根拠を説明できない</h3>
+        <p class="lp1-pain__card-body">経営層に「なぜこの媒体にこの金額か」を説明できる資料がなく、毎期同じ配分が踏襲されている。</p>
+      </article>
+      <article class="lp1-pain__card" data-reveal data-delay="300">
+        <span class="lp1-pain__card-num">04</span>
+        <h3 class="lp1-pain__card-title">媒体間の比較ができていない</h3>
+        <p class="lp1-pain__card-body">媒体ごとの管理画面を行き来しているだけで、横串でCPA・応募率・採用率を比較する仕組みがない。</p>
+      </article>
+      <article class="lp1-pain__card" data-reveal data-delay="400">
+        <span class="lp1-pain__card-num">05</span>
+        <h3 class="lp1-pain__card-title">原稿改善が「感覚」になっている</h3>
+        <p class="lp1-pain__card-body">何を改善すれば応募単価が下がるのか、優先順位が決まらない。改善項目のチェックリストもない。</p>
+      </article>
+      <article class="lp1-pain__card" data-reveal data-delay="500">
+        <span class="lp1-pain__card-num">06</span>
+        <h3 class="lp1-pain__card-title">改善後の採算ラインが描けない</h3>
+        <p class="lp1-pain__card-body">「いくら下がれば、年間でどれだけ採用費が浮くか」という採算シミュレーションができていない。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== COMPARE Before/After ============== -->
+<section class="lp1-compare" id="compare">
+  <div class="l-container">
+    <div class="lp1-compare__head" data-reveal>
+      <span class="eyebrow">改善イメージ</span>
+      <h2 class="section-title">数字を「単位」まで分解すると、<em>下げるべき場所</em>が見える。</h2>
+      <p class="section-lead" style="margin-inline:auto">下記は構造分析を実施した場合の典型的な変化イメージです（業種・媒体構成によって幅があります）。</p>
+    </div>
+
+    <div class="lp1-compare__grid">
+      <div class="lp1-compare__col lp1-compare__col--before" data-reveal>
+        <span class="lp1-compare__col-label">BEFORE</span>
+        <p style="font-size:13px;color:#6E7693;margin-bottom:10px">月平均CPA</p>
+        <div class="lp1-compare__big-num">¥7,050<small>/件</small></div>
+        <ul class="lp1-compare__col-list">
+          <li><svg class="icon"><use href="#ico-x"/></svg>媒体別の数字を毎月転記して比較している</li>
+          <li><svg class="icon"><use href="#ico-x"/></svg>効果の悪い出稿を止める判断ができない</li>
+          <li><svg class="icon"><use href="#ico-x"/></svg>原稿改善の優先順位がつかない</li>
+          <li><svg class="icon"><use href="#ico-x"/></svg>採算ラインが経営層と共有できていない</li>
+        </ul>
+      </div>
+
+      <div class="lp1-compare__arrow" aria-hidden="true">
+        <svg width="20" height="20"><use href="#ico-arrow"/></svg>
+      </div>
+
+      <div class="lp1-compare__col lp1-compare__col--after" data-reveal data-delay="200">
+        <span class="lp1-compare__col-label">AFTER</span>
+        <p style="font-size:13px;color:#6E7693;margin-bottom:10px">改善試算ベース</p>
+        <div class="lp1-compare__big-num">¥4,820<small>/件</small></div>
+        <ul class="lp1-compare__col-list">
+          <li><svg class="icon"><use href="#ico-check"/></svg>媒体・原稿・職種の3軸で1枚に可視化</li>
+          <li><svg class="icon"><use href="#ico-check"/></svg>停止候補と増額候補が同時に出る</li>
+          <li><svg class="icon"><use href="#ico-check"/></svg>原稿改善は寄与度の高い順から</li>
+          <li><svg class="icon"><use href="#ico-check"/></svg>年間で浮く採用費を金額で提示</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 図解：予算配分 -->
+    <figure style="margin-top:64px" data-reveal>
+      <img src="../assets/images/lp1/diagram-budget-allocation.svg" alt="採用予算の最適配分図解。最適化前の均等配分から、CPA起点で再配分する流れ" loading="lazy">
+      <figcaption style="font-size:12px;color:#6E7693;text-align:center;margin-top:12px">図：構造分析後の予算配分シフト（イメージ図）</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============== SOLUTION LEDGER ============== -->
+<section class="lp1-ledger" id="solution">
+  <div class="l-container lp1-ledger__inner">
+    <div class="lp1-ledger__head" data-reveal>
+      <span class="eyebrow" style="color:#C8E66A">aggregateの台帳</span>
+      <h2 class="section-title">採用費を「読める数字」に<em>翻訳する。</em></h2>
+      <p class="section-lead">媒体担当の経験則と経営層の意思決定をつなぐために、必要な数字だけを台帳形式に整理して提供します。</p>
+    </div>
+
+    <div class="lp1-ledger__table" data-reveal>
+      <div class="lp1-ledger__row">
+        <div class="lp1-ledger__no">L-001</div>
+        <h3 class="lp1-ledger__title">媒体別 CPA / CV率 シート</h3>
+        <p class="lp1-ledger__desc">主要媒体を横並びで比較。クリック数・応募数・採用数までの遷移を1枚で把握できます。</p>
+        <div class="lp1-ledger__metric">×6媒体</div>
+      </div>
+      <div class="lp1-ledger__row">
+        <div class="lp1-ledger__no">L-002</div>
+        <h3 class="lp1-ledger__title">原稿別 寄与度 ランキング</h3>
+        <p class="lp1-ledger__desc">複数の求人原稿の中で、応募単価に効いている原稿・効いていない原稿を寄与度で並び替え。</p>
+        <div class="lp1-ledger__metric">寄与度順</div>
+      </div>
+      <div class="lp1-ledger__row">
+        <div class="lp1-ledger__no">L-003</div>
+        <h3 class="lp1-ledger__title">職種 × 期間 ヒートマップ</h3>
+        <p class="lp1-ledger__desc">どの職種を、どの期間に出稿すべきかを過去データから可視化。閑散期の無駄出稿を抑える根拠になります。</p>
+        <div class="lp1-ledger__metric">12ヶ月</div>
+      </div>
+      <div class="lp1-ledger__row">
+        <div class="lp1-ledger__no">L-004</div>
+        <h3 class="lp1-ledger__title">予算 再配分シミュレーション</h3>
+        <p class="lp1-ledger__desc">「この媒体に+10%、別媒体を-30%したら、年間採用費はどう動くか」を数字で出します。</p>
+        <div class="lp1-ledger__metric">+/- 試算</div>
+      </div>
+      <div class="lp1-ledger__row">
+        <div class="lp1-ledger__no">L-005</div>
+        <h3 class="lp1-ledger__title">経営層向け 1枚サマリー</h3>
+        <p class="lp1-ledger__desc">役員・経営層に提出する用の1枚資料を作成。「現状」「改善余地」「次の打ち手」を3ブロックで整理します。</p>
+        <div class="lp1-ledger__metric">A4 / 1枚</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FLOW ============== -->
+<section class="lp1-flow" id="flow">
+  <div class="l-container">
+    <div class="lp1-flow__head" data-reveal>
+      <span class="eyebrow">進め方</span>
+      <h2 class="section-title">最初の<em>60分</em>で、改善余地の所在を共有します。</h2>
+      <p class="section-lead" style="margin-inline:auto">いきなり契約や運用代行ではなく、「数字を見る」「改善余地を提示する」までを最初のステップにしています。</p>
+    </div>
+
+    <div class="lp1-flow__steps">
+      <article class="lp1-flow__step" data-reveal>
+        <div class="lp1-flow__step-icon"><svg class="icon"><use href="#ico-doc"/></svg></div>
+        <span class="lp1-flow__step-no">STEP 01</span>
+        <h3 class="lp1-flow__step-title">現状ヒアリング</h3>
+        <p class="lp1-flow__step-body">媒体構成・採用予算・課題感をオンライン60分でヒアリング。資料の事前送付は不要です。</p>
+      </article>
+      <article class="lp1-flow__step" data-reveal data-delay="100">
+        <div class="lp1-flow__step-icon"><svg class="icon"><use href="#ico-chart"/></svg></div>
+        <span class="lp1-flow__step-no">STEP 02</span>
+        <h3 class="lp1-flow__step-title">構造分析</h3>
+        <p class="lp1-flow__step-body">いただいた数字を媒体・原稿・職種・期間の4軸で再分解。改善余地が大きい順に並び替えます。</p>
+      </article>
+      <article class="lp1-flow__step" data-reveal data-delay="200">
+        <div class="lp1-flow__step-icon"><svg class="icon"><use href="#ico-target"/></svg></div>
+        <span class="lp1-flow__step-no">STEP 03</span>
+        <h3 class="lp1-flow__step-title">改善余地の提示</h3>
+        <p class="lp1-flow__step-body">分析結果を1枚資料にまとめ、停止候補・増額候補・原稿改善優先度を提示します。</p>
+      </article>
+      <article class="lp1-flow__step" data-reveal data-delay="300">
+        <div class="lp1-flow__step-icon"><svg class="icon"><use href="#ico-coin"/></svg></div>
+        <span class="lp1-flow__step-no">STEP 04</span>
+        <h3 class="lp1-flow__step-title">採算シミュレーション</h3>
+        <p class="lp1-flow__step-body">改善後の年間採用費・CPA見込みを試算。経営層への説明資料としてそのまま使える形でお渡しします。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PROOF NUMBERS ============== -->
+<section class="lp1-proof">
+  <div class="l-container">
+    <div class="lp1-proof__head" data-reveal>
+      <span class="eyebrow">aggregateの守備範囲</span>
+      <h2 class="section-title">「採用費を見直す」を、<em>事実ベース</em>で進めるための材料。</h2>
+    </div>
+
+    <div class="lp1-proof__grid">
+      <article class="lp1-proof__card" data-reveal>
+        <span class="lp1-proof__card-label">対応媒体</span>
+        <div class="lp1-proof__card-num"><span data-countup="20" data-duration="1400">20</span><small>媒体以上</small></div>
+        <p class="lp1-proof__card-note">主要求人媒体・採用広告・運用型広告まで、横串で比較可能なフォーマットでまとめます。</p>
+      </article>
+      <article class="lp1-proof__card" data-reveal data-delay="100">
+        <span class="lp1-proof__card-label">分析の粒度</span>
+        <div class="lp1-proof__card-num"><span data-countup="4" data-duration="1200">4</span><small>軸 × 月次</small></div>
+        <p class="lp1-proof__card-note">媒体・原稿・職種・期間の4軸 × 月次で、改善余地の所在を1枚に整理します。</p>
+      </article>
+      <article class="lp1-proof__card" data-reveal data-delay="200">
+        <span class="lp1-proof__card-label">初期コスト</span>
+        <div class="lp1-proof__card-num">¥0<small>/初回相談</small></div>
+        <p class="lp1-proof__card-note">最初の構造分析・改善余地ご提示までは、費用は発生しません。</p>
+      </article>
+      <article class="lp1-proof__card" data-reveal data-delay="300">
+        <span class="lp1-proof__card-label">納品形式</span>
+        <div class="lp1-proof__card-num">A4<small>/1枚 + 詳細資料</small></div>
+        <p class="lp1-proof__card-note">経営層提出用の1枚サマリーと、現場用の詳細台帳の2種類でお渡しします。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ADVISOR PHOTO ============== -->
+<section class="photo-billboard" aria-label="改善ディスカッションのイメージ" style="--billboard-glow: rgba(31, 79, 180, .25); --billboard-accent: #C8E66A;">
+  <div class="photo-billboard__corner-tag">SESSION / 60min 改善ディスカッション</div>
+  <div class="photo-billboard__frame" style="background-image: url('../assets/images/lp1/img_04.png'); background-position: right center; min-height: clamp(320px, 42vw, 460px);">
+    <div class="l-container photo-billboard__inner" style="grid-template-columns: 1fr;">
+      <div class="photo-billboard__copy" data-reveal style="max-width: 32em;">
+        <span class="eyebrow">CONSULTATION</span>
+        <h2 class="photo-billboard__title">構造を読む人と、<em>一緒に。</em></h2>
+        <p class="photo-billboard__lead">分析だけ送って終わり、ではありません。改善余地の整理と、経営層への見せ方まで、運用責任者の視点で並走します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="lp1-faq" id="faq">
+  <div class="l-container l-container--narrow">
+    <div class="lp1-faq__head" data-reveal>
+      <span class="eyebrow">よくある質問</span>
+      <h2 class="section-title">相談前に、<em>気になる</em>こと。</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" data-reveal><summary>分析のために、媒体管理画面のIDを共有する必要がありますか？</summary>
+        <div class="faq-item__body">いいえ、初回ヒアリングではエクスポートされたCSVや月次レポート、ご担当者のメモがあれば十分です。管理画面の権限共有は、本格的にご一緒する場合のみご相談しています。</div>
+      </details>
+      <details class="faq-item" data-reveal data-delay="50"><summary>運用代行も依頼できますか？</summary>
+        <div class="faq-item__body">構造分析と改善提案が中心のサービスですが、ご要望に応じて媒体運用パートナー企業のご紹介や、運用代行のスコープ別見積もご対応可能です。詳細は初回相談でご共有ください。</div>
+      </details>
+      <details class="faq-item" data-reveal data-delay="100"><summary>採用費が小規模（月額数十万円）でも依頼できますか？</summary>
+        <div class="faq-item__body">媒体構成や課題感を伺ったうえで、ご支援が逆に重くなりすぎないかを判断します。「いまは構造分析より別の打ち手」と判断した場合は、その旨を率直にお伝えします。</div>
+      </details>
+      <details class="faq-item" data-reveal data-delay="150"><summary>1社あたりどのくらいの期間で改善余地が見えますか？</summary>
+        <div class="faq-item__body">媒体数や原稿数によりますが、初回ヒアリングから2〜3週間で構造分析レポートをお渡しするケースが多いです。緊急度に応じて短縮可能なケースもあります。</div>
+      </details>
+      <details class="faq-item" data-reveal data-delay="200"><summary>すでに代理店に依頼している場合でも相談できますか？</summary>
+        <div class="faq-item__body">はい。代理店経由の運用は維持したまま、構造分析だけをaggregateで実施するご支援もあります。代理店との関係や情報の取り扱いには十分配慮します。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CLOSING ============== -->
+<section class="lp1-closing" id="closing">
+  <div class="l-container l-container--narrow">
+    <div class="lp1-closing__inner" data-reveal>
+      <h2>採用費を、<br><em>「正しく」</em>下げる。</h2>
+      <p>
+        広告費を増やさずに改善余地を見つけるための構造分析を、まずは無料の60分相談からご提供しています。<br>
+        資料請求のみでもお気軽にお問い合わせください。
+      </p>
+      <div class="lp1-closing__cta">
+        <a href="mailto:contact@example.com" class="btn btn--primary btn--lg">
+          資料を取り寄せる（無料）
+          <svg class="icon" width="18" height="18"><use href="#ico-arrow"/></svg>
+        </a>
+        <a href="mailto:contact@example.com" class="btn btn--ghost btn--lg">60分無料相談を申し込む</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 横断ナビ -->
+<section class="cross-nav" aria-label="他の課題別LPへ">
+  <div class="l-container">
+    <h3>他の採用課題から探す</h3>
+    <div class="cross-nav__grid">
+      <a class="cross-nav__card" href="../lp2-application-volume/">
+        <small>02 / VOLUME</small><b>応募数不足・母集団形成</b>
+      </a>
+      <a class="cross-nav__card" href="../lp3-operation-outsourcing/">
+        <small>03 / OPERATIONS</small><b>媒体運用工数・まるごと代行</b>
+      </a>
+      <a class="cross-nav__card" href="../lp4-analytics-improvement/">
+        <small>04 / ANALYTICS</small><b>データ可視化・改善サイクル</b>
+      </a>
+      <a class="cross-nav__card" href="../index.html">
+        <small>00 / OVERVIEW</small><b>4本の課題LP一覧へ</b>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- フッター -->
+<footer class="site-footer">
+  <div class="l-container site-footer__grid">
+    <div>
+      <div class="site-logo" style="color:#fff">
+        <span class="site-logo__mark">A</span>
+        <span>aggregate</span>
+      </div>
+      <p class="site-footer__brand-blurb">採用費の構造を読み、無駄を減らし、必要な場所に予算を寄せる。aggregateは、採用広告の意思決定に必要な数字だけを台帳形式に翻訳します。</p>
+    </div>
+    <div>
+      <h4>SOLUTION</h4>
+      <ul>
+        <li><a href="../lp1-cpa-cost/">採用費構造改善</a></li>
+        <li><a href="../lp2-application-volume/">母集団形成</a></li>
+        <li><a href="../lp3-operation-outsourcing/">運用代行</a></li>
+        <li><a href="../lp4-analytics-improvement/">データ可視化</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>RESOURCES</h4>
+      <ul>
+        <li><a href="#closing">資料ダウンロード</a></li>
+        <li><a href="#closing">無料相談</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>COMPANY</h4>
+      <ul>
+        <li><a href="https://aggregate.eole.co.jp/" rel="noopener">aggregate.eole.co.jp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="l-container site-footer__bottom">
+    <span>&copy; aggregate / イオレ</span>
+    <span>採用費構造改善ソリューション</span>
+  </div>
+</footer>
+
+<!-- スティッキーCTA (SP) -->
+<div class="sticky-cta" data-sticky-cta role="region" aria-label="主要アクション">
+  <a href="#closing" class="btn btn--ghost">改善イメージ</a>
+  <a href="mailto:contact@example.com" class="btn btn--primary">資料請求</a>
+</div>
+
+<script src="../assets/js/common.js" defer></script>
+<script src="../assets/js/lp1.js" defer></script>
+</body>
+</html>

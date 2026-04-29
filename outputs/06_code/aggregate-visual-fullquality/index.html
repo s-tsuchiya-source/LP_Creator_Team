@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0F172A">
+<meta name="description" content="aggregate.eole.co.jp 課題別LP 4本のハブページ。応募単価・応募数・運用代行・データ可視化の4課題に対応。">
+<title>aggregate 課題別LP / 4本のフルクオリティ版</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/common.css">
+<style>
+  body {
+    background:
+      radial-gradient(900px 500px at 80% 0%, rgba(46, 91, 255, .08), transparent 60%),
+      linear-gradient(180deg, #fff 0%, #F1F5F9 100%);
+    --brand-primary: #0F172A;
+    --brand-secondary: #06B6D4;
+    --brand-tint: rgba(15, 23, 42, .06);
+    --brand-shadow: rgba(15, 23, 42, .25);
+  }
+  .hub-hero {
+    padding: clamp(80px, 10vw, 140px) 0 clamp(64px, 8vw, 100px);
+    text-align: center;
+    position: relative;
+  }
+  .hub-hero__masthead {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    letter-spacing: .2em;
+    color: #64748B;
+    border-top: 2px solid #0F172A;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 8px 14px;
+    margin-bottom: 28px;
+  }
+  .hub-hero h1 {
+    font-size: clamp(34px, 5.4vw, 60px);
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -.025em;
+    color: #0F172A;
+    margin-bottom: 24px;
+  }
+  .hub-hero h1 em {
+    font-style: normal;
+    background: linear-gradient(120deg, #0F172A, #06B6D4);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hub-hero__lead {
+    color: #475569;
+    max-width: 56ch;
+    margin: 0 auto 34px;
+    font-size: clamp(15px, 1.5vw, 17px);
+    line-height: 1.95;
+  }
+  .hub-hero__meta {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    color: #64748B;
+    font-size: 12.5px;
+    font-family: var(--font-mono);
+    letter-spacing: .08em;
+  }
+  .hub-hero__meta span { display: inline-flex; gap: 6px; align-items: center; }
+  .hub-hero__meta span::before { content: "•"; color: #06B6D4; font-size: 16px; line-height: 1; }
+
+  .hub-grid {
+    padding-block: clamp(48px, 6vw, 80px);
+  }
+  .hub-grid__list {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 760px) { .hub-grid__list { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1100px) { .hub-grid__list { grid-template-columns: repeat(2, 1fr); gap: 28px; } }
+
+  .hub-card {
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, .04);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    color: inherit;
+    text-decoration: none;
+  }
+  .hub-card:hover { transform: translateY(-6px); box-shadow: 0 30px 60px rgba(15, 23, 42, .14); border-color: var(--card-color, #06B6D4); }
+
+  .hub-card__visual {
+    position: relative;
+    aspect-ratio: 16/9;
+    background: var(--card-bg);
+    overflow: hidden;
+  }
+  .hub-card__visual::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 30% 50%, rgba(255,255,255,.18), transparent 60%);
+  }
+  .hub-card__visual::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: var(--card-pattern);
+    background-size: var(--card-pattern-size, 32px 32px);
+    opacity: .25;
+  }
+  .hub-card__visual-inner {
+    position: relative; z-index: 2;
+    height: 100%;
+    padding: 24px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    color: #fff;
+  }
+  .hub-card__no {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: .18em;
+    color: rgba(255,255,255,.7);
+  }
+  .hub-card__title {
+    font-size: clamp(20px, 2.4vw, 26px);
+    font-weight: 800;
+    line-height: 1.35;
+    letter-spacing: -.02em;
+    align-self: end;
+  }
+  .hub-card__chips {
+    display: flex; gap: 6px; flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .hub-card__chips span {
+    background: rgba(255,255,255,.14);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    backdrop-filter: blur(6px);
+  }
+
+  .hub-card__body { padding: 24px 28px 18px; }
+  .hub-card__lead { font-size: 14px; color: #475569; line-height: 1.85; }
+
+  .hub-card__metas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    padding: 16px 28px 22px;
+    border-top: 1px solid #F1F5F9;
+  }
+  .hub-card__meta { display: grid; gap: 2px; font-size: 12px; }
+  .hub-card__meta small { color: #94A3B8; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .14em; }
+  .hub-card__meta b { color: #0F172A; font-weight: 700; font-size: 13.5px; }
+
+  .hub-card__footer {
+    padding: 18px 28px;
+    background: #F8FAFC;
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid #F1F5F9;
+  }
+  .hub-card__footer span { font-size: 13px; color: #64748B; font-weight: 600; }
+  .hub-card__footer .arrow {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--card-color, #0F172A);
+    color: #fff;
+    display: grid; place-items: center;
+    transition: transform .25s ease;
+  }
+  .hub-card:hover .hub-card__footer .arrow { transform: translateX(4px); }
+
+  /* ▼ 各カードの差別化スタイル */
+  .hub-card--lp1 {
+    --card-bg: linear-gradient(135deg, #061429 0%, #1F4FB4 100%);
+    --card-pattern: linear-gradient(to right, rgba(255,255,255,.08) 1px, transparent 1px);
+    --card-pattern-size: 40px 100%;
+    --card-color: #1F4FB4;
+  }
+  .hub-card--lp2 {
+    --card-bg: linear-gradient(135deg, #1A1240 0%, #4F46E5 50%, #EC4899 100%);
+    --card-pattern: radial-gradient(rgba(255,255,255,.18) 1px, transparent 1px);
+    --card-pattern-size: 22px 22px;
+    --card-color: #4F46E5;
+  }
+  .hub-card--lp3 {
+    --card-bg: linear-gradient(135deg, #0F766E 0%, #134E4A 60%, #C2410C 100%);
+    --card-pattern: repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0 1px, transparent 1px 12px);
+    --card-pattern-size: auto;
+    --card-color: #0F766E;
+  }
+  .hub-card--lp4 {
+    --card-bg: linear-gradient(180deg, #0F172A 0%, #134E5E 100%);
+    --card-pattern:
+      linear-gradient(to right, rgba(255,255,255,.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,.08) 1px, transparent 1px);
+    --card-pattern-size: 32px 32px;
+    --card-color: #06B6D4;
+  }
+
+  .hub-info {
+    padding: clamp(60px, 8vw, 100px) 0;
+    background: #fff;
+    border-top: 1px solid #E2E8F0;
+  }
+  .hub-info__grid {
+    display: grid; gap: 32px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 880px) { .hub-info__grid { grid-template-columns: repeat(3, 1fr); } }
+  .hub-info__col h3 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #0F172A;
+    margin-bottom: 12px;
+  }
+  .hub-info__col p { font-size: 13.5px; color: #475569; line-height: 1.85; }
+  .hub-info__col ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 6px; font-size: 13.5px; color: #475569; }
+  .hub-info__col li::before { content: "→"; color: #06B6D4; margin-right: 8px; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="l-container site-header__inner">
+    <a href="index.html" class="site-logo">
+      <span class="site-logo__mark">A</span>
+      <span>aggregate<span class="site-logo__sub">/ 課題別LP 4本</span></span>
+    </a>
+    <nav class="site-nav" aria-label="メインナビ">
+      <a href="lp1-cpa-cost/">LP1 / 採用費</a>
+      <a href="lp2-application-volume/">LP2 / 応募数</a>
+      <a href="lp3-operation-outsourcing/">LP3 / 運用代行</a>
+      <a href="lp4-analytics-improvement/">LP4 / 可視化</a>
+    </nav>
+    <a href="lp1-cpa-cost/" class="btn btn--primary" style="background:linear-gradient(135deg,#0F172A,#06B6D4);padding:12px 20px;font-size:13.5px">LPを見る
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============== HERO ============== -->
+<section class="hub-hero">
+  <div class="l-container">
+    <div class="hub-hero__masthead">aggregate.eole.co.jp / problem-led landing pages</div>
+    <h1>4つの採用課題に、<br>4つの<em>ちがう答え</em>を。</h1>
+    <p class="hub-hero__lead">
+      aggregate.eole.co.jp に流入する企業担当者向けに、課題別の本格LPを4本用意しました。<br>
+      配色やテンプレートだけを変えた使い回しではなく、<strong>レイアウト・タイポ・ビジュアル・モーション・訴求設計</strong>のすべてを差別化しています。
+    </p>
+    <div class="hub-hero__meta">
+      <span>4 LANDING PAGES</span>
+      <span>SEPARATED ASSETS</span>
+      <span>SVG VISUAL COMPOSITES</span>
+      <span>FULL-STACK A11Y</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GRID ============== -->
+<section class="hub-grid">
+  <div class="l-container">
+    <div class="hub-grid__list">
+
+      <!-- LP1 -->
+      <a class="hub-card hub-card--lp1" href="lp1-cpa-cost/">
+        <div class="hub-card__visual">
+          <div class="hub-card__visual-inner">
+            <div class="hub-card__no">LP 01 / COST CONTROL</div>
+            <h2 class="hub-card__title">採用費を、媒体・原稿・予算の構造から見直す。</h2>
+            <div class="hub-card__chips">
+              <span>シリアス</span><span>経営層</span><span>大数値</span><span>セリフ強調</span>
+            </div>
+          </div>
+        </div>
+        <div class="hub-card__body">
+          <p class="hub-card__lead">CPAが下がらない原因を、媒体・原稿・職種・期間の4軸で再分解。停止候補・増額候補・原稿改善優先度を1枚に整理して、経営層への説明資料に変えます。</p>
+        </div>
+        <div class="hub-card__metas">
+          <div class="hub-card__meta"><small>TONE</small><b>抑制 / 帳票</b></div>
+          <div class="hub-card__meta"><small>COLOR</small><b>濃紺×ライム</b></div>
+          <div class="hub-card__meta"><small>HERO</small><b>Dashboard</b></div>
+        </div>
+        <div class="hub-card__footer">
+          <span>応募単価・広告費改善 LP を見る</span>
+          <span class="arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- LP2 -->
+      <a class="hub-card hub-card--lp2" href="lp2-application-volume/">
+        <div class="hub-card__visual">
+          <div class="hub-card__visual-inner">
+            <div class="hub-card__no">LP 02 / VOLUME</div>
+            <h2 class="hub-card__title">求人に、見つけられる理由と選ばれる理由を作る。</h2>
+            <div class="hub-card__chips">
+              <span>未来感</span><span>ファネル</span><span>ボールド</span><span>浮遊カード</span>
+            </div>
+          </div>
+        </div>
+        <div class="hub-card__body">
+          <p class="hub-card__lead">露出 → 閲覧 → 詳細 → 応募の4階層で「止まる場所」を特定し、8チャネルの役割分担で母集団を再設計。露出量・歩留まり・応募率を同時に動かします。</p>
+        </div>
+        <div class="hub-card__metas">
+          <div class="hub-card__meta"><small>TONE</small><b>成長 / 動的</b></div>
+          <div class="hub-card__meta"><small>COLOR</small><b>インディゴ×ピンク</b></div>
+          <div class="hub-card__meta"><small>HERO</small><b>Network Map</b></div>
+        </div>
+        <div class="hub-card__footer">
+          <span>応募数不足・母集団形成 LP を見る</span>
+          <span class="arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- LP3 -->
+      <a class="hub-card hub-card--lp3" href="lp3-operation-outsourcing/">
+        <div class="hub-card__visual">
+          <div class="hub-card__visual-inner">
+            <div class="hub-card__no">LP 03 / OPERATIONS</div>
+            <h2 class="hub-card__title">媒体運用を、現場が回る形に整える。</h2>
+            <div class="hub-card__chips">
+              <span>業務改善</span><span>タイムライン</span><span>安心感</span><span>タスクボード</span>
+            </div>
+          </div>
+        </div>
+        <div class="hub-card__body">
+          <p class="hub-card__lead">媒体差替・配信管理・媒体担当連絡・レポート集計を引き取り、採用担当者の1日を「採用業務」に戻します。週15分の定例で意思決定だけ。現場負担を最小化。</p>
+        </div>
+        <div class="hub-card__metas">
+          <div class="hub-card__meta"><small>TONE</small><b>温かみ / 整列</b></div>
+          <div class="hub-card__meta"><small>COLOR</small><b>ティール×オレンジ</b></div>
+          <div class="hub-card__meta"><small>HERO</small><b>Task Board</b></div>
+        </div>
+        <div class="hub-card__footer">
+          <span>媒体運用工数・まるごと代行 LP を見る</span>
+          <span class="arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- LP4 -->
+      <a class="hub-card hub-card--lp4" href="lp4-analytics-improvement/">
+        <div class="hub-card__visual">
+          <div class="hub-card__visual-inner">
+            <div class="hub-card__no">LP 04 / ANALYTICS</div>
+            <h2 class="hub-card__title">採用データを、改善サイクルにつなげる。</h2>
+            <div class="hub-card__chips">
+              <span>エディトリアル</span><span>PDCA</span><span>知的</span><span>ダッシュボード</span>
+            </div>
+          </div>
+        </div>
+        <div class="hub-card__body">
+          <p class="hub-card__lead">「数字を見る」だけで止まる組織を脱して、PLAN → DO → CHECK → ACT の循環を回す。媒体・原稿・職種・期間の4軸 × 38指標で、改善が回る分析支援。</p>
+        </div>
+        <div class="hub-card__metas">
+          <div class="hub-card__meta"><small>TONE</small><b>知的 / 洗練</b></div>
+          <div class="hub-card__meta"><small>COLOR</small><b>navy×シアン</b></div>
+          <div class="hub-card__meta"><small>HERO</small><b>Editorial Dashboard</b></div>
+        </div>
+        <div class="hub-card__footer">
+          <span>データ可視化・改善サイクル LP を見る</span>
+          <span class="arrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== INFO ============== -->
+<section class="hub-info">
+  <div class="l-container">
+    <div class="hub-info__grid">
+      <div class="hub-info__col">
+        <h3>差別化の方針</h3>
+        <p>4本とも配色だけでなく、レイアウト・タイポ・ビジュアル合成・モーション・訴求順序を変えています。</p>
+        <ul>
+          <li>LP1: 帳票感・大数値・セリフ強調</li>
+          <li>LP2: 浮遊カード・成長感・ファネル</li>
+          <li>LP3: 横タイムライン・チェック演出</li>
+          <li>LP4: エディトリアル・PDCA・チャート</li>
+        </ul>
+      </div>
+      <div class="hub-info__col">
+        <h3>画像の扱い</h3>
+        <p>「写真を差し込む」ではなく、SVG で構成された訴求装置として設計。グラデ・編み・KPIカード・図解・UIモックを統合しています。</p>
+        <ul>
+          <li>すべての主要ビジュアルを外部 SVG 化</li>
+          <li>画像 + 短コピー + 数値訴求を統合</li>
+          <li>base64 埋め込み軽量逃げは禁止</li>
+        </ul>
+      </div>
+      <div class="hub-info__col">
+        <h3>実装方針</h3>
+        <p>共通基盤と LP 個別を完全分離。reset / common / LP 別 CSS、common / LP 別 JS、SVG 個別ファイル化で保守性を確保しています。</p>
+        <ul>
+          <li>CSS 6 ファイル (reset / common / lp1-4)</li>
+          <li>JS 5 ファイル (common / lp1-4)</li>
+          <li>SVG ビジュアル外部アセット化</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="l-container site-footer__grid">
+    <div>
+      <div class="site-logo" style="color:#fff">
+        <span class="site-logo__mark">A</span>
+        <span>aggregate</span>
+      </div>
+      <p class="site-footer__brand-blurb">aggregate.eole.co.jp 課題別LP 4本のフルクオリティ実装。応募単価・応募数・運用代行・データ可視化の4課題に対応。</p>
+    </div>
+    <div>
+      <h4>LANDING PAGES</h4>
+      <ul>
+        <li><a href="lp1-cpa-cost/">LP1 / 採用費構造改善</a></li>
+        <li><a href="lp2-application-volume/">LP2 / 母集団形成</a></li>
+        <li><a href="lp3-operation-outsourcing/">LP3 / 運用代行</a></li>
+        <li><a href="lp4-analytics-improvement/">LP4 / データ可視化</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>DOCS</h4>
+      <ul>
+        <li><a href="docs/design-notes.md">デザインノート</a></li>
+        <li><a href="docs/asset-manifest.md">アセット一覧</a></li>
+        <li><a href="docs/review.md">レビュー結果</a></li>
+        <li><a href="README.md">README</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>COMPANY</h4>
+      <ul>
+        <li><a href="https://aggregate.eole.co.jp/" rel="noopener">aggregate.eole.co.jp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="l-container site-footer__bottom">
+    <span>&copy; aggregate / イオレ</span>
+    <span>aggregate-visual-fullquality / 4 LP hub</span>
+  </div>
+</footer>
+
+</body>
+</html>

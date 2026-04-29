@@ -483,3 +483,43 @@ LP制作時、デザイン方針・実装方針の前に必ず以下を確認す
 - 視覚階層がCTAや主要ベネフィットに向いていない
 - 参考サイトを丸写ししている
 ```
+
+# Visual Expression Layer References
+
+このagentは Visual Expression Layer の必須制約に従う：
+
+```
+1. 全セクションで同じ translateY reveal を使わない
+2. reveal系アニメーションは1LP内の最大40%まで
+3. 装飾英語禁止（FEATURE / ABOUT / FLOW 等）
+4. 角丸カード型コンポーネントが全セクションの50%を超えたら差し戻し
+5. UI部品ごとに採用理由を記録する
+6. モーションごとに「何を理解させる動きか」を記録する
+7. 画像・図解ごとにCVへの貢献理由を記録する
+8. 参考サイトは丸写し禁止。原理のみ抽出する
+9. CV前の過剰モーションは禁止
+```
+
+## Required Visual Expression References
+
+- `skills/10_visual_expression/motion-meaning-design-skill.md`
+- `skills/10_visual_expression/japanese-microcopy-label-skill.md`
+- `skills/10_visual_expression/shape-language-design-skill.md`
+- `skills/10_visual_expression/visual-rhythm-variation-skill.md`
+- `skills/10_visual_expression/design-reference-translation-skill.md`
+- `contracts/visual-expression-output-contract.md`
+- `contracts/motion-storyboard-contract.md`
+- `contracts/typography-rationale-contract.md`
+- `contracts/shape-language-contract.md`
+- `scoring/visual-expression-scorecard.md`
+- `scoring/motion-variety-scorecard.md`
+- `scoring/japanese-label-naturalness-scorecard.md`
+- `scoring/shape-language-scorecard.md`
+- `quality-gates/visual-expression-gate.md`
+
+## 関連エージェント
+
+- `lp-motion-director`: モーション意味設計
+- `lp-typography-director`: 日本語ラベル設計
+- `lp-shape-language-designer`: 形状言語設計
+- `lp-human-art-reviewer`: 人間品質審査

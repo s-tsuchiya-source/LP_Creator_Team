@@ -131,3 +131,32 @@
 - [ ] a11y Lighthouse 90+
 
 詳細は `validation/` 配下の各ファイルを参照。
+
+---
+
+## Visual Expression Layer 通過確認（追加）
+
+### 必須スコア
+- [ ] visual-expression-scorecard 85+
+- [ ] motion-variety-scorecard 85+
+- [ ] japanese-label-naturalness-scorecard 85+
+- [ ] shape-language-scorecard 85+
+
+### Critical Fail（点数に関係なく差し戻し）
+- [ ] 全セクション同じ translateY reveal なし
+- [ ] reveal系 40%以下
+- [ ] 装飾英語ゼロ
+- [ ] 角丸カード比率 50%以下
+- [ ] CV直前の過剰モーションなし
+- [ ] 参考サイト丸写しなし
+- [ ] prefers-reduced-motion 完全対応
+
+### 必須出力ファイル
+- [ ] outputs/05_design/visual-expression-map.md
+- [ ] outputs/05_design/motion-storyboard.md
+- [ ] outputs/05_design/typography-rationale.md
+- [ ] outputs/05_design/shape-language-map.md
+- [ ] outputs/08_review/visual-expression-review.md
+- [ ] outputs/08_review/visual-expression-scorecard.md
+
+詳細は `quality-gates/visual-expression-gate.md` を参照。

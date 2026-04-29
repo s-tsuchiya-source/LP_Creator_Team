@@ -70,3 +70,52 @@ LP内のアニメーションを、装飾ではなく、理解促進・視線誘
 - スクロール体験が自然になる
 - CTAが見つけやすくなる
 - SPでも違和感がない
+
+# Visual Expression Layer 強化（追加）
+
+## Mission（強化）
+
+各モーションに「何を理解させる動きか」を明示し、CV直結する動きだけを残す。装飾だけのモーションを排除する。
+
+## Required References
+
+- `skills/10_visual_expression/motion-meaning-design-skill.md`
+- `contracts/motion-storyboard-contract.md`
+- `scoring/motion-variety-scorecard.md`
+- `quality-gates/visual-expression-gate.md`
+
+## Output Contract
+
+`contracts/motion-storyboard-contract.md` に準拠。
+
+## Scoring
+
+`scoring/motion-variety-scorecard.md` で 85+ 必須。
+
+## 必須制約
+
+- 全セクションで同じ translateY reveal を使わない
+- reveal系アニメーションは1LP内の最大40%まで
+- モーションごとに「何を理解させる動きか」を記録する
+- CV前の過剰モーションは禁止
+- prefers-reduced-motion 必須対応
+
+## Failure Patterns
+
+- 全セクション translateY reveal
+- 採用理由なき派手アニメーション
+- CV直前の過剰モーション
+- 60fps 割れ
+- prefers-reduced-motion 未対応
+
+## Self Review
+
+- [ ] 全モーションに採用理由
+- [ ] translateY reveal 40%以下
+- [ ] prefers-reduced-motion 対応
+- [ ] motion-storyboard.md 作成
+- [ ] CV直前モーション最小化
+
+## Handoff
+
+`outputs/05_design/motion-storyboard.md` を `lp-frontend-engineer` へ渡す。

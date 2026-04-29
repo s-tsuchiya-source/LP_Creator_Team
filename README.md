@@ -295,3 +295,37 @@ LP構成として必ず押さえる王道15フローを定義しています。
 | lp-structure-completeness-scorecard | 85+ |
 | legal-risk-scorecard | 95+（Critical Fail なし） |
 | final-output-scorecard | 90+ |
+
+## Visual Expression Layer
+
+LPのアニメーション・タイポ・形状を「装飾」ではなく「意味の伝達」として設計します。
+
+### 必須制約
+
+```
+1. translateY reveal 連発禁止（40%以下）
+2. 装飾英語禁止（FEATURE / ABOUT / FLOW 等）
+3. 角丸カード比率 50%以下
+4. CV直前の過剰モーション禁止
+5. 参考サイト丸写し禁止（原理のみ抽出）
+```
+
+### 必須出力
+
+```
+outputs/05_design/visual-expression-map.md
+outputs/05_design/motion-storyboard.md
+outputs/05_design/typography-rationale.md
+outputs/05_design/shape-language-map.md
+outputs/08_review/visual-expression-review.md
+outputs/08_review/visual-expression-scorecard.md
+```
+
+### 担当エージェント
+
+- `lp-motion-director` — モーション意味設計
+- `lp-typography-director` — 日本語ラベル設計
+- `lp-shape-language-designer` — 形状言語設計
+- `lp-human-art-reviewer` — 人間品質審査
+
+詳細は [skills/10_visual_expression/](skills/10_visual_expression/) を参照。

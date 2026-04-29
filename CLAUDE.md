@@ -232,3 +232,43 @@ LPの品質 = 情報品質 × 信頼品質 × 体験価値 × 期待感 × CV導
 - `tests/validation-scenarios/` — テストシナリオ
 - `tests/expected-behaviors/` — 期待動作
 - `tests/evaluation-rubrics/` — 評価ルーブリック
+
+## Visual Expression Layer 必須運用
+
+このプロジェクトでは、LP制作時に Visual Expression Layer を必ず通す。
+
+### 必須制約
+
+1. 全セクションで同じ translateY reveal を使わない
+2. reveal系アニメーションは1LP内の最大40%まで
+3. 英語ラベルは意味がある場合のみ許可
+4. 装飾英語は禁止
+5. 角丸カード型コンポーネントが全セクションの50%を超えたら差し戻し
+6. UI部品ごとに採用理由を記録する
+7. モーションごとに「何を理解させる動きか」を記録する
+8. 画像・図解ごとにCVへの貢献理由を記録する
+9. 参考サイトは丸写し禁止。原理のみ抽出する
+10. CV前の過剰モーションは禁止
+
+### 必須スコア（追加）
+
+- `scoring/visual-expression-scorecard.md`: **85点以上 必須**
+- `scoring/motion-variety-scorecard.md`: **85点以上 必須**
+- `scoring/japanese-label-naturalness-scorecard.md`: **85点以上 必須**
+- `scoring/shape-language-scorecard.md`: **85点以上 必須**
+
+### 関連ディレクトリ
+
+- `skills/10_visual_expression/` — 視覚表現スキル
+- `contracts/visual-expression-output-contract.md`
+- `contracts/motion-storyboard-contract.md`
+- `contracts/typography-rationale-contract.md`
+- `contracts/shape-language-contract.md`
+- `quality-gates/visual-expression-gate.md`
+
+### 担当エージェント（新規）
+
+- `lp-motion-director` — モーション意味設計
+- `lp-typography-director` — 日本語ラベル設計
+- `lp-shape-language-designer` — 形状言語設計
+- `lp-human-art-reviewer` — 人間品質審査

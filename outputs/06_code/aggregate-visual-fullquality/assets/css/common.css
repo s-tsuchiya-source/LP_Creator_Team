@@ -278,6 +278,52 @@ body {
 [data-reveal][data-delay="400"]{ transition-delay: .4s; }
 [data-reveal][data-delay="500"]{ transition-delay: .5s; }
 
+/* Visual Expression Layer: モーション種別の多様化 */
+/* translateY reveal連発を避けるため、data-motion で種別を切り替え */
+
+/* slide-x: プロセス・時系列・横並び向け */
+[data-motion="slide-x"] {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity .6s cubic-bezier(.2,.7,.2,1), transform .6s cubic-bezier(.2,.7,.2,1);
+}
+[data-motion="slide-x"].is-revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* scale: 数値・バッジ強調向け */
+[data-motion="scale"] {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity .5s ease-out, transform .5s cubic-bezier(.2,1.2,.3,1);
+}
+[data-motion="scale"].is-revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* fade: CV直前・控えめ向け（過剰モーション禁止セクション用） */
+[data-motion="fade"] {
+  opacity: 0;
+  transition: opacity .8s ease-out;
+}
+[data-motion="fade"].is-revealed {
+  opacity: 1;
+}
+
+/* prefers-reduced-motion: 全モーション無効化 */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-motion="slide-x"],
+  [data-motion="scale"],
+  [data-motion="fade"] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 /* SVGビジュアル共通フレーム */
 .visual-frame {
   position: relative;

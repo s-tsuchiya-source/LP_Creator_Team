@@ -15,18 +15,29 @@
     else document.addEventListener('DOMContentLoaded', fn);
   };
 
-  // ---- 1. Scroll reveal -----------------------------------------------------
+  // ---- 1. Scroll reveal (multi-motion) -------------------------------------
+  // Visual Expression Layer: 単一 translateY reveal の連発を避けるため、
+  // data-motion 属性で種別を指定可能。
+  // - reveal: translateY fade-in（デフォルト・既存互換）
+  // - slide-x: 横スライド（プロセス・時系列向け）
+  // - scale: スケール拡大（数値強調・バッジ向け）
+  // - fade: フェードのみ（CV直前・控えめ向け）
   function initReveal() {
-    const els = document.querySelectorAll('[data-reveal]');
+    const els = document.querySelectorAll('[data-reveal], [data-motion]');
     if (!els.length) return;
     if (reduceMotion || !('IntersectionObserver' in window)) {
-      els.forEach((el) => el.classList.add('is-revealed'));
+      els.forEach((el) => {
+        el.classList.add('is-revealed');
+        if (el.dataset.motion) el.classList.add('is-' + el.dataset.motion);
+      });
       return;
     }
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (e.isIntersecting) {
           e.target.classList.add('is-revealed');
+          const motion = e.target.dataset.motion;
+          if (motion) e.target.classList.add('is-' + motion);
           io.unobserve(e.target);
         }
       });
